@@ -1,0 +1,66 @@
+% Topic presentation -- 20 minutes.
+% No animations and no screenshots of papers: equations are typeset in LaTeX.
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usetheme{default}
+\usecolortheme{seahorse}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamerfont{frametitle}{size=\large}
+
+\title{Your Working Title}
+\subtitle{Topic presentation --- Track A or Track B}
+\author{Your Name}
+\date{October 2026}
+
+\begin{document}
+
+% The title slide carries the repository link.
+\begin{frame}[plain]
+  \titlepage
+  \begin{center}\small
+    \texttt{github.com/your-user/ai-project}
+  \end{center}
+\end{frame}
+
+\begin{frame}{1 \textperiodcentered{} The question}
+  \textbf{Replace.} The question in one sentence, and why the answer is not
+  obvious.
+\end{frame}
+
+\begin{frame}{2 \textperiodcentered{} The baseline model}
+  \textbf{Replace.} The agent's problem, written formally.
+  \[
+    \max_{e \ge 0}\; a e - \frac{c}{2}\, e^{2}
+  \]
+  Cite the paper, the proposition and the page.
+\end{frame}
+
+\begin{frame}{3 \textperiodcentered{} The assumption I change}
+  \textbf{Replace.} Which assumption, in the paper's notation, and what
+  replaces it.
+\end{frame}
+
+\begin{frame}{4 \textperiodcentered{} The result I expect}
+  \textbf{Replace.} The first-order condition you expect, and which result of
+  the baseline should change and in which direction.
+  \[
+    a - c e = 0 \quad\Longrightarrow\quad e^{*} = \frac{a}{c}
+  \]
+\end{frame}
+
+\begin{frame}{5 \textperiodcentered{} Why this is not already solved}
+  \textbf{Replace.} Where you looked --- appendices, working-paper versions,
+  citing papers --- and what you found.
+\end{frame}
+
+\begin{frame}{6 \textperiodcentered{} Plan and risks}
+  \textbf{Replace.} What you will prove, simulate and formalize in Lean; the
+  step most likely to fail.
+\end{frame}
+
+\end{document}

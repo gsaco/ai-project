@@ -1,0 +1,48 @@
+# Runs on every push and pull request. A green check means two things:
+# the verification script passes, and the four PDFs compile from source on a
+# clean machine. The compiled PDFs can be downloaded from the run's "Artifacts".
+name: build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    name: Run code/verify.py
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to a new release mid-term
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --quiet -r code/requirements.txt
+      - run: python code/verify.py
+
+  pdfs:
+    name: Compile the PDFs from LaTeX
+    runs-on: ubuntu-24.04   # pinned: ubuntu-latest moves to a new release mid-term
+    steps:
+      - uses: actions/checkout@v7
+      - name: Compile proposal, slides and paper
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: |
+            proposal/proposal.tex
+            slides/topic.tex
+            slides/final.tex
+            paper/paper.tex
+          work_in_root_file_dir: true
+      - name: The compiled PDFs must also be committed
+        run: >
+          git ls-files --error-unmatch
+          proposal/proposal.pdf slides/topic.pdf slides/final.pdf paper/paper.pdf
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pdfs
+          path: |
+            proposal/proposal.pdf
+            slides/topic.pdf
+            slides/final.pdf
+            paper/paper.pdf

@@ -1,0 +1,59 @@
+% Topic document -- 2 to 4 pages in THIS format (11pt, 1-inch margins).
+% It accompanies the 20-minute topic presentation.
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage[round]{natbib}
+\usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}
+
+\newcommand{\replace}[1]{\par\smallskip\noindent
+  \fcolorbox{orange!80!black}{yellow!12}{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+  \small\textbf{Replace.} #1}}\par\smallskip}
+
+\title{Project Topic: Your Working Title}
+\author{Your Name \\ \small\url{https://github.com/your-user/ai-project}}
+\date{Topic presentation, October 2026}
+
+\begin{document}
+\maketitle
+
+\section{The question and the track}
+\replace{One paragraph. The question in one sentence, and the track:
+\textbf{Track A} --- you relax an assumption of a course paper and re-derive the
+proposition it affects; or \textbf{Track B} --- you formulate the economic model
+behind your own thesis.}
+
+\section{The baseline and the assumption you change}
+\replace{Track A: cite the paper, the exact proposition and page, and state the
+assumption you relax, in the paper's notation. Track B: state the model your
+thesis currently lacks or cites as a black box. Write the agent's problem
+formally --- what is maximised, over which variable, under which constraints.}
+
+\section{The result you expect}
+\replace{Write the first-order condition you expect to obtain, and say which
+result of the baseline you expect to change and in which direction. This is a
+conjecture: it is graded on being precise, not on being right.}
+
+\begin{equation}\label{eq:foc}
+  \frac{\partial}{\partial e}\Bigl[\, a e - \tfrac{c}{2} e^{2} \Bigr]
+  \;=\; a - c e \;=\; 0 .
+\end{equation}
+
+\section{Why this is not already solved}
+\replace{Where you looked: the paper's appendices, its working-paper versions,
+and the papers that cite it. Say what you found and why it does not answer your
+question. ``The model did not find it'' is not evidence.}
+
+\section{Plan and risks}
+\replace{What you will prove, what you will simulate, and what you will
+formalize in Lean. Name the step most likely to fail and what you will do if it
+does.}
+
+\bibliographystyle{plainnat}
+\bibliography{../paper/references}
+\nocite{acemoglu2018race}
+
+\end{document}

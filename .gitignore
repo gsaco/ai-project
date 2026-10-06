@@ -1,0 +1,28 @@
+# LaTeX build artefacts (the compiled PDFs ARE committed)
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Lean build cache -- never commit it
+.lake/
+
+# macOS
+.DS_Store
+
+# Never commit personal documents to a public repository
+DNI*
+*_DNI*
