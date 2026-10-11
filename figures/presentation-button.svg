@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328" height="48" viewBox="0 0 328 48" role="img" aria-labelledby="title desc">
+  <title id="title">Interactive presentation — HTML</title>
+  <desc id="desc">Blue presentation button with a turquoise play icon.</desc>
+  <rect width="328" height="48" rx="8" fill="#223F91"/>
+  <rect x="12" y="10" width="28" height="28" rx="6" fill="#008A92"/>
+  <path d="M23 17 L33 24 L23 31 Z" fill="#FFFFFF"/>
+  <text x="52" y="29" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Interactive presentation</text>
+  <rect x="270" y="13" width="46" height="22" rx="4" fill="#FFFFFF" fill-opacity="0.15"/>
+  <text x="293" y="28" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="700" fill="#FFFFFF">HTML</text>
+</svg>

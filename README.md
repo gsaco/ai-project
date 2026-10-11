@@ -1,124 +1,74 @@
-# Term project — template
+# Economic freedom and firm entry–exit decisions
 
-**Artificial Intelligence and Economic Modeling · UP 2026-II**
+**Gabriel Saco** · Professor Alexander Quispe  
+AI and Economic Modeling · **Track B: the model behind my thesis** · October 2026
 
-> **This is the template for the term project.** Press **Use this template**,
-> name your repository **`ai-project`**, and replace the content. Every project
-> in the course has this structure, so that anyone can open any repository and
-> find the paper, the slides, the code and the Lean proofs in the same place.
->
-> Dates, page limits and what is graded are in the
-> [project issue](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7)
-> of the course repository. **Delete this block and the next two sections when
-> you write your own README.**
+[![Open the interactive presentation](figures/presentation-button.svg)](https://gsaco.github.io/ai-project/slides/topic.html)
 
-## What goes where
+[Read the proposal](proposal/proposal.pdf) · [Download the slides](slides/topic.pdf) · [AI conversation](https://chatgpt.com/s/cx_6acbfdd3fe208191925b8c885b7b051e) · [Raw prompts](prompts.md)
 
-One repository for the whole project: it grows from the topic presentation to
-the final paper.
+> **Research question** · Can costly restarting make losses from institutional deterioration exceed gains from equal improvements?
 
-| Path | What it holds | Needed for |
-|---|---|---|
-| `README.md` | One page: the question, the model, the main result with all its conditions, and the status of the project | always |
-| `proposal/proposal.tex` · `.pdf` | The topic document, **2–4 pages** | topic presentation |
-| `slides/topic.tex` · `.pdf` | Deck for the 20-minute topic presentation | topic presentation |
-| `slides/final.tex` · `.pdf` | Deck for the final presentation | final presentation |
-| `paper/paper.tex` · `references.bib` · `paper.pdf` | The final paper, **8–20 pages**, in LaTeX with its compiled PDF | final paper |
-| `code/` | Simulations and symbolic checks; `code/verify.py` runs them all and **fails** if a claim does not hold | final paper |
-| `lean/` | The Lean formalization of **your** paper, generated with AppliedModelingLib | final paper |
-| `hand/` | The handwritten appendix: every derivation, step by step | final paper |
-| `prompts.md` | Your prompts and the relevant answers, raw | always |
-| `.github/workflows/build.yml` | Compiles the PDFs and runs `code/verify.py` on every push | — leave it as it is |
+<p align="center">
+  <a href="figures/paper_main_figure.pdf"><img src="figures/paper_main_figure.png" width="660" alt="Thesis estimates of cumulative log GDP-per-capita responses: symmetry imposed on the left and asymmetry allowed on the right, with confidence bands."></a>
+</p>
 
-Keep the file names. If a script, figure or section needs more files, add them
-inside the folder where they belong.
+*Thesis evidence motivating the model: cumulative log GDP-per-capita responses, with symmetry imposed (left) and asymmetry allowed (right). [Measurement and confidence bands](figures/README.md).*
 
-Work as in the weekly repositories: **branch → pull request → merge**. Nothing
-is written directly to `main`, and what is graded is what is on `main` at the
-deadline.
+## Model and experiment
 
-## Building
+Normalize fixed property to $`\bar{k}=1`$. Institutions determine its usable share $`s`$ and recurring overhead $`c_0`$. The initially active firm chooses whether to operate, $`a_t\in\{0,1\}`$, and input $`x_t\geq0`$, with $`x_t=0`$ when closed:
 
-```bash
-python3 -m pip install -r code/requirements.txt
-python3 code/verify.py                      # checks + figures
-
-cd paper    && latexmk -pdf paper.tex       # or: tectonic paper.tex
-cd proposal && latexmk -pdf proposal.tex
-cd slides   && latexmk -pdf topic.tex final.tex
+```math
+\max_{\{a_t,x_t\}_{t\geq0}}\;\sum_{t=0}^{\infty}\beta^t
+\bigl[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t-\kappa a_t(1-a_{t-1})\bigr].
 ```
 
-**Commit the compiled PDFs** next to their sources. The workflow in
-`.github/workflows/` recompiles everything from source on every push: the
-green check on your repository is the evidence that the PDF you committed is
-the one your LaTeX produces. If the check is red, the Actions tab shows the
-LaTeX error.
+Productivity $`A`$, input price $`w`$, and ordinary overhead $`F`$ are positive; $`c_0\geq0`$, $`0<\alpha,\beta<1`$, and $`a_{-1}=1`$. **Baseline:** free restarting, $`\kappa=0`$. **Extension:** a sunk restart cost, $`\kappa>0`$. Closure is free, preserves property, and dismantles the organization. Financing is available; suspension that preserves the organization is excluded.
 
-Every orange **Replace** box in the PDFs is an instruction to you. A submitted
-document has none left.
+Compare $`s_0-d`$, $`s_0`$, and $`s_0+d`$ at date 0, where $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ from date 1, as known in advance. All other parameters remain fixed.
 
-## The Lean component
+## Conditional result
 
-The target is that **every numbered result of your paper is stated and proved
-in Lean**, with no `sorry` and no hypothesis that smuggles in the conclusion.
-It is the same workflow as in the weekly repositories, pointed at your own
-paper instead of a published one.
+Restart costs do not depend on input, so the **FOC is unchanged**:
 
-1. Merge the version of `paper/paper.pdf` you want formalized and copy the
-   commit hash.
-2. From the root of your [AppliedModelingLib](https://gargnikhil.com/AppliedModelingLib/)
-   clone (`git pull` first), with the same agent configuration as in the weekly
-   repositories, give the agent this task:
+```math
+\alpha As^{1-\alpha}x^{\alpha-1}=w.
+```
 
-   ```text
-   Please formalize my own paper, an unpublished manuscript with no arXiv
-   record: https://github.com/<your-user>/ai-project/blob/<commit>/paper/paper.pdf
-   (pinned at commit <commit>), using the paper-formalization skill and
-   workflow in this repository.
-   Use <Surname>26<ShortTitle> as the paper folder.
-   ```
+Define operating output, profit, and continuation value:
 
-3. Run the paper-scoped check and keep its output:
+```math
+\begin{aligned}
+q(s)&=sA\left(\frac{\alpha A}{w}\right)^{\alpha/(1-\alpha)},
+&\pi(s,c)&=(1-\alpha)q(s)-F-c,\\
+q_0&=q(s_0), &\pi_0&=\pi(s_0,c_0),\\
+\pi_\pm&=\pi(s_0\pm d,c_0), &V&=\frac{\pi_0}{1-\beta}.
+\end{aligned}
+```
 
-   ```bash
-   python3 scripts/paper_contribution.py check <Surname>26<ShortTitle> --fast
-   ```
+Under the assumptions above, my conjecture requires:
 
-4. Copy the **entire** generated `papers/<Surname>26<ShortTitle>/` folder,
-   exactly as generated, into this repository as `lean/`. Stage it with
-   `git add lean/` and respect the generated `.gitignore` — never `git add -f`.
-5. Fill in the *Lean formalization* appendix of the paper: one row per numbered
-   result, the Lean declaration that proves it, and its status.
+```math
+\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>\pi_++\beta V.
+```
 
-If you change a proposition after the run, the Lean folder no longer matches
-the paper: run the workflow again. If a result is still open at the deadline,
-say exactly which one and what blocks it — an honest partial result is graded,
-a hidden gap is not.
+Deterioration causes permanent closure; the other paths stay open. Identical inactive owners facing the same setup cost stay out. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
 
----
+## Literature, plan, and risk
 
-# Your title
+I apply Dixit’s established sunk-cost mechanism to institutional changes. The [literature review](proposal/literature-check.md) records inspected sources, unavailable materials, and the contribution. I will prove the optimizer and switching comparisons, simulate alternative shocks, and formalize the results in Lean. **Cheap suspension is the principal risk:** it can eliminate persistence.
 
-**Replace everything below with your own README — one page.**
+## Deliverables and status
 
-*Track A (extension of …) or Track B (thesis model).*
+| Component | Files and current status |
+|:--|:--|
+| **Topic proposal** | [PDF](proposal/proposal.pdf) · [LaTeX](proposal/proposal.tex) — four pages, 11 pt, one-inch margins |
+| **Topic presentation** | [Live](https://gsaco.github.io/ai-project/slides/topic.html) · [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) — 14 slides, 20-minute plan |
+| **Verification** | [Code](code/README.md) — 10 Python checks and 13 presentation-model checks pass |
+| **Final paper and slides** | [Paper](paper/paper.pdf) · [source](paper/paper.tex) · [bibliography](paper/references.bib) · [deck](slides/final.pdf) · [source](slides/final.tex) — progress files; final work pending |
+| **Proofs and AI record** | [Lean](lean/README.md) · [hand derivations](hand/README.md) — planned; [raw conversation](prompts.md) recorded; my independent adjudication remains pending |
 
-## The question
+[Build guide and topic coverage](proposal/topic-checklist.md) · [Homework instructions](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7)
 
-## The model
-
-The agent's problem, written formally: what is maximised, over which variable,
-under which constraints.
-
-## The main result, with all its conditions
-
-## Status
-
-| Component | State |
-|---|---|
-| Topic document and slides | |
-| Final slides | |
-| Paper | |
-| Simulations (`python3 code/verify.py`) | |
-| Lean (`check --fast` result, paper commit formalized) | |
-| Handwritten appendix | |
+**Submission pending:** pull request, merge into `main`, and repository-link comment. **Deadline:** October 13, 22:00 Lima. **Presentation:** October 14, 07:55–08:15.

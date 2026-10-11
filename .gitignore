@@ -26,3 +26,11 @@ __pycache__/
 # Never commit personal documents to a public repository
 DNI*
 *_DNI*
+
+# Local previews and layout audits
+slides/build/
+proposal/build/
+.quarto/
+
+# Thesis stays in the local research workspace
+/tesis.pdf

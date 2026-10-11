@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "scope": "topic-stage checks; not a proof",
+  "checks": [
+    "symbolic FOC",
+    "symbolic second derivative",
+    "closed form dominates a numerical input grid",
+    "illustrative output and profits",
+    "costly restarting: loss persists",
+    "free restarting: complete recovery",
+    "small shock: symmetric levels while active",
+    "overhead leaves input unchanged",
+    "optimal switching versus 324 enumerated scenario problems and conditional log comparison",
+    "cheap suspension defeats permanent closure in the illustration"
+  ],
+  "enumerated_scenarios": 324
+}
