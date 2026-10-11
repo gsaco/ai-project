@@ -32,3 +32,7 @@ node slides/reveal/verify-deck.cjs
 The Python runner creates static model figures. The browser model is `model.js`; tests compare its examples with the Python exports. `verify-deck.cjs` requires Playwright and Chromium, opens an isolated HTML copy offline, checks all slides/equations and bounds at two viewport sizes, and operates both diagrams. The empirical figure from my thesis has its provenance in `../../figures/README.md`.
 
 Full build instructions, source dependencies, deadlines, and the pending submission steps are recorded in `../../proposal/topic-checklist.md`. Lean formalization remains future work.
+
+## Public presentation
+
+[Open the presentation on GitHub Pages](https://gsaco.github.io/ai-project/slides/topic.html). Pages publishes the root of `codex/topic-collateral-asymmetry`; pushing an updated `slides/topic.html` to that branch updates the public deck. The root `index.html` redirects visitors to the slides, and `.nojekyll` preserves the generated HTML without Jekyll processing.

@@ -3,11 +3,11 @@
 **Gabriel Saco · Track B: thesis model · Professor Alexander Quispe**  
 AI and Economic Modeling · Topic stage · October 2026
 
-[![Interactive presentation — HTML](figures/presentation-button.svg)](slides/topic.html)
+[![Interactive presentation — HTML](figures/presentation-button.svg)](https://gsaco.github.io/ai-project/slides/topic.html)
 
 [Proposal PDF](proposal/proposal.pdf) · [Slides PDF](slides/topic.pdf) · [Shared AI conversation](https://chatgpt.com/s/cx_6acbf869e28c819197601b5a0bfac041)
 
-<sub>The interactive deck is a standalone HTML file. On GitHub, download it and open it in a browser to use the diagrams.</sub>
+<sub>The interactive deck is available on GitHub Pages; open the button above to use the diagrams. The standalone HTML file can also be downloaded for offline use.</sub>
 
 **1 · Question and Track B.** Can costly restarting make losses from institutional deterioration exceed gains from equal improvements? I develop a firm model behind my thesis.
 
@@ -36,7 +36,7 @@ Deterioration causes permanent closure; the other paths stay open. Identical ina
 | Required component | Project status |
 |---|---|
 | [Topic document: source](proposal/proposal.tex) / [PDF](proposal/proposal.pdf) | Four pages; 11 pt; one-inch margins |
-| [Topic slides: source](slides/topic.tex) / [PDF](slides/topic.pdf) / [interactive](slides/topic.html) | 14 slides; 20-minute plan; five topic points in order |
+| [Topic slides: source](slides/topic.tex) / [PDF](slides/topic.pdf) / [interactive](https://gsaco.github.io/ai-project/slides/topic.html) | 14 slides; 20-minute plan; five topic points in order |
 | [Final paper](paper/paper.tex) · [bibliography](paper/references.bib) · [PDF](paper/paper.pdf) | Progress document; final paper remains future work |
 | [Final slides: source](slides/final.tex) / [PDF](slides/final.pdf) | Planning deck; final presentation remains future work |
 | [Code and verification](code/README.md) | 10 Python checks and 13 presentation-model checks pass |
