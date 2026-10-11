@@ -1,9 +1,9 @@
 # Empirical motivation figure
 
 The empirical figure from my thesis is included as the original PDF and matching
-Stata-exported PNG. Both files are copied without changes from:
+Stata-exported PNG. Both files are copied without changes from my `economic-freedom` research repository, at:
 
-`/Users/gabrielsaco/Documents/GitHub/economic-freedom/code/figures_paper/experiment3_panel_chainlinked_sign_specific_controls`
+`code/figures_paper/experiment3_panel_chainlinked_sign_specific_controls`
 
 The PDF is included in the proposal and Beamer presentation. The PNG is embedded
 in the standalone Quarto/Reveal.js presentation. Both panels, axes, colors,

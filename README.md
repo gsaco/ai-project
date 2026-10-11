@@ -1,11 +1,24 @@
-# Economic freedom and firm entry–exit decisions
+<h1 align="center">Economic freedom and firm entry–exit decisions</h1>
 
-**Gabriel Saco** · Professor Alexander Quispe  
-AI and Economic Modeling · **Track B: the model behind my thesis** · October 2026
+<p align="center">
+  <strong>Gabriel Saco</strong><br>
+  Professor Alexander Quispe · Universidad del Pacífico<br>
+  <sub>AI and Economic Modeling · Track B · Topic presentation · October 2026</sub>
+</p>
 
-[![Open the interactive presentation](figures/presentation-button.svg)](https://gsaco.github.io/ai-project/slides/topic.html)
+<p align="center">
+  <a href="https://gsaco.github.io/ai-project/slides/topic.html"><img src="figures/presentation-button.svg" width="286" alt="Open the interactive presentation"></a>
+  <a href="proposal/proposal.pdf"><img src="figures/proposal-button.svg" width="160" alt="Read the proposal PDF"></a>
+  <a href="slides/topic.pdf"><img src="figures/slides-button.svg" width="160" alt="Read the slides PDF"></a>
+</p>
 
-[Read the proposal](proposal/proposal.pdf) · [Download the slides](slides/topic.pdf) · [AI conversation](https://chatgpt.com/s/cx_6acbfdd3fe208191925b8c885b7b051e) · [Raw prompts](prompts.md)
+<p align="center">
+  <a href="https://chatgpt.com/s/cx_6acbfdd3fe208191925b8c885b7b051e">AI conversation</a> &nbsp;·&nbsp;
+  <a href="prompts.md">Raw prompts</a> &nbsp;·&nbsp;
+  <a href="proposal/topic-checklist.md">Reading and build guide</a>
+</p>
+
+---
 
 > **Research question** · Can costly restarting make losses from institutional deterioration exceed gains from equal improvements?
 
@@ -15,9 +28,9 @@ AI and Economic Modeling · **Track B: the model behind my thesis** · October 2
 
 *Thesis evidence motivating the model: cumulative log GDP-per-capita responses, with symmetry imposed (left) and asymmetry allowed (right). [Measurement and confidence bands](figures/README.md).*
 
-## Model and experiment
+## 01 · Model and experiment
 
-Normalize fixed property to $`\bar{k}=1`$. Institutions determine its usable share $`s`$ and recurring overhead $`c_0`$. The initially active firm chooses whether to operate, $`a_t\in\{0,1\}`$, and input $`x_t\geq0`$, with $`x_t=0`$ when closed:
+Normalize fixed property to $`\bar{k}=1`$. Institutions determine its usable share $`s\in(0,1]`$ and recurring overhead $`c_0`$. The initially active firm chooses whether to operate, $`a_t\in\{0,1\}`$, and input $`x_t\geq0`$, with $`x_t=0`$ when closed:
 
 ```math
 \max_{\{a_t,x_t\}_{t\geq0}}\;\sum_{t=0}^{\infty}\beta^t
@@ -28,7 +41,7 @@ Productivity $`A`$, input price $`w`$, and ordinary overhead $`F`$ are positive;
 
 Compare $`s_0-d`$, $`s_0`$, and $`s_0+d`$ at date 0, where $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ from date 1, as known in advance. All other parameters remain fixed.
 
-## Conditional result
+## 02 · Conditional result
 
 Restart costs do not depend on input, so the **FOC is unchanged**:
 
@@ -55,20 +68,20 @@ Under the assumptions above, my conjecture requires:
 
 Deterioration causes permanent closure; the other paths stay open. Identical inactive owners facing the same setup cost stay out. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
 
-## Literature, plan, and risk
+## 03 · Literature and research plan
 
 I apply Dixit’s established sunk-cost mechanism to institutional changes. The [literature review](proposal/literature-check.md) records inspected sources, unavailable materials, and the contribution. I will prove the optimizer and switching comparisons, simulate alternative shocks, and formalize the results in Lean. **Cheap suspension is the principal risk:** it can eliminate persistence.
 
-## Deliverables and status
+## 04 · Repository guide
 
-| Component | Files and current status |
-|:--|:--|
-| **Topic proposal** | [PDF](proposal/proposal.pdf) · [LaTeX](proposal/proposal.tex) — four pages, 11 pt, one-inch margins |
-| **Topic presentation** | [Live](https://gsaco.github.io/ai-project/slides/topic.html) · [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) — 14 slides, 20-minute plan |
-| **Verification** | [Code](code/README.md) — 10 Python checks and 13 presentation-model checks pass |
-| **Final paper and slides** | [Paper](paper/paper.pdf) · [source](paper/paper.tex) · [bibliography](paper/references.bib) · [deck](slides/final.pdf) · [source](slides/final.tex) — progress files; final work pending |
-| **Proofs and AI record** | [Lean](lean/README.md) · [hand derivations](hand/README.md) — planned; [raw conversation](prompts.md) recorded; my independent adjudication remains pending |
+| Material | Read or explore | Status |
+|:--|:--|:--|
+| **Topic proposal** | [PDF](proposal/proposal.pdf) · [LaTeX](proposal/proposal.tex) | Four pages; model, derivations, and conjecture |
+| **Topic presentation** | [Interactive](https://gsaco.github.io/ai-project/slides/topic.html) · [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) | 14 slides; 20-minute plan |
+| **Verification** | [Code and checks](code/README.md) | 10 Python checks and 13 presentation-model checks pass |
+| **Final paper** | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [References](paper/references.bib) | Research outline; development continues |
+| **Final presentation** | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) | Planning deck |
+| **Formal and hand proofs** | [Lean plan](lean/README.md) · [Derivation plan](hand/README.md) | Future work |
+| **AI collaboration** | [Raw conversation](prompts.md) | Recorded; my independent adjudication remains pending |
 
-[Build guide and topic coverage](proposal/topic-checklist.md) · [Homework instructions](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7)
-
-**Submission pending:** pull request, merge into `main`, and repository-link comment. **Deadline:** October 13, 22:00 Lima. **Presentation:** October 14, 07:55–08:15.
+<sub>Topic-stage research: the current result is a conditional conjecture with a proof outline and reproducible checks. Complete proofs, Lean formalization, and the final paper remain future work. <a href="https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7">Course requirements</a>.</sub>

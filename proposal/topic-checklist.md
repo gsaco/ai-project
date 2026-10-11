@@ -1,4 +1,4 @@
-# Local topic readiness and build guide
+# Topic presentation: reading and build guide
 
 Reference: [homework issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), checked 11 October 2026. Scope: topic presentation. Final-paper requirements remain future work.
 
@@ -31,11 +31,11 @@ Tectonic is also supported for each TeX file when run in that file's directory. 
 
 ## Build validation: 11 October 2026
 
-All four PDFs compile with Tectonic, and Quarto renders the standalone interactive deck. The proposal has four pages with one-inch margins. The topic PDF has 14 slides in 16:9 format. The final TeX passes have no unresolved references or overfull boxes. All PDF pages have been visually inspected. The slide audit's single overlap flag concerns the summation's upper limit on slide 6; visual inspection confirms that the symbols are separated.
+All four PDFs compile with Tectonic, and Quarto renders the standalone interactive deck. The proposal has four pages with one-inch margins. The topic PDF has 14 slides in 16:9 format. The final TeX passes have no unresolved references or overfull boxes. All PDF pages have been visually inspected.
 
 The model checks pass: 10 Python checks, including 324 enumerated switching problems, and 13 browser-model checks. The HTML also passes offline rendering, equation, navigation, diagram, and layout checks at two viewport sizes. These checks support reproducibility; my independent adjudication and formal proofs remain pending.
 
-The equivalent Tectonic commands, run from each source directory, are `tectonic -X compile proposal.tex`, `tectonic -X compile topic.tex`, `tectonic -X compile paper.tex`, and `tectonic -X compile final.tex`. Generated local audit files are [the report](../slides/build/topic-audit/audit_report.md), [contact sheet](../slides/build/topic-audit/contact_sheet.png), and [rendered pages](../slides/build/topic-audit/pages/). These build artifacts are ignored by Git and can be regenerated.
+The equivalent Tectonic commands, run from each source directory, are `tectonic -X compile proposal.tex`, `tectonic -X compile topic.tex`, `tectonic -X compile paper.tex`, and `tectonic -X compile final.tex`. Local previews and layout-audit files are excluded from version control.
 
 ## Twenty-minute topic slot
 
@@ -51,10 +51,8 @@ The equivalent Tectonic commands, run from each source directory, are `tectonic 
 | 14 | 1.5 | Plan and risk |
 | Discussion | 3 | Total slot: 20 minutes |
 
-## Local records and later work
+## Research records and later work
 
-`README.md` gives the model, full conditions, and status. `prompts.md` preserves my prompts and the corresponding AI responses, with separate verification notes; my independent adjudication is pending. The paper and final deck are explicitly labelled project-specific progress files; they are not final deliverables. Lean proofs and handwritten scans remain unfinished.
+`README.md` gives the model, full conditions, and status. `prompts.md` preserves the raw conversation export, including my prompts and the corresponding AI responses. My independent adjudication remains pending. The paper and final deck are explicitly labelled project-specific progress files; they are not final deliverables. Lean proofs and handwritten scans remain unfinished.
 
-## Submission status
-
-The slot is Wednesday Oct 14, 07:55–08:15 Lima. The topic deadline is Tuesday Oct 13 at 22:00. Submission is pending. After reviewing the local files and assets, I will commit on the working branch, open a pull request, check the course build workflow, merge into `main`, and post the repository URL once on issue #7.
+The [public interactive presentation](https://gsaco.github.io/ai-project/slides/topic.html) supplements the required LaTeX and PDF deck. The course build workflow compiles all four PDFs and runs the model checks on GitHub.

@@ -4,7 +4,7 @@ Open `../topic.html` in a browser. The standalone file embeds fonts, equations, 
 
 ## Structure and timing
 
-The five homework points appear in order: question (1–2), baseline/model (3–6), FOC/conjecture/comparison (7–12), literature check (13), plan and risks (14). The experiment precedes the switching decisions, and the literature review precedes the research plan. [Coverage and 20-minute plan](../../proposal/topic-checklist.md).
+The five homework points appear in order: question (1–2), baseline/model (3–6), FOC/conjecture/comparison (7–12), literature check (13), plan and risks (14). The experiment setup precedes the switching decisions, and the literature review precedes the research plan. [Coverage and 20-minute plan](../../proposal/topic-checklist.md).
 
 ## Design and interaction
 
@@ -31,7 +31,7 @@ node slides/reveal/verify-deck.cjs
 
 The Python runner creates static model figures. The browser model is `model.js`; tests compare its examples with the Python exports. `verify-deck.cjs` requires Playwright and Chromium, opens an isolated HTML copy offline, checks all slides/equations and bounds at two viewport sizes, and operates both diagrams. The empirical figure from my thesis has its provenance in `../../figures/README.md`.
 
-Full build instructions, source dependencies, deadlines, and the pending submission steps are recorded in `../../proposal/topic-checklist.md`. Lean formalization remains future work.
+[The project guide](../../proposal/topic-checklist.md) records build instructions, source dependencies, topic coverage, and presentation timing. Lean formalization remains future work.
 
 ## Public presentation
 
