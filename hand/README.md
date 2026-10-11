@@ -1,8 +1,12 @@
-# `hand/` — placeholder
+# Planned handwritten derivations
 
-Delete this file when you add your derivations. This folder holds the
-**handwritten appendix**: every derivation of the paper, step by step and with
-no skipped steps — each algebraic manipulation written out, each rule named,
-each condition checked where it is used. Photographed or scanned, as long as it
-is legible. Name the files so the order is obvious (`01-foc.pdf`,
-`02-proposition-1.pdf`, …).
+The proposal currently contains typeset derivations and a proof outline. My handwritten appendix remains future work. I will prepare legible, numbered scans in this order:
+
+1. Conditional input problem, interior optimum, second derivative, and boundary behavior.
+2. Optimal input, operating output, and profit identities.
+3. Discounted value after restoration, closure value, and all delayed restart alternatives.
+4. Conjecture with every maintained condition; optimal paths and loss–gain comparison.
+5. Positive-output aggregation and the log inequality.
+6. Suspension counterexample and the assumptions on which persistence depends.
+
+I will show each algebraic manipulation, state the rule used, and check the conditions supporting each step. I will also assess the AI-assisted derivations independently and record my decisions and corrections in `../prompts.md`. The typeset proposal does not substitute for this handwritten work.
