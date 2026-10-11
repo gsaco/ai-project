@@ -17,16 +17,16 @@ AI and Economic Modeling · **Track B: the model behind my thesis** · October 2
 
 ## Model and experiment
 
-Normalize fixed property to $\bar{k}=1$. Institutions determine its usable share $s$ and recurring overhead $c_0$. The initially active firm chooses whether to operate, $a_t\in\{0,1\}$, and input $x_t\geq0$, with $x_t=0$ when closed:
+Normalize fixed property to $`\bar{k}=1`$. Institutions determine its usable share $`s`$ and recurring overhead $`c_0`$. The initially active firm chooses whether to operate, $`a_t\in\{0,1\}`$, and input $`x_t\geq0`$, with $`x_t=0`$ when closed:
 
 ```math
 \max_{\{a_t,x_t\}_{t\geq0}}\;\sum_{t=0}^{\infty}\beta^t
-\left[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t-\kappa a_t(1-a_{t-1})\right].
+\bigl[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t-\kappa a_t(1-a_{t-1})\bigr].
 ```
 
-Productivity $A$, input price $w$, and ordinary overhead $F$ are positive; $c_0\geq0$, $0<\alpha,\beta<1$, and $a_{-1}=1$. **Baseline:** free restarting, $\kappa=0$. **Extension:** a sunk restart cost, $\kappa>0$. Closure is free, preserves property, and dismantles the organization. Financing is available; suspension that preserves the organization is excluded.
+Productivity $`A`$, input price $`w`$, and ordinary overhead $`F`$ are positive; $`c_0\geq0`$, $`0<\alpha,\beta<1`$, and $`a_{-1}=1`$. **Baseline:** free restarting, $`\kappa=0`$. **Extension:** a sunk restart cost, $`\kappa>0`$. Closure is free, preserves property, and dismantles the organization. Financing is available; suspension that preserves the organization is excluded.
 
-Compare $s_0-d$, $s_0$, and $s_0+d$ at date 0, where $0<d<s_0$ and $s_0+d\leq1$. All paths return permanently to $s_0$ from date 1, as known in advance. All other parameters remain fixed.
+Compare $`s_0-d`$, $`s_0`$, and $`s_0+d`$ at date 0, where $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ from date 1, as known in advance. All other parameters remain fixed.
 
 ## Conditional result
 
@@ -53,7 +53,7 @@ Under the assumptions above, my conjecture requires:
 \pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>\pi_++\beta V.
 ```
 
-Deterioration causes permanent closure; the other paths stay open. Identical inactive owners facing the same setup cost stay out. The impact loss $q_0$ exceeds the gain $(d/s_0)q_0$; thereafter the loss remains $q_0$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
+Deterioration causes permanent closure; the other paths stay open. Identical inactive owners facing the same setup cost stay out. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
 
 ## Literature, plan, and risk
 
