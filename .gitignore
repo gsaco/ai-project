@@ -31,3 +31,6 @@ DNI*
 slides/build/
 proposal/build/
 .quarto/
+
+# Thesis stays in the local research workspace
+/tesis.pdf
