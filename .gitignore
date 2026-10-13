@@ -34,3 +34,6 @@ proposal/build/
 
 # Thesis stays in the local research workspace
 /tesis.pdf
+
+# Presentation script is local only
+/slides/guion-topic-es.md
