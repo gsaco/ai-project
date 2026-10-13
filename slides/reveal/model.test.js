@@ -26,7 +26,6 @@ check("The numerical illustration reproduces the proposed conjecture", () => {
   near(m.constants.restartValue, -0.3);
   assert.equal(m.paths.negative.decision, "close");
   assert.equal(m.paths.negative.restorationDecision, "remain closed");
-  assert.equal(m.paths.positive.entrant.enters, false);
   assert.deepEqual(m.paths.negative.output, [0, 0, 0, 0, 0]);
   near(m.comparison.loss[0], 0.8); near(m.comparison.gain[0], 0.32);
   near(m.comparison.loss[1], 0.8); near(m.comparison.gain[1], 0);
@@ -35,14 +34,16 @@ check("The numerical illustration reproduces the proposed conjecture", () => {
 });
 
 check("Scenario profits and normal-output formulas match the simplified conjecture", () => {
-  const m = simulate(), p = m.params, c = m.constants;
+  const m = simulate({kappa: 0.2}), p = m.params, c = m.constants;
   near(m.paths.negative.conditional.q, c.q0 * (1 - p.d / p.s0));
   near(m.paths.positive.conditional.q, c.q0 * (1 + p.d / p.s0));
   near(c.piPlus - c.pi0, c.pi0 - c.piMinus);
   near(m.paths.negative.continueValue, c.piMinus + p.beta * c.V);
   near(m.paths.positive.continueValue, c.piPlus + p.beta * c.V);
   assert.ok(c.pi0 > 0 && c.piMinus + p.beta * c.V < 0);
-  assert.ok(p.kappa > c.piPlus + p.beta * c.V);
+  assert.ok(p.kappa > c.V);
+  assert.equal(m.conjecture.holds, true);
+  assert.deepEqual(m.paths.negative.output, [0, 0, 0, 0, 0]);
   near(m.comparison.loss[0], c.q0);
   near(m.comparison.gain[0], p.d / p.s0 * c.q0);
 });
@@ -107,6 +108,7 @@ check("At the closure threshold the incumbent continues; restarting at zero is d
   const reopenTie = simulate({kappa: m.constants.V});
   assert.equal(reopenTie.paths.negative.decision, "close");
   assert.equal(reopenTie.paths.negative.restart, false);
+  assert.equal(reopenTie.conjecture.holds, false);
 });
 
 check("Zero shock is admissible for the explorer but not a strict conjecture case", () => {

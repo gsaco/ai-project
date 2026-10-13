@@ -63,10 +63,10 @@ q_0&=q(s_0), &\pi_0&=\pi(s_0,c_0),\\
 Under the assumptions above, my conjecture requires:
 
 ```math
-\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>\pi_++\beta V.
+\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>V.
 ```
 
-Deterioration causes permanent closure; the other paths stay open. Identical inactive owners facing the same setup cost stay out. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
+Deterioration causes permanent closure; the other paths stay open. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
 
 ## 03 · Literature and research plan
 

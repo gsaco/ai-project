@@ -32,7 +32,7 @@ for a,sv in product([.2,.5,.8],[.15,.5,.9]):
 check('closed form dominates a numerical input grid',True)
 r=simulate()
 check('illustrative output and profits',np.allclose([r['normal']['q'],r['normal']['pi'],r['paths']['negative']['pi'],r['paths']['positive']['pi'],r['V']],[.8,.01,-.15,.17,.1]))
-check('costly restarting: loss persists',r['conjecture'] and r['paths']['negative']['output']==[0]*5)
+check('costly restarting: loss persists',all(case['conjecture'] and case['paths']['negative']['output']==[0]*5 for case in [r,simulate(kappa=.2)]))
 f=simulate(kappa=0)
 check('free restarting: complete recovery',not f['paths']['negative']['active'] and f['paths']['negative']['restart'] and np.allclose(f['paths']['negative']['output'][1:],[.8]*4))
 z=simulate(d=.05)

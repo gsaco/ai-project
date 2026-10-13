@@ -23,5 +23,5 @@ def simulate(**overrides):
         reopen=V-p['kappa']>1e-10
         paths[name]=dict(output=[o['q'] if active else 0.]+[normal['q'] if active or reopen else 0.]*4,
                          pi=o['pi'],continueValue=keep,closeValue=close,active=active,restart=(not active and reopen))
-    holds=paths['negative']['continueValue']<0 and p['kappa']>paths['positive']['continueValue']
+    holds=paths['negative']['continueValue']<0 and p['kappa']>V
     return dict(params=p,normal=normal,V=V,paths=paths,conjecture=holds)

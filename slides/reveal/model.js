@@ -84,20 +84,11 @@
         : restart ? "restart" : "remain closed";
       const subsequentOutput = decision !== "close" || restart ? normal.q : 0;
       const output = timing.map(t => t === 0 ? (decision === "operate" ? conditional.q : 0) : subsequentOutput);
-      const entrantEnterValue = continueValue - p.kappa;
-      const entrantWaitValue = closeValue;
-      const entrantEnters = greater(entrantEnterValue, entrantWaitValue);
       const alternatives = [continueValue, closeValue].concat(p.suspension ? [suspendValue] : []);
       const tie = alternatives.filter(value => tied(value, chosenValue)).length > 1;
       return {
         key, direction, s, conditional, continueValue, closeValue, suspendValue,
-        chosenValue, decision, tie, restart, restartValue, restorationDecision, output,
-        entrant: {
-          enterValue: entrantEnterValue,
-          waitValue: entrantWaitValue,
-          enters: entrantEnters,
-          tie: tied(entrantEnterValue, entrantWaitValue)
-        }
+        chosenValue, decision, tie, restart, restartValue, restorationDecision, output
       };
     }
 
@@ -116,7 +107,7 @@
     };
     // The sufficient conditions use the same scenario profits as the slides.
     const adverseContinuationNegative = greater(0, paths.negative.continueValue);
-    const entryUnprofitable = greater(p.kappa, paths.positive.continueValue);
+    const restartUnprofitable = greater(p.kappa, V);
     const shockAdmissible = p.d > 0 && p.d < p.s0 && p.s0 + p.d <= 1;
     return {
       params: p, timing, normal, constants, paths,
@@ -127,12 +118,12 @@
         persistentLoss: greater(loss[1], 0)
       },
       conjecture: {
-        holds: shockAdmissible && adverseContinuationNegative && entryUnprofitable && !p.suspension,
-        shockAdmissible, adverseContinuationNegative, entryUnprofitable,
+        holds: shockAdmissible && adverseContinuationNegative && restartUnprofitable && !p.suspension,
+        shockAdmissible, adverseContinuationNegative, restartUnprofitable,
         noSuspension: !p.suspension,
         note: "The displayed inequalities are sufficient conditions, not necessary conditions or a universal prediction."
       },
-      tieConvention: "Keep an incumbent operating at a tie; otherwise prefer suspension to closure at a tie. An inactive owner does not enter or restart at a tie."
+      tieConvention: "Keep an incumbent operating at a tie; otherwise prefer suspension to closure at a tie. A closed firm does not restart at a tie."
     };
   }
 
