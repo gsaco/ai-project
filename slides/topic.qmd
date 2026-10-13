@@ -672,7 +672,7 @@ Remain closed
 
 <h3>1 · Conditions</h3>
 
-Maintain the experiment and assumptions above. Improvement profit: $\pi_+=\pi(s_0+d,c_0)$.
+Maintain the experiment and assumptions above.
 
 :::
 
@@ -702,9 +702,9 @@ Future earnings cannot offset the loss from continuing during deterioration.
 
 <h3>Rebuilding is too costly</h3>
 
-$$\kappa>\pi_++\beta V$$
+$$\kappa>V$$
 
-An identical inactive owner would not enter even during improvement.
+Restarting costs more than the business is worth after restoration.
 
 :::
 

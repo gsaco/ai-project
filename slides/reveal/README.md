@@ -16,7 +16,7 @@ Slide 9 (`channels`) varies usable property `s` and institutional overhead `c`. 
 
 The initially active firm faces equal one-period shocks with `0 < d < s0` and `s0 + d <= 1`. Restoration is known and permanent from date 1. The experiment holds `c=c0`, technology, and prices fixed. Closing is free, preserves property, and dismantles the organization; financing is available and organization-preserving suspension is excluded. These conditions precede the switching decisions.
 
-The conditional input FOC is unchanged because rebuilding costs do not depend on input. The conjecture also requires `pi0 > 0`, `piMinus + beta*V < 0`, and `kappa > piPlus + beta*V`. The last inequality both prevents restart and excludes entry by an identical inactive owner. Outside this region the explorer still uses the full closure value `beta*max(V-kappa,0)`.
+The conditional input FOC is unchanged because rebuilding costs do not depend on input. The conjecture also requires `pi0 > 0`, `piMinus + beta*V < 0`, and `kappa > V`. The last inequality makes restarting unprofitable after restoration. Outside this region the explorer still uses the full closure value `beta*max(V-kappa,0)`.
 
 ## Build and verification
 

@@ -1615,7 +1615,7 @@ Net value of restarting: <span class="math inline">V-\kappa</span>
 <h3>
 1 · Conditions
 </h3>
-<p>Maintain the experiment and assumptions above. Improvement profit: <span class="math inline">\pi_+=\pi(s_0+d,c_0)</span>.</p>
+<p>Maintain the experiment and assumptions above.</p>
 </div>
 <div class="three conjecture-condition-cards">
 <div class="condition-card">
@@ -1636,8 +1636,8 @@ Continuation loses value
 <h3>
 Rebuilding is too costly
 </h3>
-<p><span class="math display">\kappa&gt;\pi_++\beta V</span></p>
-<p>An identical inactive owner would not enter even during improvement.</p>
+<p><span class="math display">\kappa&gt;V</span></p>
+<p>Restarting costs more than the business is worth after restoration.</p>
 </div>
 </div>
 <div class="two conjecture-results">
@@ -2950,20 +2950,11 @@ window.QuartoSupport = function () {
         : restart ? "restart" : "remain closed";
       const subsequentOutput = decision !== "close" || restart ? normal.q : 0;
       const output = timing.map(t => t === 0 ? (decision === "operate" ? conditional.q : 0) : subsequentOutput);
-      const entrantEnterValue = continueValue - p.kappa;
-      const entrantWaitValue = closeValue;
-      const entrantEnters = greater(entrantEnterValue, entrantWaitValue);
       const alternatives = [continueValue, closeValue].concat(p.suspension ? [suspendValue] : []);
       const tie = alternatives.filter(value => tied(value, chosenValue)).length > 1;
       return {
         key, direction, s, conditional, continueValue, closeValue, suspendValue,
-        chosenValue, decision, tie, restart, restartValue, restorationDecision, output,
-        entrant: {
-          enterValue: entrantEnterValue,
-          waitValue: entrantWaitValue,
-          enters: entrantEnters,
-          tie: tied(entrantEnterValue, entrantWaitValue)
-        }
+        chosenValue, decision, tie, restart, restartValue, restorationDecision, output
       };
     }
 
@@ -2982,7 +2973,7 @@ window.QuartoSupport = function () {
     };
     // The sufficient conditions use the same scenario profits as the slides.
     const adverseContinuationNegative = greater(0, paths.negative.continueValue);
-    const entryUnprofitable = greater(p.kappa, paths.positive.continueValue);
+    const restartUnprofitable = greater(p.kappa, V);
     const shockAdmissible = p.d > 0 && p.d < p.s0 && p.s0 + p.d <= 1;
     return {
       params: p, timing, normal, constants, paths,
@@ -2993,12 +2984,12 @@ window.QuartoSupport = function () {
         persistentLoss: greater(loss[1], 0)
       },
       conjecture: {
-        holds: shockAdmissible && adverseContinuationNegative && entryUnprofitable && !p.suspension,
-        shockAdmissible, adverseContinuationNegative, entryUnprofitable,
+        holds: shockAdmissible && adverseContinuationNegative && restartUnprofitable && !p.suspension,
+        shockAdmissible, adverseContinuationNegative, restartUnprofitable,
         noSuspension: !p.suspension,
         note: "The displayed inequalities are sufficient conditions, not necessary conditions or a universal prediction."
       },
-      tieConvention: "Keep an incumbent operating at a tie; otherwise prefer suspension to closure at a tie. An inactive owner does not enter or restart at a tie."
+      tieConvention: "Keep an incumbent operating at a tie; otherwise prefer suspension to closure at a tie. A closed firm does not restart at a tie."
     };
   }
 

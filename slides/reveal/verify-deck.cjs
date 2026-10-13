@@ -66,6 +66,7 @@ const {chromium} = require('playwright');
   assert.ok(await page.locator('#choice-close').evaluate(e=>e.classList.contains('chosen')));
   assert.ok(await page.locator('#choice-stay-closed').evaluate(e=>e.classList.contains('chosen')));
   assert.equal(await page.locator('#restart-options').isVisible(),true);
+  await setRange('shock-kappa',.2);s=await state();assert.equal(s.conjecture.holds,true);assert.equal(s.paths.negative.restorationDecision,'remain closed');
   await page.locator('#preset-free').click();s=await state();assert.equal(s.paths.negative.restart,true);assert.equal(s.comparison.loss[1],0);
   assert.equal(s.params.d,.2);
   assert.ok((await page.locator('#path-description').textContent()).includes('loss after restoration 0'));
