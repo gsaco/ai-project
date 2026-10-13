@@ -4,229 +4,245 @@
 
 [Mostrar la portada.]
 
-Voy a presentarles mi proyecto que corresponde al Track B.
+Voy a presentarles mi proyecto, que corresponde al Track B del curso.
 
 ## Slide 2. Why might losses exceed gains?
 
-[Tiempo orientativo: 00:10–01:30.]
+[Tiempo orientativo: 00:10–01:25.]
 
-[Señalar los ejes antes de comparar los paneles.]
+[Señalar los ejes y después los dos paneles.]
 
-Mi tesis estudia cómo responde el PIB real por habitante a mejoras y deterioros de igual tamaño en la libertad económica. Quiero evaluar si las respuestas tienen igual magnitud y signo contrario, lo que sería simetría, o si difieren en tamaño o duración.
+Mi tesis estudia cómo responde el PIB real por habitante a mejoras y deterioros de igual tamaño en la libertad económica. Quiero evaluar si las respuestas tienen igual magnitud y signo contrario en cada horizonte, lo que sería simetría, o si difieren en magnitud o persistencia.
 
-Utilizo el índice Economic Freedom of the World. Aquí muestro respuestas estimadas del PIB real por habitante: el eje horizontal indica los años posteriores al cambio y el vertical, la variación acumulada de su logaritmo. El panel izquierdo impone simetría; el derecho permite diferencias. Allí la caída estimada supera al aumento; las bandas representan intervalos de confianza.
+Utilizo el índice Economic Freedom of the World. En estos gráficos, el eje horizontal muestra los años posteriores al cambio. El vertical muestra la respuesta acumulada del logaritmo del PIB real por habitante.
 
-Esta evidencia motiva el proyecto, pero no identifica por sí sola el mecanismo. A mi tesis le falta un modelo explícito que conecte las condiciones institucionales con las decisiones de las empresas y con una posible asimetría.
+El panel izquierdo impone simetría. El derecho permite respuestas diferentes: la línea verde corresponde a mejoras y la roja, a deterioros. Aquí la caída estimada supera al aumento. Las bandas reflejan la incertidumbre de las estimaciones.
 
-La pregunta del proyecto es esta: ¿puede un deterioro temporal provocar una pérdida mayor y más persistente que la ganancia de una mejora equivalente, porque cerrar obliga a reconstruir la empresa? Plantearé las condiciones bajo las cuales espero obtener ese resultado.
+Esta evidencia motiva mi proyecto, pero no identifica por sí sola el mecanismo económico. Para desarrollarlo, estudiaré cómo un deterioro temporal puede llevar a una empresa a cerrar y cómo el costo de reconstruir su organización puede impedir que vuelva a producir. Ese es el modelo que propongo como base para mi tesis.
 
 ## Slide 3. From economic freedom to two firm-level channels
 
-[Tiempo orientativo: 01:30–03:55.]
+[Tiempo orientativo: 01:25–03:55.]
 
-[Recorrer brevemente las cinco áreas. Dedicar la mayor parte del tiempo a los dos ejemplos.]
+[Señalar las cinco áreas y después el canal s.]
 
-El índice va de cero a diez y reúne las cinco áreas de la tabla: tamaño del gobierno, sistema legal y derechos de propiedad, moneda sana, comercio internacional y regulación. Un valor mayor indica más libertad económica según sus criterios.
+Primero necesito conectar las condiciones para utilizar la propiedad, contratar e intercambiar con decisiones concretas de una empresa. El índice va de cero a diez y reúne cinco áreas: tamaño del gobierno, sistema legal y derechos de propiedad, moneda sana, libertad de comercio internacional y regulación. Un valor mayor indica más libertad económica según sus criterios.
 
-Para construir el modelo, recojo algunos efectos de esas instituciones mediante dos canales: la fracción de propiedad de la empresa disponible para producir, s, y el costo fijo institucional que paga por período de actividad, c. Voy a explicarlos con el mismo taller de muebles.
+Para construir el mecanismo, represento algunos efectos institucionales mediante dos canales. s es la fracción de propiedad de la empresa disponible para producir. c es el costo fijo institucional que paga en cada período de actividad.
 
-[Señalar s.]
+Pensemos en un taller de muebles con mil metros cuadrados igualmente aptos para producir. Las restricciones de uso le permiten trabajar en quinientos. Por tanto, s vale cero coma cinco.
 
-Supongamos que el taller tiene mil metros cuadrados igualmente aptos para producir, pero las restricciones de uso solo le permiten trabajar en quinientos. s vale cero coma cinco.
+Ahora una decisión arbitraria le impide utilizar otros doscientos metros y el sistema legal no restablece su acceso durante ese período. El taller sigue siendo propietario del local, pero solo puede utilizar trescientos metros: s baja a cero coma tres. Cuando recupera el acceso, vuelve a disponer de quinientos metros sin construir nada nuevo.
 
-Una decisión arbitraria le impide utilizar otros doscientos metros y el sistema legal no restablece su acceso durante ese período. El taller conserva la propiedad, pero solo tiene trescientos metros disponibles: s baja a cero coma tres. Al restituirse su derecho de uso, recupera los quinientos metros iniciales sin construir nada nuevo.
-
-Este ejemplo conecta con la protección efectiva de la propiedad. Tener el activo y poder utilizarlo son cosas distintas; s recoge esa disponibilidad para producir.
+Este ejemplo recoge la protección efectiva de la propiedad: conservar el título no garantiza poder utilizar el activo para producir.
 
 [Señalar c.]
 
-Ahora conservemos los quinientos metros disponibles. El taller presenta mensualmente información duplicada ante varias oficinas para seguir operando. Contrata ese servicio por quinientos soles, produzca diez muebles o cien. Una ventanilla única permite entregar los mismos datos una sola vez y reduce el honorario a trescientos soles.
+Para el segundo canal, mantengamos los quinientos metros disponibles. El taller debe presentar mensualmente información duplicada ante varias oficinas. Contrata ese servicio por quinientos soles, produzca diez muebles o cien. Una ventanilla única permite entregar los mismos datos una sola vez y reduce el honorario a trescientos soles.
 
-Ese ahorro de doscientos soles aumenta su beneficio. Si sigue operando y todo lo demás permanece constante, no cambia su producción óptima. Es el canal c, relacionado con las cargas burocráticas del área de regulación. La parte fija de una gestión aduanera recurrente puede funcionar de forma similar para una empresa exportadora. Un arancel por unidad no pertenece a c porque depende de la cantidad comerciada.
+Ese ahorro aumenta el beneficio en doscientos soles por mes. Como el gasto es independiente de la producción, no cambia la cantidad óptima mientras el taller siga operando y lo demás permanezca constante. Pero sí puede cambiar si le conviene seguir abierto.
 
-Incluyo ambos canales para distinguir una restricción al uso de los activos de un gasto fijo de operación. No representan todas las áreas del índice ni se convierten directamente en sus puntos. Para la comparación principal mantendré c constante y cambiaré únicamente s.
+Este es el canal c, vinculado a cargas burocráticas. También puede representar la parte fija de una gestión aduanera recurrente. Un arancel por unidad sería un costo variable y requeriría otro tratamiento.
+
+Incluyo ambos canales porque afectan de forma distinta la producción y la rentabilidad. No abarcan todo el índice ni equivalen a sus puntos. Para aislar el mecanismo, en el experimento principal cambiaré s y mantendré c constante.
 
 ## Slide 4. From usable property to production
 
-[Tiempo orientativo: 03:55–05:20.]
+[Tiempo orientativo: 03:55–05:15.]
 
-[Señalar cada símbolo al nombrarlo.]
+[Recorrer la cadena superior y después la función de producción.]
 
-Ahora traduzco el primer ejemplo a una ecuación. K barra representa el stock físico de propiedad del taller, que permanece fijo. s es la fracción utilizable, mayor que cero y menor o igual que uno. Su producto, s por k barra, es la cantidad de propiedad disponible para producir.
+Ahora traduzco el ejemplo a una ecuación. K barra es el stock físico de propiedad, positivo y fijo. s es la fracción utilizable, mayor que cero y menor o igual que uno. Su producto, s por k barra, es la propiedad disponible para producir.
 
-La función Cobb–Douglas combina esa propiedad con un insumo variable. q es la cantidad producida; A, positivo, representa la productividad; y x es el insumo ajustable, por ejemplo, horas de trabajo.
+La función Cobb–Douglas combina esa propiedad con un insumo variable. q es la producción. A, positivo, representa la productividad. x es el insumo ajustable, por ejemplo, horas de trabajo, y no puede ser negativo.
 
-Alfa está entre cero y uno y es la elasticidad de la producción respecto del insumo: aumentar x en uno por ciento eleva aproximadamente q en alfa por ciento, manteniendo lo demás constante. Uno menos alfa cumple ese papel para la propiedad utilizable. Con el mismo espacio, cada hora adicional de trabajo aporta menos que la anterior.
+Alfa está entre cero y uno. Es la elasticidad de la producción respecto de x: un aumento de uno por ciento en el insumo eleva aproximadamente la producción en alfa por ciento, manteniendo lo demás constante. Uno menos alfa es la elasticidad respecto de la propiedad utilizable. Con un espacio fijo, cada hora adicional aporta menos producción que la anterior.
 
-Mido la propiedad en unidades de su stock total, de modo que k barra vale uno. Queda q igual a A, por s elevado a uno menos alfa, por x elevado a alfa. También tomo el precio del producto como uno, así que producción e ingresos coinciden numéricamente. El cambio institucional afecta cuánto espacio puede aprovechar el taller.
+Mido la propiedad en unidades de su stock total, de modo que k barra vale uno. La función queda: A por s elevado a uno menos alfa, por x elevado a alfa. Tomo el precio del producto como uno, por lo que producción e ingresos coinciden numéricamente.
 
 ## Slide 5. One experiment, one changed assumption
 
-[Tiempo orientativo: 05:20–06:40.]
+[Tiempo orientativo: 05:15–06:35.]
 
-[Señalar kappa y después las tres trayectorias.]
+[Señalar los dos modelos y después la tabla.]
 
-El supuesto que voy a cambiar es el costo de reiniciar. Mi modelo base permite reabrir sin costo de reinicio: kappa vale cero. En la extensión, kappa es positivo: hay que reunir y capacitar nuevamente al equipo y reconstruir la organización. Es un costo hundido: una vez pagado, no se recupera al cerrar.
+Compararé un modelo base con una extensión. En el modelo base, reabrir no exige un costo de reinicio: kappa vale cero. En la extensión, kappa es positivo. Representa reunir y capacitar nuevamente al equipo y reconstruir las relaciones comerciales. Es un costo hundido: una vez pagado, no se recupera al cerrar.
 
-Mantengo iguales la tecnología, los precios, los otros costos y el cambio institucional para identificar qué predicción cambia al introducir kappa.
+La empresa empieza activa. t indica el período y el cambio institucional ocurre en cero. s subcero es la fracción normalmente utilizable; d es el tamaño del cambio. Comparo deterioro, s subcero menos d; ausencia de cambio, s subcero; y mejora, s subcero más d.
 
-La empresa empieza abierta. t indica el período y el cambio ocurre en cero. s subcero es la disponibilidad normal de propiedad; d es el tamaño del cambio. Comparo deterioro, s subcero menos d; ausencia de cambio, s subcero; y mejora, s subcero más d.
+d es positivo y menor que s subcero. Además, s subcero más d no supera uno. Así las tres fracciones son factibles.
 
-d es positivo y menor que s subcero. s subcero más d no supera uno. Así las tres disponibilidades son factibles.
+Desde el período uno, todas regresan permanentemente a s subcero. La empresa conoce esa recuperación desde el inicio. Mantengo c en c subcero y conservo la tecnología, los precios y los demás parámetros.
 
-Desde el período uno, todas regresan permanentemente a s subcero, como la empresa sabe desde el inicio. Mantengo c en c subcero. El financiamiento no limita las decisiones; cerrar no tiene costo directo y conserva la propiedad, pero desmantela la organización. Por ahora excluyo la suspensión que permite conservarla.
+El financiamiento está disponible. Cerrar no tiene costo directo y conserva la propiedad, pero desmantela la organización. Por ahora excluyo una suspensión que permita conservarla. Beta es el factor con el que la empresa descuenta sus beneficios futuros.
 
 ## Slide 6. The complete firm problem
 
-[Tiempo orientativo: 06:40–08:30.]
+[Tiempo orientativo: 06:35–08:15.]
 
 [Recorrer la ecuación de izquierda a derecha.]
 
-La empresa elige cuánto insumo utilizar y cuándo operar. a sub t indica el estado de actividad: uno si opera y cero si está cerrada. a sub menos uno vale uno porque empieza abierta. x sub t no puede ser negativo y debe ser cero cuando está cerrada.
+La empresa elige dos cosas en cada período: si opera y cuánto insumo utiliza. a sub t vale uno si opera y cero si está cerrada. a sub menos uno vale uno porque inicialmente está activa. x sub t es no negativo y debe ser cero si está cerrada.
 
-El máximo indica que elige la mejor secuencia de esas decisiones. La sumatoria reúne los beneficios netos descontados desde hoy hasta el infinito. Beta, entre cero y uno, es el factor de descuento: expresa beneficios futuros en valor presente. Beta elevado a t aplica ese descuento al período t.
+El máximo indica que elige la secuencia que genera el mayor valor. La sumatoria reúne los beneficios desde el período cero hasta el infinito. Beta está entre cero y uno: un beneficio del próximo período vale beta veces ese beneficio hoy. Beta elevado a t descuenta el beneficio del período t.
 
-Dentro del corchete, A por s sub t elevado a uno menos alfa, por x sub t elevado a alfa son los ingresos. Después resto w por x sub t: w es el precio positivo y constante del insumo; si utilizo horas de trabajo, es el pago por hora.
+Dentro del corchete, el primer término son los ingresos de la función de producción. Resto w por x sub t: w es el precio positivo y constante del insumo; si x son horas, w es el pago por hora.
 
-Luego resto F más c sub t, multiplicado por a sub t. F es el costo fijo ordinario de operar y es positivo. c es el gasto institucional recurrente del ejemplo y no puede ser negativo. Ambos son independientes de cuánto produce. Supongo que se evitan al cerrar, por eso los multiplico por a.
+Después resto F más c sub t, multiplicado por a sub t. F es el costo fijo ordinario, positivo. c es el costo institucional, no negativo. Ambos se pagan solo al operar y no dependen de cuánto se produce.
 
-Finalmente, kappa por a sub t, por uno menos a del período anterior resta el costo de reinicio solo al pasar de cerrada a abierta. Si ya operaba o permanece cerrada, ese término vale cero. c se paga cada período de actividad; kappa se paga al reiniciar. Son gastos distintos y afectan decisiones distintas.
+Finalmente, a sub t por uno menos a del período anterior vale uno únicamente cuando la empresa pasa de cerrada a activa. Al multiplicarlo por kappa, resto el costo de reinicio exactamente en esa transición.
+
+Resolveré este problema en dos pasos: primero cuánto producir si opera, y después si conviene operar, cerrar o reabrir.
 
 ## Slide 7. Restart costs leave the input FOC unchanged
 
-[Tiempo orientativo: 08:30–09:55.]
+[Tiempo orientativo: 08:15–09:40.]
 
-[Señalar primero pi y después la igualdad del valor del producto marginal con w.]
+[Señalar pi, la derivada y la condición de primer orden.]
 
-Resuelvo primero cuánto producir si el taller permanece abierto. Pi de s y c es el beneficio operativo máximo del período, antes del costo de reinicio: ingresos menos el gasto variable, F y c. Elijo el x no negativo que maximiza esa diferencia. Puedo hacerlo por separado en cada período porque el insumo de hoy no cambia las oportunidades futuras.
+Pi de s y c es el beneficio operativo máximo del período, antes de pagar cualquier reinicio. Para obtenerlo, elijo el x no negativo que maximiza los ingresos menos el gasto variable, F y c. Puedo resolverlo por separado porque el insumo de hoy no modifica las oportunidades futuras.
 
-Derivo respecto de x. Alfa por A, por s elevado a uno menos alfa, por x elevado a alfa menos uno es el valor del producto marginal del insumo: mide cuánto aumentan los ingresos, en el margen, al aumentar x. w es el costo por unidad de insumo.
+Al derivar respecto de x, obtengo alfa por A, por s elevado a uno menos alfa, por x elevado a alfa menos uno, y resto w.
 
-Si el aporte supera el costo, conviene aumentar x. Si es menor, conviene reducirlo. En el óptimo se igualan. Esa es la condición de primer orden, o FOC. El beneficio es estrictamente cóncavo en x: su pendiente disminuye. Con estos parámetros, la condición determina un máximo interior único, con x positivo.
+El primer término es el valor del producto marginal: cuánto aumentan los ingresos, en el margen, al aumentar el insumo. w es su costo por unidad. Si el aporte supera el costo, conviene aumentar x; si es menor, conviene reducirlo.
 
-F, c y kappa no dependen de x. Por eso la condición de primer orden que espero obtener es la misma en el modelo base y en la extensión. La predicción que puede cambiar corresponde a las decisiones de cierre y reapertura.
+Igualar ambos da la condición de primer orden, o FOC. La pendiente del beneficio disminuye con x: pasa de positiva a negativa y cruza cero una sola vez. Por eso obtengo un máximo único, con insumo positivo.
+
+F, c y kappa no dependen de x. La regla para elegir el insumo es la misma en el modelo base y en la extensión. El costo de reinicio puede cambiar la decisión de actividad, aunque esta condición no cambie.
 
 ## Slide 8. From optimal input to output and profit
 
-[Tiempo orientativo: 09:55–11:40.]
+[Tiempo orientativo: 09:40–11:10.]
 
-[Seguir las tres filas y terminar señalando y sub t.]
+[Seguir las tres filas y terminar en y sub t.]
 
-En la primera fila despejo x. x elevado a uno menos alfa es igual a alfa por A, por s elevado a uno menos alfa, dividido entre w. Elevo ambos lados a uno dividido entre uno menos alfa y obtengo x estrella de s. La estrella identifica el óptimo.
+En la primera fila despejo x. x elevado a uno menos alfa queda igual a alfa por A, por s elevado a uno menos alfa, dividido entre w. Elevo ambos lados a uno dividido entre uno menos alfa.
 
-El resultado es s multiplicado por el cociente alfa por A entre w, elevado a uno dividido entre uno menos alfa. Como A, alfa y w están fijos, x estrella es proporcional a s.
+Obtengo x estrella de s: s por el cociente alfa por A entre w, elevado a uno dividido entre uno menos alfa. La estrella indica que es el insumo óptimo. Como A, alfa y w están fijos, es proporcional a s.
 
-En la segunda fila sustituyo ese insumo en la producción. Queda s por A, por el mismo cociente elevado a alfa dividido entre uno menos alfa. Esta es q de s: la producción con el insumo óptimo. Es proporcional a s, por lo que cambios iguales y opuestos de s generan respuestas simétricas en el nivel de producción, siempre que la empresa siga operando.
+En la segunda fila sustituyo ese insumo en la producción. Obtengo q de s: s por A, por el mismo cociente elevado a alfa dividido entre uno menos alfa. La producción también es proporcional a s, una vez ajustado el insumo.
 
-En la tercera fila calculo el beneficio. Multiplicar la condición de primer orden por x estrella da w por x estrella igual a alfa por q. Queda la fracción uno menos alfa de los ingresos; a eso le resto F y c.
+En la tercera fila uso la condición de primer orden para calcular el beneficio. Al multiplicarla por x estrella, el gasto w por x estrella equivale a alfa por q. Por tanto, queda uno menos alfa de los ingresos, y resto F y c.
 
-Finalmente, y sub t es la producción efectiva: a sub t por q de s sub t. Si opera, produce q de s sub t; si está cerrada, produce cero. Aquí puede aparecer la asimetría: el deterioro puede provocar un cierre que elimine toda la producción, mientras la mejora solo la aumenta proporcionalmente.
+Mientras la empresa opere, cambios iguales y opuestos de s generan respuestas simétricas en el nivel de producción. Pero la producción efectiva, y sub t, es a sub t por q de s sub t. Si cierra, a vale cero y desaparece toda su producción. Esa decisión puede romper la simetría.
 
 ## Slide 9. Two channels, different effects
 
-[Tiempo orientativo: 11:40–12:50.]
+[Tiempo orientativo: 11:10–12:25.]
 
-[Pulsar “Reset to starting values” y después “Less usable property”.]
+[Pulsar “Reset to starting values”.]
 
-El gráfico permite ver la diferencia entre los ejemplos. El eje horizontal muestra el insumo x y el vertical, el beneficio operativo. El taller elige el punto más alto.
+El gráfico muestra el insumo en el eje horizontal y el beneficio operativo en el vertical. La empresa elige el punto más alto. En este ejemplo, ingresos de cero coma ochenta dejan un beneficio de apenas cero coma cero uno.
 
-Al perder acceso a parte del local, baja s. Para una misma cantidad de horas, disminuye el producto marginal del trabajo y conviene contratar menos horas. Disminuyen el insumo elegido, la producción y el beneficio.
+[Pulsar “Less usable property”.]
 
-[Pulsar “Higher overhead”, que restablece s y aumenta c.]
+Al bajar s, disminuye el producto marginal del trabajo para una misma cantidad de horas. Conviene contratar menos horas. Por eso caen el insumo óptimo, la producción y el beneficio.
 
-Ahora aumenta el gasto fijo de los trámites. La curva baja, pero su punto más alto conserva la misma posición horizontal: aumentar el insumo no cambia ese gasto fijo. La elección de insumo sigue igual mientras el taller opere.
+[Pulsar “Higher overhead”. Este botón restablece s y aumenta c.]
 
-Los indicadores muestran x estrella, q y pi; la cuenta inferior resta los gastos a los ingresos. Si el máximo beneficio es negativo, todavía falta decidir si conviene cerrar o soportar la pérdida para conservar el negocio.
+Ahora solo aumenta el costo fijo institucional. Toda la curva baja, pero el máximo conserva su posición horizontal. El taller produce la misma cantidad si sigue operando, aunque gana menos.
+
+Los indicadores muestran el insumo óptimo, la producción y el beneficio. La cuenta inferior descompone ingresos y costos. Incluso si el beneficio es negativo, aún falta comparar cerrar con soportar la pérdida para conservar el negocio. Esa es la decisión dinámica.
 
 ## Slide 10. Closure today and restarting later
 
-[Tiempo orientativo: 12:50–14:40.]
+[Tiempo orientativo: 12:25–14:15.]
 
-[Explicar V antes de comparar las dos decisiones.]
+[Explicar primero V y después las dos alternativas.]
 
-Pi subcero es el beneficio normal: pi evaluada en s subcero y c subcero. Supongo que es positivo. Pi menos es el beneficio durante el deterioro, con s subcero menos d y el mismo c subcero. El subíndice menos identifica el escenario adverso; por sí solo no indica que el beneficio sea negativo.
+Pi subcero es el beneficio operativo normal: pi evaluada en s subcero y c subcero. Supongo que es positivo. Pi menos es el beneficio durante el deterioro: evalúo la misma función en s subcero menos d y c subcero. El subíndice menos identifica ese escenario; no significa por sí solo que el beneficio sea negativo.
 
-V es el valor presente de los beneficios operativos de un taller ya activo en condiciones normales, incluido el período en que se calcula. Sumo pi subcero hoy, beta por pi subcero el próximo período y los beneficios descontados siguientes. Esa suma infinita converge a pi subcero dividido entre uno menos beta.
+V es el valor presente de los beneficios de una empresa ya activa en condiciones normales. Incluye el beneficio del período en que se calcula. Sumo pi subcero, beta por pi subcero y los beneficios descontados siguientes. Como beta está entre cero y uno, esa suma equivale a pi subcero dividido entre uno menos beta.
 
-Durante el deterioro, continuar vale pi menos más beta por V: el beneficio actual más el valor de conservar el negocio para la recuperación. Cerrar deja cero hoy y permite decidir el próximo período si reiniciar.
+Durante el deterioro, continuar vale pi menos más beta por V. Es el beneficio actual más el valor descontado de operar desde la recuperación.
 
-Por eso cerrar vale beta por el máximo entre V menos kappa y cero. V menos kappa es el valor neto de reabrir, calculado en ese próximo período. Cero es permanecer cerrado. El máximo selecciona la alternativa de mayor valor y beta la descuenta hasta hoy.
+Cerrar deja cero hoy. El próximo período la empresa puede reabrir, obteniendo V menos kappa, o permanecer cerrada, obteniendo cero. Por eso cerrar hoy vale beta por el máximo entre V menos kappa y cero. El máximo selecciona la mejor alternativa; beta la descuenta hasta hoy.
 
-Tras la recuperación, conviene reiniciar si V supera a kappa; si es menor, conviene seguir cerrado. Si son iguales, hay indiferencia. Esperar no vuelve rentable una reconstrucción que cuesta más que esos beneficios, porque las condiciones futuras permanecen constantes.
+Si V supera a kappa, conviene reabrir. Si kappa supera a V, conviene seguir cerrado. Si son iguales, hay indiferencia. Como las condiciones permanecen constantes, esperar descuenta el mismo valor neto: si es positivo, aplazarlo reduce su valor presente; si es negativo, sigue siendo negativo.
 
-Comparo todos los beneficios descontados con el costo de reconstrucción. Mantener una empresa activa evita volver a pagar kappa. Por eso operar puede ser rentable y, aun así, reiniciar después de un cierre puede no serlo.
+La distinción clave es esta: una empresa puede generar beneficios positivos al operar y, aun así, no generar lo suficiente para cubrir su reconstrucción. Por eso recuperar las condiciones institucionales no garantiza recuperar la producción.
 
 ## Slide 11. Conjecture: a temporary setback can cause a lasting loss
 
-[Tiempo orientativo: 14:40–16:40.]
+[Tiempo orientativo: 14:15–16:10.]
 
-[Leer cada condición y explicar su función. Hacer una pausa antes de la tabla.]
+[Leer las tres condiciones. Después señalar las decisiones y la tabla.]
 
-Con los supuestos anteriores, planteo tres condiciones suficientes. Delimitan un caso en el que aparece el mecanismo; no pretenden cubrir todos los casos posibles.
+Con los supuestos anteriores, planteo tres condiciones suficientes para obtener ese resultado.
 
-Primero, pi subcero es mayor que cero: el taller es rentable normalmente.
+Primero, pi subcero es mayor que cero. La empresa es rentable en condiciones normales.
 
-Segundo, pi menos más beta por V es menor que cero. La pérdida durante el deterioro supera el valor descontado de conservar el negocio para el futuro. Incluso sabiendo que habrá recuperación y disponiendo de financiamiento, el valor de continuar es negativo.
+Segundo, pi menos más beta por V es menor que cero. La pérdida actual supera los beneficios futuros descontados. Incluso con financiamiento y sabiendo que habrá recuperación, continuar tiene valor negativo.
 
-Tercero, kappa es mayor que V: reconstruir la organización cuesta más que el valor presente de los beneficios que generaría una vez recuperadas las condiciones normales. Por tanto, no conviene reiniciar y cerrar vale cero.
+Tercero, kappa es mayor que V. Reconstruir cuesta más que el valor presente de operar después de la recuperación. Reabrir no conviene y cerrar vale cero.
 
-Juntas, estas condiciones explican la decisión: durante el deterioro, continuar vale menos que cero y cerrar vale cero. El taller cierra y permanece cerrado. Ante la mejora o la ausencia de cambio, sigue abierto y no necesita reconstruirse.
+Juntas explican la decisión: ante el deterioro, continuar vale menos que cerrar. La empresa cierra y permanece cerrada. Sin cambio institucional, sigue operando porque es rentable. Con la mejora, sus beneficios aumentan y también permanece activa.
 
-En la tabla comparo ambas respuestas con la trayectoria sin cambio institucional: una producción constante q subcero, igual a q evaluada en s subcero. El cierre elimina q subcero completo. La mejora añade d dividido entre s subcero, por q subcero. Como d es menor que s subcero, la ganancia es menor que la pérdida.
+Ahora comparo pérdidas y ganancias respecto de la trayectoria sin cambio institucional. Su producción es q subcero, es decir, q evaluada en s subcero.
 
-En el taller, pasar de quinientos a setecientos metros utilizables aumenta la producción cuarenta por ciento mientras opere. Pero si perder doscientos metros provoca el cierre, desaparece toda su producción. El cambio de espacio tiene el mismo tamaño; la decisión de cerrar hace diferentes las respuestas.
+Durante el deterioro, el cierre elimina toda esa producción. La pérdida es q subcero. La mejora añade d dividido entre s subcero, multiplicado por q subcero. Esa fracción mide el aumento proporcional de la propiedad utilizable. Como d es menor que s subcero, la ganancia es menor que la pérdida.
 
-Mi conjetura es que, bajo estos supuestos, el deterioro produce una pérdida mayor que la ganancia de la mejora. Tras la recuperación, la ganancia desaparece y la pérdida persiste. Esa es la proposición que quiero demostrar.
+En nuestro taller, pasar de quinientos a setecientos metros utilizables aumenta la producción cuarenta por ciento. Si perder doscientos metros provoca el cierre, la pérdida es cien por ciento. Después de recuperar el acceso, la ganancia desaparece, pero la pérdida persiste porque reconstruir no resulta rentable.
+
+Esta es mi conjetura: bajo estas condiciones, el deterioro genera una pérdida mayor y más persistente que la ganancia de una mejora equivalente. Quiero convertir este argumento en una proposición formal.
 
 ## Slide 12. Institutions recover. Does production recover too?
 
-[Tiempo orientativo: 16:40–18:05.]
+[Tiempo orientativo: 16:10–17:45.]
 
-[Mostrar “Small shock”, “Free restart” y “Costly restart”, en ese orden.]
+[Señalar las dos partes del gráfico.]
 
-Este gráfico compara la predicción del modelo base con la de la extensión. Arriba está la propiedad utilizable; abajo, la producción, con nivel inicial cien. Son períodos ilustrativos del modelo.
+Arriba vemos la fracción de propiedad utilizable. Abajo, la producción, con nivel inicial cien. Comparo deterioro, ausencia de cambio y mejora. El eje horizontal distingue antes, durante y después del cambio; son períodos del modelo.
 
-Con un cambio pequeño, el taller permanece abierto: los beneficios futuros compensan la pérdida temporal.
+[Pulsar “Small shock”.]
 
-Con un deterioro mayor y reinicio gratuito, cierra durante el cambio y reabre al recuperarse las condiciones. Este es el resultado de referencia: recuperación completa.
+Con un cambio pequeño, la empresa permanece activa. La pérdida temporal se compensa con el valor de conservar el negocio. Las respuestas de producción son simétricas y todas regresan a cien.
 
-Mantengo ese deterioro e introduzco el costo de reinicio. Ahora cierra y permanece cerrado. El negocio recuperado vale cero coma diez y reconstruirlo cuesta cero coma cuarenta. Sería como pagar cuarenta mil soles para obtener beneficios futuros que, todos descontados, valen diez mil.
+[Pulsar “Free restart”.]
 
-Esta es la predicción que cambia: la recuperación completa puede convertirse en una pérdida persistente. La asimetría inicial puede existir incluso con reinicio gratuito; en esta comparación, introducir kappa impide la reapertura y hace persistente la pérdida.
+Con un deterioro mayor y reinicio gratuito, la empresa cierra durante el cambio y reabre al recuperarse las condiciones. La pérdida inicial supera a la ganancia, pero luego hay recuperación completa.
 
-El control d modifica s, no puntos del índice. Estos ejemplos ilustran las decisiones y permiten comprobar los cálculos, pero demostrar el resultado para todos los casos que cumplen los supuestos es parte del trabajo que propongo.
+[Pulsar “Costly restart”.]
+
+Mantengo el mismo cambio y aumento únicamente kappa. Ahora la empresa cierra y no reabre. V vale cero coma diez y kappa, cero coma cuarenta. Sería como pagar cuarenta mil soles para obtener beneficios cuyo valor presente es diez mil.
+
+Esta comparación identifica lo que cambia al introducir el costo de reinicio: el cierre ya podía generar asimetría inicial; ahora la pérdida también persiste.
+
+El control d mide cambios en la fracción utilizable, no puntos del índice de libertad económica. Estos casos ilustran el mecanismo. La demostración deberá establecerlo para todos los casos que cumplan los supuestos.
 
 ## Slide 13. Prior work and my proposed contribution
 
-[Tiempo orientativo: 18:05–19:25.]
+[Tiempo orientativo: 17:45–19:10.]
 
 [Señalar las referencias y después el alcance de la revisión.]
 
-Para precisar qué aporta el proyecto, revisé qué estaba resuelto en la literatura. Dixit, en 1989, ya explica por qué los costos hundidos pueden hacer que una empresa tolere pérdidas y que, una vez cerrada, no regrese aunque mejoren las condiciones. La persistencia asociada a costos hundidos es un mecanismo establecido.
+Para delimitar mi aporte, revisé la literatura. Dixit, en 1989, ya explica por qué una empresa puede tolerar pérdidas para evitar reconstruirse y por qué, una vez cerrada, puede no regresar aunque las condiciones mejoren. Ese mecanismo está establecido.
 
-Busqué también versiones y apéndices. El artículo señala que los apéndices A y B podían solicitarse al autor, pero no los incluye. Encontré la versión de trabajo de 1988 en el catálogo RePEc, sin texto descargable. No pude revisar esos materiales.
+También busqué versiones de trabajo y apéndices. El artículo menciona los apéndices A y B, disponibles a solicitud del autor, pero no los incluye. Encontré la versión de 1988 en el catálogo RePEc, sin texto descargable. Esos materiales quedaron fuera de la revisión.
 
-Entre los trabajos posteriores que citan el artículo, revisé Dixit de 1992 y su apéndice. Distingue suspender temporalmente de abandonar y reconstruir. Esa distinción identifica el principal riesgo de mi propuesta. Revisé además el resumen institucional de Roberts y Tybout, que reporta costos hundidos de entrada en la exportación.
+Entre los trabajos que citan el artículo, revisé Dixit de 1992, incluido su apéndice. Distingue suspender temporalmente de abandonar y reconstruir. Esa diferencia será central para evaluar mi modelo.
 
-Mi tarea es derivar, para este modelo, la comparación entre mejoras y deterioros iguales, y precisar qué cambia al introducir el costo de reinicio. La literatura respalda el mecanismo; debo establecer las decisiones y sus consecuencias bajo supuestos explícitos, y ampliar la revisión antes de afirmar originalidad.
+Revisé además el resumen institucional de Roberts y Tybout de 1997. Reporta costos hundidos de entrada a la exportación, aunque no prueba el mecanismo entre libertad económica y PIB que estudio.
+
+Mi aporte propuesto es aplicar el mecanismo a cambios institucionales de igual tamaño y recuperación conocida, y derivar las condiciones que producen respuestas diferentes. La revisión respalda esa base, pero no permite afirmar que la comparación sea original. Tendré que ampliarla y evaluar cuánto depende el resultado de mis supuestos.
 
 ## Slide 14. The mechanism and next steps
 
-[Tiempo orientativo: 19:25–20:55.]
+[Tiempo orientativo: 19:10–20:45.]
 
-[Señalar el plan. Volver al taller antes de cerrar.]
+[Recorrer el mecanismo y después los tres pasos del plan.]
 
-Propongo tres pasos de trabajo.
+El argumento tiene tres pasos: las instituciones afectan la rentabilidad; la rentabilidad influye en el cierre; y el costo de reinicio puede impedir la recuperación de la producción.
 
-Primero, completar la demostración a mano: establecer que el insumo elegido maximiza el beneficio, comparar continuar con cerrar, descartar una reapertura posterior más conveniente y derivar las desigualdades entre pérdidas y ganancias. El argumento que presenté es la base para esa proposición.
+Para desarrollar la propuesta, primero completaré la demostración a mano. Estableceré el insumo óptimo, compararé las decisiones de actividad, descartaré una reapertura posterior más conveniente y derivaré las desigualdades entre pérdidas y ganancias.
 
-Segundo, simular distintos márgenes de beneficio, tamaños y duraciones del cambio, y costos de reinicio. Distinguiré dónde la empresa sigue abierta, cierra y vuelve, o permanece cerrada.
+Segundo, simularé distintos márgenes de beneficio, tamaños y duraciones del cambio, y costos de reinicio. Así identificaré cuándo la empresa sigue activa, cuándo reabre y cuándo permanece cerrada.
 
-Tercero, usar Lean, un asistente de pruebas, para formalizar las identidades de valor, las reglas de actividad y las desigualdades de producción. Verificará que las conclusiones se siguen de los supuestos; su pertinencia económica debe evaluarse por separado.
+Tercero, formalizaré esas relaciones en Lean, un asistente de pruebas que verifica si las conclusiones se siguen de los supuestos. Incluiré las identidades de valor, las decisiones de actividad y las desigualdades de producción. La comparación en logaritmos requiere producción positiva. Para acercarme a la variable de mi tesis, trabajaré con producción agregada positiva, aunque algunas empresas cierren.
 
-El paso más frágil es suponer que cerrar desmantela la organización. Si el taller puede suspender la actividad a bajo costo y conservar su organización, podría reabrir sin reconstruirla y la pérdida persistente podría desaparecer. Esa será mi primera extensión. Después estudiaré diferencias entre empresas y si otras entran o se expanden para compensar la producción perdida, antes de vincular el resultado de una empresa con el PIB real por habitante.
+El supuesto más frágil es que cerrar desmantela la organización. Si suspender permite conservarla a bajo costo, la pérdida persistente podría desaparecer. Esa será mi primera extensión. Después incorporaré diferencias entre empresas y la posibilidad de que otras entren o se expandan, antes de vincular este mecanismo con el PIB real por habitante.
 
-Mi tesis mantiene abierta la pregunta sobre simetría. Para este proyecto propongo demostrar un mecanismo preciso: bajo ciertas condiciones, recuperar el derecho a producir no basta para recuperar la producción. Muchas gracias.
+Mi tesis mantiene abierta la pregunta sobre simetría. Este proyecto busca establecer cuándo recuperar las condiciones para producir puede ser insuficiente para recuperar la producción. Muchas gracias.
 
 ---
 
