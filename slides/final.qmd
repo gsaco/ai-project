@@ -101,7 +101,7 @@ Lima · November 11, 2026
 :::
 
 
-## Why might [losses]{.orange} exceed [gains]{.teal}? {#question .empirical-slide}
+## Why might [losses]{.orange} exceed [gains]{.teal}? (Average responses of 160 countries) {#question .empirical-slide}
 
 
 ::: {.kicker}
@@ -472,37 +472,6 @@ $$\kappa>0$$
 | Improvement | $s_0+d$ | $s_0$ |
 
 
-::: {.two .setup-assumptions}
-
-
-
-::: {}
-
-
-<h3>Same firm and known restoration</h3>
-
-Initially open; $0<d<s_0$, $s_0+d\leq1$. Restoration is permanent and known at date 0. Hold $c=c_0$ and other parameters fixed.
-
-
-:::
-
-
-
-::: {}
-
-
-<h3>What closure means</h3>
-
-Free closure preserves property but dismantles the organization. No organization-preserving suspension; financing is available. Profits are discounted by $0<\beta<1$.
-
-
-:::
-
-
-
-:::
-
-
 ## The complete [firm problem]{.teal} {#formal-problem}
 
 
@@ -686,13 +655,6 @@ The input FOC is unchanged by $\kappa$: restarting is independent of input, and 
 
 :::
 
-
-
-::: {.small}
-
-Maintain the model and matched paths: $A,w,F>0$, $c_0\geq0$, $0<\alpha,\beta<1$; initially open, $0<d<s_0$, $s_0+d\leq1$, and known permanent restoration at date one. Financing is available; closure is free, destroys the organization, and has no salvage or suspension option. No entry or reallocation.
-
-:::
 
 
 ::: {.three .conditions}
