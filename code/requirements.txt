@@ -1,4 +1,5 @@
 numpy
+# Runtime prerequisite: Node.js >=18 for browser-model checks invoked by verify.py.
 pandas
 sympy
 matplotlib

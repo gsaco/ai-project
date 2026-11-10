@@ -1,0 +1,124 @@
+{
+  "method": "110-dpi pixel comparison excluding bottom 6 percent containing footer; changed pages visually inspected separately",
+  "changed_pages": [
+    15,
+    23,
+    24
+  ],
+  "new_page": 29,
+  "unchanged_pages": 25,
+  "rows": [
+    {
+      "slide": 1,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 2,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 3,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 4,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 5,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 6,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 7,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 8,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 9,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 10,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 11,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 12,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 13,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 14,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 15,
+      "body_identical_to_previously_inspected_render": false
+    },
+    {
+      "slide": 16,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 17,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 18,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 19,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 20,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 21,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 22,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 23,
+      "body_identical_to_previously_inspected_render": false
+    },
+    {
+      "slide": 24,
+      "body_identical_to_previously_inspected_render": false
+    },
+    {
+      "slide": 25,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 26,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 27,
+      "body_identical_to_previously_inspected_render": true
+    },
+    {
+      "slide": 28,
+      "body_identical_to_previously_inspected_render": true
+    }
+  ]
+}

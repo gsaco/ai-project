@@ -1,0 +1,6 @@
+Command: LEAN_NUM_THREADS=1 lake env lean /Users/gabrielsaco/Documents/GitHub/ai-project/paper/audit/beta-zero-counterexample.lean
+Working directory: /tmp/efw-applied-final
+AppliedModelingLib commit: 194edcc95df74806a39b961d10dedddc6e730cce
+Exit code: 0
+Compiler output: empty (all four examples elaborated successfully).
+This is an AI-assisted machine check, not the author's handwritten evaluation.

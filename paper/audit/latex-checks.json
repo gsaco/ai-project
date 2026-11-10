@@ -1,0 +1,30 @@
+[
+  {
+    "source": "proposal/proposal.tex",
+    "exit_code": 0,
+    "passes": 2,
+    "pdf": "/Users/gabrielsaco/Documents/GitHub/ai-project/slides/build/compile-all/proposal/proposal.pdf",
+    "warnings": []
+  },
+  {
+    "source": "slides/topic.tex",
+    "exit_code": 0,
+    "passes": 2,
+    "pdf": "/Users/gabrielsaco/Documents/GitHub/ai-project/slides/build/compile-all/topic/topic.pdf",
+    "warnings": []
+  },
+  {
+    "source": "slides/final.tex",
+    "exit_code": 0,
+    "passes": 2,
+    "pdf": "/Users/gabrielsaco/Documents/GitHub/ai-project/slides/build/compile-all/final/final.pdf",
+    "warnings": []
+  },
+  {
+    "source": "paper/paper.tex",
+    "exit_code": 0,
+    "passes": 2,
+    "pdf": "/Users/gabrielsaco/Documents/GitHub/ai-project/slides/build/compile-all/paper/paper.pdf",
+    "warnings": []
+  }
+]

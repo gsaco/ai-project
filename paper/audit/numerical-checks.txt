@@ -1,0 +1,35 @@
+PASS The conditional optimum satisfies the FOC and the profit identity
+PASS The numerical illustration reproduces the proposed conjecture
+PASS Scenario profits and normal-output formulas match the simplified conjecture
+PASS Free restarting produces closure now and full recovery after restoration
+PASS Small shocks leave the firm active and produce symmetric level changes
+PASS Closure includes the option to reopen, even when continuing has positive value
+PASS Cheap suspension prevents persistent loss
+PASS Expensive suspension is rejected; availability alone does not imply use
+PASS Compliance affects profit, while legal access changes input and output
+PASS At the closure threshold the incumbent continues; restarting at zero is declined
+PASS Zero shock is admissible for the explorer but not a strict conjecture case
+PASS Invalid parameter regions produce actionable validation errors
+PASS Interactive and Python-exported PDF examples agree
+
+13 economic-model checks passed.
+PASS final browser/Python agreement: 168 parameter points and 151 suspension costs.
+PASS symbolic FOC
+PASS symbolic second derivative
+PASS closed form dominates a numerical input grid
+PASS illustrative output and profits
+PASS costly restarting: loss persists
+PASS free restarting: complete recovery
+PASS small shock: symmetric levels while active
+PASS overhead leaves input unchanged
+PASS optimal switching versus 324 enumerated scenario problems and conditional log comparison
+PASS cheap suspension defeats permanent closure in the illustration
+PASS closure threshold, weak asymmetry and independent five-date enumeration: 168 parameter points
+PASS delayed reopening: 200 dates plus never-restart, four restart costs
+PASS three topic cases reproduced
+PASS cheap suspension restores production; expensive suspension is rejected
+PASS suspension value comparison: 151 preservation costs
+PASS boundaries explicitly indifferent
+PASS a higher restart cost can discourage current closure
+PASS normal profit is positive and all proposition inequalities coexist
+10 original checks, 8 final check groups, and browser-model checks passed; final figures regenerated.

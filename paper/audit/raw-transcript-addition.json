@@ -1,0 +1,12 @@
+{
+  "supplied_date": "2026-11-09",
+  "source_filename": "Pasted text.txt",
+  "target": "prompts.md",
+  "operation": "Appended verbatim after two newline bytes; earlier content preserved byte for byte.",
+  "previous_bytes": 1616552,
+  "previous_sha256": "836a162e9d40bd350dff2bd30998ea5f49c5cfa4b626b5332e2a72ac92b1b777",
+  "appendix_offset_bytes": 1616554,
+  "attachment_bytes": 3122626,
+  "attachment_sha256": "953f02386e2a86e1a4de7f55b14d361ff40beb95d1c787e6ad6161ea0345c118",
+  "target_sha256": "9fc7b1118515bb55d75b563ad6bd436cfb70d323d910bdc2afc1febb09a0a5fa"
+}

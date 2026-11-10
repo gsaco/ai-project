@@ -1,0 +1,183 @@
+{
+  "schema": 1,
+  "paper": "Saco26InstitutionalRestart",
+  "namespace": "Saco26InstitutionalRestart",
+  "paper_interface_module": "",
+  "semantic_route_schema": 2,
+  "closeout_review_policy": {
+    "schema": 1,
+    "source_scope": "all_named_theory",
+    "repeat_final_scope": "main_primary",
+    "required_final_adversary_count": 1,
+    "scheduling": {
+      "initial_semantic_review": [],
+      "final_adversarial_review": []
+    }
+  },
+  "source_version": "November 8, 2026; GitHub merge a15ed978282156ba72928ad23940860cccda6f28",
+  "initialize_selected_source_claim_atoms": true,
+  "include_specs": [
+    "lemma1_operating_optimum",
+    "lemma2_restored_state_values_and_delays",
+    "proposition1_persistent_strict_asymmetry",
+    "proposition2_complete_closure_threshold",
+    "proposition3_cheap_suspension",
+    "corollary1_positive_totals_and_logs"
+  ],
+  "source_item_for_spec": {
+    "lemma1_operating_optimum": "lemma1_operating_optimum",
+    "lemma2_restored_state_values_and_delays": "lemma2_restored_state_values_and_delays",
+    "proposition1_persistent_strict_asymmetry": "proposition1_persistent_strict_asymmetry",
+    "proposition2_complete_closure_threshold": "proposition2_complete_closure_threshold",
+    "proposition3_cheap_suspension": "proposition3_cheap_suspension",
+    "corollary1_positive_totals_and_logs": "corollary1_positive_totals_and_logs"
+  },
+  "evidence_declaration_for_spec": {
+    "lemma1_operating_optimum": "Saco26InstitutionalRestart.lemma1_operating_optimum_proof",
+    "lemma2_restored_state_values_and_delays": "Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof",
+    "proposition1_persistent_strict_asymmetry": "Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetry_proof",
+    "proposition2_complete_closure_threshold": "Saco26InstitutionalRestart.proposition2_complete_closure_threshold_proof",
+    "proposition3_cheap_suspension": "Saco26InstitutionalRestart.proposition3_cheap_suspension_proof",
+    "corollary1_positive_totals_and_logs": "Saco26InstitutionalRestart.corollary1_positive_totals_and_logs_proof"
+  },
+  "add_source_items": {
+    "model_A1_A6_and_reduced_problem": {
+      "statement": "A1--A6 fix the technology, costs, binary activity and restart state, discounting and information, matched one-period shocks, and positive normal profit; after conditional input optimization the paper studies the displayed infinite-horizon reduced activity problem.",
+      "source_kind": "model",
+      "source_location": "source.tex:30-55; source.tex:71-72; source.tex:80-81",
+      "source_note": "Composite governing-model prerequisite for all six numbered claims; it also makes the full-program to reduced-program coverage boundary visible.",
+      "claim_bearing": true,
+      "lean_declarations": [
+        "Saco26InstitutionalRestart.Model",
+        "Saco26InstitutionalRestart.OperatingEnvironment"
+      ]
+    },
+    "suspension_extension_model": {
+      "statement": "The robustness extension adds a date-zero suspension action that produces zero, pays h instead of operating overhead, preserves the organization, and permits costless resumption at date one.",
+      "source_kind": "model",
+      "source_location": "source.tex:157",
+      "source_note": "The action and value semantics embedded inside Proposition 3's source presentation.",
+      "claim_bearing": true,
+      "lean_declarations": [
+        "Saco26InstitutionalRestart.ImpactAction",
+        "Saco26InstitutionalRestart.suspensionActionValue",
+        "Saco26InstitutionalRestart.IsUniqueBestImpactAction"
+      ]
+    },
+    "fixed_cohort_aggregation": {
+      "statement": "The corollary defines matched fixed-cohort totals as Y_t^j=B+N y_t^j and uses the same positive population divisor in every per-capita path.",
+      "source_kind": "model",
+      "source_location": "source.tex:163-168",
+      "source_note": "Aggregation and common-population definitions embedded in Corollary 1.",
+      "claim_bearing": true,
+      "lean_declarations": [
+        "Saco26InstitutionalRestart.cohortTotal",
+        "Saco26InstitutionalRestart.perCapitaTotal"
+      ]
+    },
+    "lemma1_operating_optimum": {
+      "statement": "Lemma 1: conditional on operating at s>0 under A1--A2, the unique global input optimum satisfies the displayed FOC, optimizer, output, and profit formulas, independently of restart cost.",
+      "source_kind": "lemma",
+      "source_location": "source.tex:58-67",
+      "source_note": "Complete source presentation of Lemma 1.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.lemma1_operating_optimumSpec"]
+    },
+    "lemma2_restored_state_values_and_delays": {
+      "statement": "Lemma 2: V is the active restored value, W=max(V-kappa,0) is the inactive value; restart or permanent inactivity is uniquely optimal on the strict sides, while every delay and never restarting tie at equality.",
+      "source_kind": "lemma",
+      "source_location": "source.tex:73-75",
+      "source_note": "Complete source presentation of Lemma 2, including arbitrary delayed restart.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.lemma2_restored_state_values_and_delaysSpec"]
+    },
+    "proposition1_persistent_strict_asymmetry": {
+      "statement": "Proposition 1: under positive normal profit, negative adverse continuation value, and kappa>V, adverse closure is permanent and unique, normal and favorable firms remain active, losses strictly exceed gains at every date, while the free-restart adverse firm reopens at date one and later gaps vanish.",
+      "source_kind": "proposition",
+      "source_location": "source.tex:82-93",
+      "source_note": "Complete source presentation of Proposition 1, including the free-restart baseline.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetrySpec"]
+    },
+    "proposition2_complete_closure_threshold": {
+      "statement": "Proposition 2: the adverse closure threshold is an iff with the displayed damage term, with reverse and equality cases, post-restoration behavior for all kappa/V regions, and weak loss-gain asymmetry under any optimal tie selection.",
+      "source_kind": "proposition",
+      "source_location": "source.tex:105-111",
+      "source_note": "Complete source presentation of Proposition 2.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.proposition2_complete_closure_thresholdSpec"]
+    },
+    "proposition3_cheap_suspension": {
+      "statement": "Proposition 3: under Proposition 1's strict conditions and 0<=h<beta V, the adverse firm uniquely suspends and resumes at date one, normal and favorable firms operate, the impact loss is q0, and all later loss and gain vanish.",
+      "source_kind": "proposition",
+      "source_location": "source.tex:156-158",
+      "source_note": "Complete source presentation of Proposition 3 and its date-zero suspension action.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.proposition3_cheap_suspensionSpec"]
+    },
+    "corollary1_positive_totals_and_logs": {
+      "statement": "Corollary 1: common positive B and N make all three cohort totals positive and the adverse log loss strictly exceed the favorable log gain at every date; the comparison also holds for common-population per-capita totals.",
+      "source_kind": "corollary",
+      "source_location": "source.tex:162-169",
+      "source_note": "Complete source presentation of Corollary 1.",
+      "claim_bearing": true,
+      "lean_declarations": ["Saco26InstitutionalRestart.corollary1_positive_totals_and_logsSpec"]
+    }
+  },
+  "source_semantic_declarations": {
+    "model_A1_A6_and_reduced_problem": [
+      "Saco26InstitutionalRestart.Model",
+      "Saco26InstitutionalRestart.OperatingEnvironment"
+    ],
+    "suspension_extension_model": [
+      "Saco26InstitutionalRestart.suspensionActionValue",
+      "Saco26InstitutionalRestart.suspendedThenResumedOutput"
+    ],
+    "fixed_cohort_aggregation": [
+      "Saco26InstitutionalRestart.cohortTotal",
+      "Saco26InstitutionalRestart.perCapitaTotal"
+    ]
+  },
+  "paper_semantic_prerequisite_sources": {
+    "Saco26InstitutionalRestart.Model": "model_A1_A6_and_reduced_problem",
+    "Saco26InstitutionalRestart.OperatingEnvironment": "model_A1_A6_and_reduced_problem",
+    "Saco26InstitutionalRestart.suspendedThenResumedOutput": "suspension_extension_model",
+    "Saco26InstitutionalRestart.suspensionActionValue": "suspension_extension_model",
+    "Saco26InstitutionalRestart.cohortTotal": "fixed_cohort_aggregation",
+    "Saco26InstitutionalRestart.perCapitaTotal": "fixed_cohort_aggregation"
+  },
+  "library_semantic_prerequisite_sources": {},
+  "semantic_context_requirements": {},
+  "model_convention_ids_by_source_item": {},
+  "source_named_result_inventory_review": {
+    "complete": true,
+    "validator": "Codex source-only inventory session efw-applied-final-2026-11-08",
+    "method": "Read the complete pinned TeX and rendered eight-page PDF; independently enumerated every numbered lemma, proposition, and corollary plus the governing A1--A6 model and reduced activity problem; cross-checked the six named environments with the repository extractor.",
+    "validated_at": "2026-11-08T21:55:50Z",
+    "prose_definition_presentations": [],
+    "candidate_presentations": [],
+    "source_region_partition": {
+      "complete": true,
+      "validator": "Codex source-only inventory session efw-applied-final-2026-11-08",
+      "method": "The paper has no appendix or supplement; the complete 198-line canonical TeX is one main-text region.",
+      "validated_at": "2026-11-08T21:55:50Z",
+      "regions": [
+        {"id": "main_paper", "kind": "main_text", "source_locator": "source.tex:1-198"}
+      ],
+      "source_item_regions": {
+        "model_A1_A6_and_reduced_problem": "main_paper",
+        "suspension_extension_model": "main_paper",
+        "fixed_cohort_aggregation": "main_paper",
+        "lemma1_operating_optimum": "main_paper",
+        "lemma2_restored_state_values_and_delays": "main_paper",
+        "proposition1_persistent_strict_asymmetry": "main_paper",
+        "proposition2_complete_closure_threshold": "main_paper",
+        "proposition3_cheap_suspension": "main_paper",
+        "corollary1_positive_totals_and_logs": "main_paper"
+      },
+      "candidate_presentation_regions": {},
+      "prose_definition_presentation_regions": {},
+      "promoted_source_items": []
+    }
+  }
+}

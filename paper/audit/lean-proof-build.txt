@@ -1,0 +1,192 @@
+⚠ [3316/3320] Replayed Saco26InstitutionalRestart.MainTheorems
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:278:4: The following tactic starts with 3 goals and ends with 3 goals, 2 of which are not operated on.
+  have hzero : ∀ t, discountedSlack pi beta kappa V W prior a t = 0 :=
+    by
+    intro t
+    change beta ^ t * bellmanSlack pi beta kappa (pi / (1 - beta)) (max (pi / (1 - beta) - kappa) 0) prior a t = 0
+    rw [hslack t, mul_zero]
+Please focus on the current goal, for instance using `·` (typed as "\.").
+
+Note: This linter can be disabled with `set_option linter.style.multiGoal false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:283:4: The following tactic starts with 3 goals and ends with 3 goals, 2 of which are not operated on.
+  have htsum : (∑' t, discountedSlack pi beta kappa V W prior a t) = 0 := by
+    calc
+      (∑' t, discountedSlack pi beta kappa V W prior a t) = ∑' _ : ℕ, (0 : ℝ) := tsum_congr hzero
+      _ = 0 := tsum_zero
+Please focus on the current goal, for instance using `·` (typed as "\.").
+
+Note: This linter can be disabled with `set_option linter.style.multiGoal false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:318:36: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysActive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:327:36: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysActive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:371:36: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysActive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:380:36: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysActive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:397:39: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysInactive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/MainTheorems.lean:406:39: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  simp [alwaysInactive,̵ ̵h̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3317/3320] Replayed Saco26InstitutionalRestart.Operating
+warning: papers/Saco26InstitutionalRestart/Operating.lean:136:15: This simp argument is unused:
+  Pi.sub_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [Pi.su̵b̵_̵a̵p̵p̵l̵y̵,̵ ̵P̵i̵.̵s̵mul_apply, smul_eq_mul, id_eq, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Operating.lean:136:29: This simp argument is unused:
+  Pi.smul_apply
+
+Hint: Omit it from the simp argument list.
+  simp only [Pi.sub_apply, P̵i̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵smul_eq_mul, id_eq, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Operating.lean:136:44: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  simp only [Pi.sub_apply, Pi.smul_apply, s̵m̵u̵l̵_̵e̵q̵_̵m̵u̵l̵,̵ ̵id_eq, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Operating.lean:136:57: This simp argument is unused:
+  id_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [Pi.sub_apply, Pi.smul_apply, smul_eq_mul, i̵d̵_̵e̵q̵,̵ ̵one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Operating.lean:135:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: papers/Saco26InstitutionalRestart/Operating.lean:136:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3318/3320] Replayed Saco26InstitutionalRestart.Results
+warning: papers/Saco26InstitutionalRestart/Results.lean:43:26: This simp argument is unused:
+  hW
+
+Hint: Omit it from the simp argument list.
+  simp [bellmanSlack, restoredPotential, periodPayoff, stateBefore,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵delayedRestart, hW̵,̵ ̵h̵eq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:51:34: This simp argument is unused:
+  hW
+
+Hint: Omit it from the simp argument list.
+  simp [bellmanSlack, restoredPotential, periodPayoff, stateBefore,
+  ̵  ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵ ̵delayedRestart, hp, hc,̵ ̵h̵W̵]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:55:36: This simp argument is unused:
+  hW
+
+Hint: Omit it from the simp argument list.
+  simp [bellmanSlack, restoredPotential, periodPayoff, stateBefore, delayedRestart, hp, hc,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲h̵W̵,̵ ̵heq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:176:33: This simp argument is unused:
+  Bool.true_eq
+
+Hint: Omit it from the simp argument list.
+  simp only [periodPayoff, B̵o̵o̵l̵.̵t̵r̵u̵e̵_̵e̵q̵,̵ ̵if_true, Bool.false_eq_true, Bool.not_true, Bool.true_and,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲if_false, sub_zero] at hav
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:215:63: This simp argument is unused:
+  Bool.not_false
+
+Hint: Omit it from the simp argument list.
+  simp only [periodPayoff, Bool.false_eq_true, if_false, B̵o̵o̵l̵.̵n̵o̵t̵_̵f̵a̵l̵s̵e̵,̵Bool.false_and, sub_self,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲zero_add] at hav
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:249:63: This simp argument is unused:
+  Bool.not_false
+
+Hint: Omit it from the simp argument list.
+  simp only [periodPayoff, Bool.false_eq_true, if_false, B̵o̵o̵l̵.̵n̵o̵t̵_̵f̵a̵l̵s̵e̵,̵Bool.false_and, sub_self,
+  ̲  ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲ ̲zero_add] at hav
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:511:24: This simp argument is unused:
+  impactUsableShare
+
+Hint: Omit it from the simp argument list.
+  simp [actualOutput, i̵m̵p̵a̵c̵t̵U̵s̵a̵b̵l̵e̵S̵h̵a̵r̵e̵,̵ ̵alwaysActive, alwaysInactive]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:514:24: This simp argument is unused:
+  impactUsableShare
+
+Hint: Omit it from the simp argument list.
+  simp [actualOutput, i̵m̵p̵a̵c̵t̵U̵s̵a̵b̵l̵e̵S̵h̵a̵r̵e̵,̵ ̵alwaysActive]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:518:24: This simp argument is unused:
+  impactUsableShare
+
+Hint: Omit it from the simp argument list.
+  simp [actualOutput, i̵m̵p̵a̵c̵t̵U̵s̵a̵b̵l̵e̵S̵h̵a̵r̵e̵,̵ ̵alwaysActive, closeThenRestart]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:604:12: This simp argument is unused:
+  impactUsableShare
+
+Hint: Omit it from the simp argument list.
+  simp [outputLoss, outputGain, actualOutput, hn, hf, alwaysActive, i̵m̵p̵a̵c̵t̵U̵s̵a̵b̵l̵e̵S̵h̵a̵r̵e̵,̵ ̵ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:623:10: This simp argument is unused:
+  impactUsableShare
+
+Hint: Omit it from the simp argument list.
+  simp [outputLoss, outputGain, actualOutput, hn, hf, alwaysActive, i̵m̵p̵a̵c̵t̵U̵s̵a̵b̵l̵e̵S̵h̵a̵r̵e̵,̵ ̵ha]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:604:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:604:63: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:623:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: papers/Saco26InstitutionalRestart/Results.lean:623:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3320 jobs).

@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-11-09T00:19:18.493401+00:00",
+  "reason": "Author requested a simpler, understandable deliverable if the code did not finish. The compiled proofs and completed preliminary reviews are retained; the extended review-graph acquisition was stopped before certification.",
+  "stopped_processes": [
+    7951,
+    29061,
+    29158,
+    29135
+  ],
+  "proof_or_source_files_changed": false,
+  "full_workflow_certified": false
+}

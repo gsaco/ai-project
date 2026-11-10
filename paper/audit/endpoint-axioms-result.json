@@ -1,0 +1,22 @@
+{
+  "command": "lake env lean -M 8192 -j 1 <ai-project>/paper/audit/endpoint-axioms.lean",
+  "exit_code": 0,
+  "endpoint_count": 6,
+  "reported_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sorryAx": false,
+  "custom_axioms": false,
+  "source_correspondence_verified_by_this_check": false,
+  "lean_source_sha256": {
+    "Assumptions.lean": "d5270e250660de20a8ddf27f58f8a09d32ca0af26e68cd27e4d1e2218fbe4539",
+    "MainTheorems.lean": "b57ec95bdc616a9793b36436a4b6b7a5a09bb9f5bcb5229ced3e0feed8a6efdb",
+    "Model.lean": "be264d5141411b727c02546f7f58501dce11466cf2a8b4c3232d21b6a198eea3",
+    "Operating.lean": "3178ff7b8382d443b9e53cfee0a7b788ca5d4e1c1f942dffca29124753ad77bc",
+    "PaperInterface.lean": "3250dfd49de238081f339444076ce58daa15e4fd5c33315bdd6cbc36e9aa14f2",
+    "ProofInterface.lean": "6185f63a8fdc03dea245a5b2133d1272a557a048923065bf50b28e2f4fd5f178",
+    "Results.lean": "39bf0ffdac2fd301b653c4773dd22bfa3578068371e67cfc66f19eea4a2047da"
+  }
+}

@@ -1,0 +1,16 @@
+'Saco26InstitutionalRestart.lemma1_operating_optimum_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetry_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition2_complete_closure_threshold_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition3_cheap_suspension_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.corollary1_positive_totals_and_logs_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
