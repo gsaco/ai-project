@@ -1,0 +1,11 @@
+{
+  "author": "Gabriel Saco",
+  "supplied_date": "2026-11-09",
+  "original_filename": "codex-clipboard-542e15b4-21d3-4b5b-bf1b-c32c1a411a83.png",
+  "saved_file": "handwritten-revision-2026-11-09.png",
+  "sha256": "613452fe5a11258229ee89be0f624af3a24cd54e37cf607ef461558cdf77e757",
+  "original_bytes_preserved": true,
+  "verdict_verbatim": "I accept it.",
+  "display_edits": "Presentation clipping and magnification only; no edits to the source photograph.",
+  "scope": "Restored value, upper bound over activity paths, immediate/delayed/never reopening, closure value and continuation-minus-closure comparison. The photograph explicitly ranks delays for V > kappa; it does not separately write out the V = kappa and V < kappa cases or the beta = 0 diagnostic."
+}

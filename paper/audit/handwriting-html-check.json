@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "slide": "handwritten",
+      "original_image_embedded_unchanged": true
+    },
+    {
+      "slide": "handwritten-original",
+      "original_image_embedded_unchanged": true
+    }
+  ],
+  "slides": 29,
+  "javascript_syntax_check": "passed",
+  "live_browser_preview": "blocked by file-URL policy; not executed",
+  "image_zoom_live_test": "not executed"
+}

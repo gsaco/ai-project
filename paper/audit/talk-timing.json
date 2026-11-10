@@ -1,0 +1,197 @@
+{
+  "planned_talk_seconds": 1800,
+  "discussion_seconds": 900,
+  "slides": [
+    {
+      "slide": 1,
+      "start": "0:00",
+      "end": "0:15",
+      "seconds": 15,
+      "spoken_words_approx": 39
+    },
+    {
+      "slide": 2,
+      "start": "0:15",
+      "end": "1:20",
+      "seconds": 65,
+      "spoken_words_approx": 123
+    },
+    {
+      "slide": 3,
+      "start": "1:20",
+      "end": "2:10",
+      "seconds": 50,
+      "spoken_words_approx": 112
+    },
+    {
+      "slide": 4,
+      "start": "2:10",
+      "end": "3:10",
+      "seconds": 60,
+      "spoken_words_approx": 141
+    },
+    {
+      "slide": 5,
+      "start": "3:10",
+      "end": "4:15",
+      "seconds": 65,
+      "spoken_words_approx": 132
+    },
+    {
+      "slide": 6,
+      "start": "4:15",
+      "end": "5:00",
+      "seconds": 45,
+      "spoken_words_approx": 80
+    },
+    {
+      "slide": 7,
+      "start": "5:00",
+      "end": "6:25",
+      "seconds": 85,
+      "spoken_words_approx": 160
+    },
+    {
+      "slide": 8,
+      "start": "6:25",
+      "end": "8:05",
+      "seconds": 100,
+      "spoken_words_approx": 165
+    },
+    {
+      "slide": 9,
+      "start": "8:05",
+      "end": "9:15",
+      "seconds": 70,
+      "spoken_words_approx": 147
+    },
+    {
+      "slide": 10,
+      "start": "9:15",
+      "end": "10:10",
+      "seconds": 55,
+      "spoken_words_approx": 98
+    },
+    {
+      "slide": 11,
+      "start": "10:10",
+      "end": "11:20",
+      "seconds": 70,
+      "spoken_words_approx": 132
+    },
+    {
+      "slide": 12,
+      "start": "11:20",
+      "end": "12:05",
+      "seconds": 45,
+      "spoken_words_approx": 94
+    },
+    {
+      "slide": 13,
+      "start": "12:05",
+      "end": "13:55",
+      "seconds": 110,
+      "spoken_words_approx": 187
+    },
+    {
+      "slide": 14,
+      "start": "13:55",
+      "end": "15:25",
+      "seconds": 90,
+      "spoken_words_approx": 173
+    },
+    {
+      "slide": 15,
+      "start": "15:25",
+      "end": "16:35",
+      "seconds": 70,
+      "spoken_words_approx": 143
+    },
+    {
+      "slide": 16,
+      "start": "16:35",
+      "end": "17:15",
+      "seconds": 40,
+      "spoken_words_approx": 102
+    },
+    {
+      "slide": 17,
+      "start": "17:15",
+      "end": "18:30",
+      "seconds": 75,
+      "spoken_words_approx": 125
+    },
+    {
+      "slide": 18,
+      "start": "18:30",
+      "end": "20:00",
+      "seconds": 90,
+      "spoken_words_approx": 154
+    },
+    {
+      "slide": 19,
+      "start": "20:00",
+      "end": "21:30",
+      "seconds": 90,
+      "spoken_words_approx": 143
+    },
+    {
+      "slide": 20,
+      "start": "21:30",
+      "end": "23:10",
+      "seconds": 100,
+      "spoken_words_approx": 175
+    },
+    {
+      "slide": 21,
+      "start": "23:10",
+      "end": "24:20",
+      "seconds": 70,
+      "spoken_words_approx": 153
+    },
+    {
+      "slide": 22,
+      "start": "24:20",
+      "end": "25:30",
+      "seconds": 70,
+      "spoken_words_approx": 163
+    },
+    {
+      "slide": 23,
+      "start": "25:30",
+      "end": "26:40",
+      "seconds": 70,
+      "spoken_words_approx": 168
+    },
+    {
+      "slide": 24,
+      "start": "26:40",
+      "end": "27:55",
+      "seconds": 75,
+      "spoken_words_approx": 165
+    },
+    {
+      "slide": 25,
+      "start": "27:55",
+      "end": "29:10",
+      "seconds": 75,
+      "spoken_words_approx": 192
+    },
+    {
+      "slide": 26,
+      "start": "29:10",
+      "end": "29:50",
+      "seconds": 40,
+      "spoken_words_approx": 87
+    },
+    {
+      "slide": 27,
+      "start": "29:50",
+      "end": "30:00",
+      "seconds": 10,
+      "spoken_words_approx": 19
+    }
+  ],
+  "note": "Thirty-minute plan with 27 main slides and three backups. Slide 9 consolidates A1\u2013A6 and the strict result conditions; its 70 seconds replace repeated explanations on the experiment and proposition slides.",
+  "spoken_words_approx": 3572
+}

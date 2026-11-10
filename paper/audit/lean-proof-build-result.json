@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/opt/homebrew/bin/lake",
+    "build",
+    "+Saco26InstitutionalRestart"
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T00:26:32.430626+00:00",
+  "elapsed_seconds": 3.26,
+  "timeout": false,
+  "full_semantic_certification": false
+}

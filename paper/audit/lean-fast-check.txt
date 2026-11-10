@@ -1,0 +1,3 @@
++ lake build +Saco26InstitutionalRestart.PaperInterface
+Build completed successfully (3315 jobs).
++ git diff --check -- papers/Saco26InstitutionalRestart papers/Saco26InstitutionalRestart.lean lakefile.toml ':(exclude)papers/Saco26InstitutionalRestart/source/'

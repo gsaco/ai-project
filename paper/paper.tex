@@ -179,7 +179,7 @@ The proofs of Lemmas~\ref{lem:input}--\ref{lem:value}, Propositions~\ref{prop:ma
 
 Formal verification is a separate claim. The formalization run uses a pinned GitHub commit of this paper, the AppliedModelingLib procedure, and a paper-scoped check. The exact source hash, declarations, results of commands, and additional assumptions or open endpoints are recorded in \texttt{lean/} and \texttt{paper/audit/}. No theorem is described as Lean-verified solely because it has a Lean-like statement on a slide. An algebraic result conditional on value identities does not by itself verify the underlying optimization or infinite-horizon argument.
 
-\textbf{Author adjudication.} The selected AI-assisted step is the closure value $\beta\max\{V-\kappa,0\}$. The independent worksheet in \texttt{hand/final/} asks for the geometric sum, every possible first restart date, the never-restart option, and the conversion from date-one to date-zero value. The author's handwritten work and verdict must be supplied by the author. Until then, the final deck labels this component as awaiting those materials.
+\textbf{Author adjudication.} I initially suspected an error in the max--min equivalence used to compare continuing and closing. My handwritten derivation recovered the same value in both forms, so my verdict is ``I accept it.'' The original page, supplied November 9, and my clarification of this doubt, supplied November 10, are included in the final-presentation record in \texttt{hand/final/}. The full handwritten appendix and assessments of the other AI contributions remain open.
 
 \section{Questions for discussion}
 \begin{enumerate}
@@ -195,4 +195,37 @@ The model makes a precise conditional statement. Input choices have a standard u
 \bibitem{dixit92} Dixit, A. K. (1992). Investment and hysteresis. \emph{Journal of Economic Perspectives}, 6(1), 107--132. \href{https://doi.org/10.1257/jep.6.1.107}{doi:10.1257/jep.6.1.107}.
 \bibitem{efw} Lawson, R., Murphy, R., and Mitchell, M. D. (2025). Economic Freedom of the World: 2025 Annual Report. Fraser Institute.
 \end{thebibliography}
+
+\newpage
+\appendix
+\section{Lean coverage and reproducible checks}
+The formalization uses the eight-page paper merged at
+\href{https://github.com/gsaco/ai-project/tree/a15ed978282156ba72928ad23940860cccda6f28}{commit \texttt{a15ed978}}. This appendix reports the outcome; the mathematical body and its assumptions are unchanged from that identified version.
+
+\textbf{What is proved.} The six transparent formal statements below have compiled proofs. They cover the conditional input problem and the reduced infinite-horizon activity problem, including arbitrary activity paths and delayed reopening. No additional economic hypothesis was introduced. In particular, $0<\beta<1$ is already assumption A4. The namespace is \texttt{Saco26InstitutionalRestart}; all listed endpoints are in \path{lean/ProofInterface.lean}, and their full statements are in \path{lean/PaperInterface.lean}.
+
+\begin{center}\small
+\begin{tabular}{@{}p{.19\textwidth}p{.57\textwidth}p{.17\textwidth}@{}}
+\toprule
+Paper result & Lean endpoint in \texttt{ProofInterface.lean} & Status\\\midrule
+Lemma 1 & \path{lemma1_operating_optimum_proof} & Proved\\[5pt]
+Lemma 2 & \path{lemma2_restored_state_values_and_delays_proof} & Proved\\[5pt]
+Proposition 1 & \path{proposition1_persistent_strict_asymmetry_proof} & Proved\\[5pt]
+Proposition 2 & \path{proposition2_complete_closure_threshold_proof} & Proved\\[5pt]
+Proposition 3 & \path{proposition3_cheap_suspension_proof} & Proved\\[5pt]
+Corollary 1 & \path{corollary1_positive_totals_and_logs_proof} & Proved\\\bottomrule
+\end{tabular}
+\end{center}
+Here ``proved'' describes the formal counterpart within this stated scope, not completed certification of every source-to-Lean correspondence. The main proof developments are \path{lean/Operating.lean}, \path{lean/MainTheorems.lean}, and \path{lean/Results.lean}.
+
+\textbf{Open formalization obligation.} The reduction from joint input/activity problem~\eqref{eq:full} to reduced activity problem~\eqref{eq:reduced} has not been proved in Lean. In particular, arbitrary unoptimized plans with infinite discounted losses are not represented by the checked reduction. The conditional optimizer and the reduced dynamic problem are verified separately. This is a missing formal connection, not a new economic restriction or a counterexample to the paper's argument.
+
+\textbf{Executed checks.} The full paper target compiled, and an independent axiom inspection found no \texttt{sorryAx} or custom axiom in the six endpoints. The required command
+\begin{quote}\small\ttfamily
+python3 scripts/paper\_contribution.py check\\
+Saco26InstitutionalRestart -{}-fast
+\end{quote}
+passed with exit code zero on November 8, 2026 (Lima). This fast check does not perform the full source-correspondence audit. A preliminary independent review found no mismatch in its twelve reviewed statements and definitions, but the extended audit was stopped before terminal certification. The development remains partially formalized.
+
+The run used AppliedModelingLib base \texttt{194edcc9}, \texttt{gpt-5.6-sol} at \texttt{xhigh}, and Lean \texttt{v4.30.0-rc2}. The entire generated paper folder is copied to \texttt{lean/}; its ignore rules are preserved. Exact source hashes, build and check output, the local environment patch, and a copy manifest are retained in \path{paper/audit/}. My handwritten derivation and acceptance were supplied separately on November 9. The full handwritten appendix and remaining personal assessments are still open.
 \end{document}

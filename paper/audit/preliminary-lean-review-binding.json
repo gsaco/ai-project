@@ -1,0 +1,9 @@
+{
+  "role": "Independent draft repair screen; not an accepted semantic audit or source-correspondence receipt",
+  "bundle_sha256": "d7cae4be9352d7acb2bd3952929d3c44a02feae97365ec08c7456b0f5c56849d",
+  "report_sha256": "f2ceb7eb6a1338721e83218a0cf479b82cc9853e1ce5b4748ab0595001513d13",
+  "matches": 12,
+  "mismatches": 0,
+  "uncertain": 0,
+  "needs_maintainer_clarification": 0
+}

@@ -1,0 +1,1 @@
+import Saco26InstitutionalRestart.ProofInterface

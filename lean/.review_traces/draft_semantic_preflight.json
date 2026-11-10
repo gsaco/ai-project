@@ -1,0 +1,474 @@
+{
+  "acceptance_credential": false,
+  "lean_dependency_support": {
+    "library_declarations": {},
+    "paper_declarations": {
+      "Saco26InstitutionalRestart.ActivityPath": {
+        "declaration_kind": "definition",
+        "display": "type:\nType\n\nvalue:\n\u2115 \u2192 Bool",
+        "display_sha256": "4f60efc61e1203200d86c0749a50edc6a155ff9dda812a4d8360f29b92b9236c",
+        "elaborated_signature_sha256": "5276e61014f721bc84252bb4446e4c5640fae0d11c75e8a78a85329d9ebcdf4c",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.ImpactAction": {
+        "declaration_kind": "non_definition",
+        "display": "type:\nType\n\nconstructor Saco26InstitutionalRestart.ImpactAction.operate:\nSaco26InstitutionalRestart.ImpactAction\n\nconstructor Saco26InstitutionalRestart.ImpactAction.close:\nSaco26InstitutionalRestart.ImpactAction\n\nconstructor Saco26InstitutionalRestart.ImpactAction.suspend:\nSaco26InstitutionalRestart.ImpactAction",
+        "display_sha256": "9b24655d8d93aef5af17f86343207e0e743e2e5aeb7edc1a2c76e57a6d80c4fa",
+        "elaborated_signature_sha256": "0201e3c4c3c9d08f2f2ee6a49336d7ee936253be4dce47ebd7e6c2c4fdabf9b4",
+        "root_expanded": false
+      },
+      "Saco26InstitutionalRestart.IsShockOptimal": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 Prop\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ActivityPath) =>\n  \u2200 (b : Saco26InstitutionalRestart.ActivityPath),\n    Saco26InstitutionalRestart.shockPathValue m j b \u2264 Saco26InstitutionalRestart.shockPathValue m j a",
+        "display_sha256": "a850c365bb261ddef7a61ff73588303211069ffb21ad5aa18e55e3e152f5a3a3",
+        "elaborated_signature_sha256": "d9b8979cc01bc77b5eb722c74c68fff28abbea1dfe4e71d89c97458b1d54db84",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.IsUniqueBestImpactAction": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d \u2192 Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ImpactAction \u2192 Prop\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (h : \u211d) (j : Saco26InstitutionalRestart.Shock)\n    (choice : Saco26InstitutionalRestart.ImpactAction) =>\n  \u2200 (other : Saco26InstitutionalRestart.ImpactAction),\n    Saco26InstitutionalRestart.suspensionActionValue m h j other \u2264\n        Saco26InstitutionalRestart.suspensionActionValue m h j choice \u2227\n      (Saco26InstitutionalRestart.suspensionActionValue m h j other =\n          Saco26InstitutionalRestart.suspensionActionValue m h j choice \u2192\n        other = choice)",
+        "display_sha256": "849b9e102ddc252619a5d21386f3baba0c74f88a291cf6e238d98572ad48edcf",
+        "elaborated_signature_sha256": "e4c05e7d6c06f79b9a15917b05795087ce2280a1dea4f102834fa1e69821d062",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.Model.withKappa": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 (k : \u211d) \u2192 0 \u2264 k \u2192 Saco26InstitutionalRestart.Model\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (k : \u211d) (hk : 0 \u2264 k) =>\n  { A := m.A, w := m.w, F := m.F, c0 := m.c0, alpha := m.alpha, s0 := m.s0, d := m.d, beta := m.beta, kappa := k,\n    A_pos := m.A_pos, w_pos := m.w_pos, F_pos := m.F_pos, c0_nonneg := m.c0_nonneg, alpha_pos := m.alpha_pos,\n    alpha_lt_one := m.alpha_lt_one, s0_pos := m.s0_pos, d_pos := m.d_pos, d_lt_s0 := m.d_lt_s0,\n    s0_add_d_le_one := m.s0_add_d_le_one, beta_pos := m.beta_pos, beta_lt_one := m.beta_lt_one, kappa_nonneg := hk }",
+        "display_sha256": "67e58a8139f5ec8481dfea5a5934681e229abcf3952ba0b7b39497f3cf2629dd",
+        "elaborated_signature_sha256": "601bad73e15088f2683a51998f2a2c88316e58b4b9ecdd0520ea87e684e5de6c",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.NormallyViable": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Prop\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => 0 < Saco26InstitutionalRestart.pi0 m",
+        "display_sha256": "7308bf8982050ebb8b83be7d4b4ba0c160642b19431e0ae85fcaabc2b58416cf",
+        "elaborated_signature_sha256": "b0085f62a27aab63a55c36bc61a8c8f47e8e31acb829caea2a7766844ae53370",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.OptimalProfile": {
+        "declaration_kind": "non_definition",
+        "display": "field adverse:\n{m : Saco26InstitutionalRestart.Model} \u2192\n  Saco26InstitutionalRestart.OptimalProfile m \u2192 Saco26InstitutionalRestart.ActivityPath\n\nfield unchanged:\n{m : Saco26InstitutionalRestart.Model} \u2192\n  Saco26InstitutionalRestart.OptimalProfile m \u2192 Saco26InstitutionalRestart.ActivityPath\n\nfield favorable:\n{m : Saco26InstitutionalRestart.Model} \u2192\n  Saco26InstitutionalRestart.OptimalProfile m \u2192 Saco26InstitutionalRestart.ActivityPath\n\nfield adverse_optimal:\n\u2200 {m : Saco26InstitutionalRestart.Model} (self : Saco26InstitutionalRestart.OptimalProfile m),\n  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse self.adverse\n\nfield unchanged_optimal:\n\u2200 {m : Saco26InstitutionalRestart.Model} (self : Saco26InstitutionalRestart.OptimalProfile m),\n  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.unchanged self.unchanged\n\nfield favorable_optimal:\n\u2200 {m : Saco26InstitutionalRestart.Model} (self : Saco26InstitutionalRestart.OptimalProfile m),\n  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.favorable self.favorable",
+        "display_sha256": "7eb0c5734f5332b0d4accaf54af1c61eadc4043ef4fc0650020e7c4f22c80a16",
+        "elaborated_signature_sha256": "a94ac6134c4924d3e220d9109e402db50b94d5c468a973356e58da2bcf94e624",
+        "root_expanded": false
+      },
+      "Saco26InstitutionalRestart.Shock": {
+        "declaration_kind": "non_definition",
+        "display": "type:\nType\n\nconstructor Saco26InstitutionalRestart.Shock.adverse:\nSaco26InstitutionalRestart.Shock\n\nconstructor Saco26InstitutionalRestart.Shock.unchanged:\nSaco26InstitutionalRestart.Shock\n\nconstructor Saco26InstitutionalRestart.Shock.favorable:\nSaco26InstitutionalRestart.Shock",
+        "display_sha256": "defa15d66521bb99c47db9c02a5075eef3e81d108fb9345cb3d04c5a8bb7e05b",
+        "elaborated_signature_sha256": "0201e3c4c3c9d08f2f2ee6a49336d7ee936253be4dce47ebd7e6c2c4fdabf9b4",
+        "root_expanded": false
+      },
+      "Saco26InstitutionalRestart.activeValue": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => Saco26InstitutionalRestart.pi0 m / (1 - m.beta)",
+        "display_sha256": "3a0ae291e80c845871fdcc3fed969126abd820c4b5853fba626e9fa52e39071c",
+        "elaborated_signature_sha256": "b9481c8853223512026a7e80f167b964444066b5edb2afda59e23af54d63b3d3",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.actualOutput": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ActivityPath) (t : \u2115) =>\n  if a t = true then\n    Saco26InstitutionalRestart.operatingOutput m\n      (if t = 0 then Saco26InstitutionalRestart.impactUsableShare m j else m.s0)\n  else 0",
+        "display_sha256": "f0936126b51837d1dfd7037dd80928ba42a14ea21ef638f1e3915f95418e327b",
+        "elaborated_signature_sha256": "b0de0a260972981fe74da10acd68aabb3c9e0013d9a04e631e62596e6b0d5f15",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.alwaysActive": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u2115 \u2192 Bool\n\nvalue:\nfun (a : \u2115) => true",
+        "display_sha256": "3f55b20bb757924036bf36495134ae1b31b3f139e575e916b32607da02a39450",
+        "elaborated_signature_sha256": "64b3f05b8d5ef93df55203046f467f3828b5ea87a3d989601e3181411b45cc88",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.alwaysInactive": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u2115 \u2192 Bool\n\nvalue:\nfun (a : \u2115) => false",
+        "display_sha256": "db2a644f5214e1ba5981fc168c6637d886b59647b8e067e01f111276c5f6a418",
+        "elaborated_signature_sha256": "3501ba4ecea579014fce5ea0dad4cc3912ec3230967740fa5ef22837238811de",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.closeThenRestart": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u2115 \u2192 Bool\n\nvalue:\nfun (a : \u2115) =>\n  match a with\n  | 0 => false\n  | n.succ => true",
+        "display_sha256": "8ebdf0198ad7bf33ce993ada543e070d3fb8a3976213d3dc4773ff9f2f7eda79",
+        "elaborated_signature_sha256": "bf24498519ea5e86d595eedad4e47af9d9d54ad1e6431bf22afb4d2de7b5c6d4",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.delayedRestart": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u2115 \u2192 \u2115 \u2192 Bool\n\nvalue:\nfun (n a : \u2115) => decide (n \u2264 a)",
+        "display_sha256": "58cbf979bc81f80f618b1672481e698c646bea575bdf1155348f4872085502c7",
+        "elaborated_signature_sha256": "52bfee6c86ed54f0bba9d8b016285d054da9971b57b9869b79a27f5bd2156e9d",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.impactClosureValue": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => m.beta * Saco26InstitutionalRestart.inactiveValue m",
+        "display_sha256": "da289317e93d49dfb50606547eaede9e07700c49d39f28ce08a3a81ed6a72e30",
+        "elaborated_signature_sha256": "dfde5f35bc6e9d16475c0de62febb02e0530622bfa9fb35437ef4fba469bc8ab",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.impactContinueValue": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock) =>\n  Saco26InstitutionalRestart.impactProfit m j + m.beta * Saco26InstitutionalRestart.activeValue m",
+        "display_sha256": "ba1b4a26da2fda551d75731f072eaadd24369fb6fdffca99249b3cbfc02a3076",
+        "elaborated_signature_sha256": "732a3e332365e2e56bdb87d3fee9ad0af40aff048ff1cc242a60875cae1a0ce8",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.impactProfit": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (a : Saco26InstitutionalRestart.Shock) =>\n  match a with\n  | Saco26InstitutionalRestart.Shock.adverse => Saco26InstitutionalRestart.piMinus m\n  | Saco26InstitutionalRestart.Shock.unchanged => Saco26InstitutionalRestart.pi0 m\n  | Saco26InstitutionalRestart.Shock.favorable => Saco26InstitutionalRestart.piPlus m",
+        "display_sha256": "fec14cc963fa2724fdcf82559b9cd2fd43b87395f9f516012f1b57e15a4c83c6",
+        "elaborated_signature_sha256": "ede24664d2fb2fb8e416aa580fe8ba529f4f51b1652e0b18162832c0b22fc876",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.impactUsableShare": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (a : Saco26InstitutionalRestart.Shock) =>\n  match a with\n  | Saco26InstitutionalRestart.Shock.adverse => m.s0 - m.d\n  | Saco26InstitutionalRestart.Shock.unchanged => m.s0\n  | Saco26InstitutionalRestart.Shock.favorable => m.s0 + m.d",
+        "display_sha256": "0ea8e46067e04b0c0dae8c0c5f4637138d9cc5b943238fb39b244ccf9db77bb0",
+        "elaborated_signature_sha256": "bc3ee47d33f732e674b2f819b6ab35e675e5eb8b86cc3199c6d85777547a2a56",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.inactiveValue": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => max (Saco26InstitutionalRestart.activeValue m - m.kappa) 0",
+        "display_sha256": "b68bb463ae2e1ffdee655b1b42f28de845bf6f00f316417ee537962d5070a670",
+        "elaborated_signature_sha256": "1b2e5ac98c2d168bac63a33d00615ef17b8bf4b09f577134dfc153e834c19bb3",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.operatingInputStar": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (e : Saco26InstitutionalRestart.OperatingEnvironment) (s : \u211d) => s * (e.alpha * e.A / e.w).rpow (1 / (1 - e.alpha))",
+        "display_sha256": "c65b70e14e22ccb618ba44b5972a07a890f10b82766390dde82bed1f7cf8461c",
+        "elaborated_signature_sha256": "5c8b9fe074316103ddfb81af81d342f7c1c246fcc6f9721a5e5662f616b3175b",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.operatingOutput": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (s : \u211d) => s * m.A * (m.alpha * m.A / m.w).rpow (m.alpha / (1 - m.alpha))",
+        "display_sha256": "7efc51f0f634999f141d71f680823af718b3beed7714cbd5fff63e3a8eafa526",
+        "elaborated_signature_sha256": "0b79492c69d3425e14e0f387deeb7392a3a9b51bf19e12b7cc68fe97c48e44bf",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.operatingOutputAt": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (e : Saco26InstitutionalRestart.OperatingEnvironment) (s : \u211d) =>\n  s * e.A * (e.alpha * e.A / e.w).rpow (e.alpha / (1 - e.alpha))",
+        "display_sha256": "f85d734e50e59d14b32adf7ee371fc0f48910939538b1fd4d561de10be677b62",
+        "elaborated_signature_sha256": "1c0c25ec32a89c724df50dfae254719a060851f90965bd30e98032405cf3966a",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.operatingProfit": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (s : \u211d) =>\n  (1 - m.alpha) * Saco26InstitutionalRestart.operatingOutput m s - m.F - m.c0",
+        "display_sha256": "84a99bb70215fe7098af7311fc89f2d8ae47eac302f7c0314072425c22208e01",
+        "elaborated_signature_sha256": "1b0b1d071ec8e1dd7aeed540cd9ffa7c6500f3f726a8933609274c8214034807",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.operatingProfitAt": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (e : Saco26InstitutionalRestart.OperatingEnvironment) (s : \u211d) =>\n  (1 - e.alpha) * Saco26InstitutionalRestart.operatingOutputAt e s - e.F - e.c0",
+        "display_sha256": "43279dd7ca2b1e7b26f9c3efc5c08dcdbd70b6399e74490419b66caa35409aaf",
+        "elaborated_signature_sha256": "f0cf88cc97944ef3415588dc0c3efec14b1f88635561327d16baa9da57224e4d",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.outputGain": {
+        "declaration_kind": "definition",
+        "display": "type:\n(m : Saco26InstitutionalRestart.Model) \u2192 Saco26InstitutionalRestart.OptimalProfile m \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (p : Saco26InstitutionalRestart.OptimalProfile m) (t : \u2115) =>\n  Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.favorable p.favorable t -\n    Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged p.unchanged t",
+        "display_sha256": "cbab264ec878332bc1e25eb0cad3146c36c30a46eccdb1f45fc8f28d90e47f5e",
+        "elaborated_signature_sha256": "0fdb9a75061bbe792167839e090df0c78b5a9f40aa936effeb13601359ad2bc9",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.outputLoss": {
+        "declaration_kind": "definition",
+        "display": "type:\n(m : Saco26InstitutionalRestart.Model) \u2192 Saco26InstitutionalRestart.OptimalProfile m \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (p : Saco26InstitutionalRestart.OptimalProfile m) (t : \u2115) =>\n  Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged p.unchanged t -\n    Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.adverse p.adverse t",
+        "display_sha256": "17dbf57aeed0fee252105ff2370f10675cea715ddd5ec653ee6afde8d9615ecd",
+        "elaborated_signature_sha256": "22286c669610ebefb6ee258c24081243101fdca644b72be6aaad0b892e347bf9",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.periodPayoff": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u211d \u2192 \u211d \u2192 Bool \u2192 Bool \u2192 \u211d\n\nvalue:\nfun (pi kappa : \u211d) (previous current : Bool) =>\n  (if current = true then pi else 0) - if (current && !previous) = true then kappa else 0",
+        "display_sha256": "14a7b72d51ea166fef23b052e6e00c7281eb6794d9fd270e08b5e7181ea90e30",
+        "elaborated_signature_sha256": "8435c0d3237577a03ceb2131ec1b08a70501a201ef9415e069b02bf65348b3d9",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.pi0": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => Saco26InstitutionalRestart.operatingProfit m m.s0",
+        "display_sha256": "0862e899fe138ae9121de5021f93cbaf0b2ddc96904110634daeb87f5a3eb990",
+        "elaborated_signature_sha256": "00ff2cf8c3cb3d0f28ec8214f2e89ca7e2a110048b79d02d4dd5cbec33b16145",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.piMinus": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => Saco26InstitutionalRestart.operatingProfit m (m.s0 - m.d)",
+        "display_sha256": "5b8fba94b6c588d3481217fee87c4506f83344d84d4f7330f62a557ea114d94c",
+        "elaborated_signature_sha256": "406624fd39128b613fa7159168d5604e1495e6586b5aba5bf5787bb88439818e",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.piPlus": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => Saco26InstitutionalRestart.operatingProfit m (m.s0 + m.d)",
+        "display_sha256": "cdc5855f13130fa3d066457a6afa9cc19b34fa31616a1d58f5a7095ff01472a2",
+        "elaborated_signature_sha256": "6092b974cb427275b6152a9ecc1cb8136902b9c0eabec92f708aea8ba30c2dfa",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.q0": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) => Saco26InstitutionalRestart.operatingOutput m m.s0",
+        "display_sha256": "c79f8f986815b3614e59ed51064ea87d840f39dc46c0512e113bbaa8deac1c47",
+        "elaborated_signature_sha256": "c2c5959b459771f280bc6aa1c919b1c30a53311f1479a9313871f6e9a3669743",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.rawOperatingOutputAt": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (e : Saco26InstitutionalRestart.OperatingEnvironment) (s x : \u211d) => e.A * s.rpow (1 - e.alpha) * x.rpow e.alpha",
+        "display_sha256": "04600080a4adead6c8b1f5f959f2dfc0f556f0fa0943690d46bbba2d76058322",
+        "elaborated_signature_sha256": "6e4d11dbb11df447b4f2387acd23c215b803e03177a4aea482555472895f7a08",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.rawOperatingPayoffAt": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (e : Saco26InstitutionalRestart.OperatingEnvironment) (s x : \u211d) =>\n  e.A * s.rpow (1 - e.alpha) * x.rpow e.alpha - e.w * x - e.F - e.c0",
+        "display_sha256": "dd651b4fb8259407b4a53a38cedae3aaff40516ad5ec37c868e55f9ada1e6883",
+        "elaborated_signature_sha256": "e9a1606e06c97338fdf329082cdb262e312a3c64b972eb7bcc08d0f2a67b8f86",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.restoredPathValue": {
+        "declaration_kind": "definition",
+        "display": "type:\n\u211d \u2192 \u211d \u2192 \u211d \u2192 Bool \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u211d\n\nvalue:\nfun (pi beta kappa : \u211d) (prior : Bool) (a : Saco26InstitutionalRestart.ActivityPath) =>\n  \u2211' (t : \u2115),\n    beta ^ t * Saco26InstitutionalRestart.periodPayoff pi kappa (Saco26InstitutionalRestart.stateBefore prior a t) (a t)",
+        "display_sha256": "b8d119f4383b5524aa160dd0163464fb142f3b3153ee292ba36e4bed424f0e8c",
+        "elaborated_signature_sha256": "dc0d7ef130af1a3d9566a9ccd17a260603638d39ef2c6d24a0fc4d5c46f49a4b",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.shockPathValue": {
+        "declaration_kind": "definition",
+        "display": "type:\nSaco26InstitutionalRestart.Model \u2192 Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ActivityPath) =>\n  Saco26InstitutionalRestart.periodPayoff (Saco26InstitutionalRestart.impactProfit m j) m.kappa true (a 0) +\n    m.beta *\n      Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa (a 0)\n        fun (t : \u2115) => a (t + 1)",
+        "display_sha256": "cc95b0f3ee96552bc8fef93a9d90973a6158bbeea8036285f83acdce045925ef",
+        "elaborated_signature_sha256": "285a898468b719b6f96b6ca94f47c92906da5ffee368af04320d822f9be25cea",
+        "root_expanded": true
+      },
+      "Saco26InstitutionalRestart.stateBefore": {
+        "declaration_kind": "definition",
+        "display": "type:\nBool \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u2115 \u2192 Bool\n\nvalue:\nfun (prior : Bool) (a : Saco26InstitutionalRestart.ActivityPath) (a_1 : \u2115) =>\n  match a_1 with\n  | 0 => prior\n  | n.succ => a n",
+        "display_sha256": "e3f5ba41b182726ccbb80d2bed139ce533cf1ae32c3f7c256747b3d890aa1773",
+        "elaborated_signature_sha256": "1a410b6dda282f464951c36554873b59806da6e80abaf05b82ad4c2455ad2d1e",
+        "root_expanded": true
+      }
+    }
+  },
+  "non_evidence": true,
+  "paper": "Saco26InstitutionalRestart",
+  "persisted": false,
+  "reviewer_instruction": "Use this only to repair the source map or Lean interface before graph acquisition. A context-isolated reviewer must return matches, mismatch, or uncertain for each row; for a row with an approved_corrected_target, it may return matches_approved_corrected_target only when the fully expanded Lean target matches that displayed approved correction. If an otherwise reasonable source-model interpretation needs maintainer confirmation, the reviewer may return needs_maintainer_clarification with the exact source passage, Lean reading, and affected scope. No verdict from this bundle is a ledger judgment or closeout evidence. Resolve named dependencies through lean_dependency_support: these are Lean-emitted owner displays, not additional source claims or standalone source-review rows.",
+  "schema": "applied-modeling-lib.draft-semantic-preflight/v1",
+  "semantic_preflight_import_module": "Saco26InstitutionalRestart",
+  "source_model_and_definition_rows": [
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source": "/-- Source primitives and their maintained numerical restrictions (A1--A6). -/\nstructure Model where\n  A : \u211d\n  w : \u211d\n  F : \u211d\n  c0 : \u211d\n  alpha : \u211d\n  s0 : \u211d\n  d : \u211d\n  beta : \u211d\n  kappa : \u211d\n  A_pos : 0 < A\n  w_pos : 0 < w\n  F_pos : 0 < F\n  c0_nonneg : 0 \u2264 c0\n  alpha_pos : 0 < alpha\n  alpha_lt_one : alpha < 1\n  s0_pos : 0 < s0\n  d_pos : 0 < d\n  d_lt_s0 : d < s0\n  s0_add_d_le_one : s0 + d \u2264 1\n  beta_pos : 0 < beta\n  beta_lt_one : beta < 1\n  kappa_nonneg : 0 \u2264 kappa",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 26,
+        "column_start": 0,
+        "line_end": 49,
+        "line_start": 26
+      },
+      "lean_exact_declaration_source_sha256": "9e14f564b16ab1f5488cc001efde3b2c7d529f1449b5937afd9ce643c8b4dc22",
+      "lean_expanded_target": "field A:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield w:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield F:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield c0:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield alpha:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield s0:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield d:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield beta:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield kappa:\nSaco26InstitutionalRestart.Model \u2192 \u211d\n\nfield A_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.A\n\nfield w_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.w\n\nfield F_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.F\n\nfield c0_nonneg:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 \u2264 self.c0\n\nfield alpha_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.alpha\n\nfield alpha_lt_one:\n\u2200 (self : Saco26InstitutionalRestart.Model), self.alpha < 1\n\nfield s0_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.s0\n\nfield d_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.d\n\nfield d_lt_s0:\n\u2200 (self : Saco26InstitutionalRestart.Model), self.d < self.s0\n\nfield s0_add_d_le_one:\n\u2200 (self : Saco26InstitutionalRestart.Model), self.s0 + self.d \u2264 1\n\nfield beta_pos:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 < self.beta\n\nfield beta_lt_one:\n\u2200 (self : Saco26InstitutionalRestart.Model), self.beta < 1\n\nfield kappa_nonneg:\n\u2200 (self : Saco26InstitutionalRestart.Model), 0 \u2264 self.kappa",
+      "lean_expanded_target_sha256": "92fd12175c8e33e8bdca912e81554d4e01e3ce23e4bc32d1b9672c8637df40ba",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.Model:model_A1_A6_and_reduced_problem",
+      "review_kind": "source_model_or_definition",
+      "source_input": "\\textbf{A1. Technology and prices.} Dates are $t=0,1,\\ldots$. Output price is one. Fixed pre-existing property $\\bar k>0$ is normalized to one. With $A>0$, $w>0$, and $0<\\alpha<1$, operating output is $As_t^{1-\\alpha}x_t^\\alpha$. The usable share lies in $(0,1]$. Technology, prices, and physical property do not change across experiments.\n\n\\textbf{A2. Operating costs.} Ordinary overhead is $F>0$. Institutional overhead is constant, $c_t=c_0\\geq0$, and both are paid only when operating. This experiment changes $s$, not $c$.\n\n\\textbf{A3. Feasible choices and state.} Activity $a_t\\in\\{0,1\\}$ and input $x_t\\geq0$ satisfy $x_t=0$ when $a_t=0$. Initially $a_{-1}=1$. Closure is free, has no salvage payment, preserves physical property, and dismantles the organization. Every closed-to-open transition costs the same $\\kappa\\geq0$. Inactivity has zero payoff. No temporary suspension preserves the organization in the main model.\n\n\\textbf{A4. Financing and information.} Financing is available for inputs, operating losses, and restarting. There is no wealth state, capital accumulation, or effect of today's input on tomorrow's opportunities. The firm knows the entire institutional path and maximizes discounted profit with $0<\\beta<1$.\n\n\\textbf{A5. Matched shock paths.} For $j\\in\\{-,0,+\\}$, date-zero usable property is $s_0-d,s_0,s_0+d$, respectively, with $0<d<s_0$ and $s_0+d\\leq1$. Every path returns permanently to $s_0$ at date one. All other primitives are fixed.\n\n\\textbf{A6. Normal viability and scope.} Optimized normal operating profit $\\pi_0$ is strictly positive. The comparison concerns the same incumbent. Potential entrants, endogenous market prices, and reallocation are outside its choice set.\n\nThe firm solves\n\\begin{equation}\\label{eq:full}\n\\max_{\\{a_t,x_t\\}}\\sum_{t=0}^{\\infty}\\beta^t\n\\left[As_t^{1-\\alpha}x_t^\\alpha-wx_t-(F+c_0)a_t\n-\\kappa a_t(1-a_{t-1})\\right].\n\\end{equation}\nOperating revenue is zero when closed because $x_t=0$. Original setup costs are sunk. The free-restart baseline sets $\\kappa=0$; the extension changes only this parameter.\n\nAfter input optimization, write $\\pi_t^j=\\pi(s_t^j,c_0)$. Problem~\\eqref{eq:full} reduces to\n\\begin{equation}\\label{eq:reduced}\n\\max_{a_t\\in\\{0,1\\}}\\sum_{t=0}^{\\infty}\\beta^t\n\\left[a_t\\pi_t^j-\\kappa a_t(1-a_{t-1})\\right].\n\\end{equation}\nThese optimized profits are bounded, say $|\\pi_t^j|\\leq C$. Thus every reduced activity path has an absolutely convergent payoff, bounded in absolute value by $(C+\\kappa)/(1-\\beta)$. Unoptimized plans with infinite discounted losses have value $-\\infty$ and cannot improve on immediate closure. The infinite horizon concerns the firm's future, not the duration of the shock.\n\n[Next verbatim source excerpt]\n\nDefine $q_0=q(s_0)>0$, $\\pi_0=\\pi(s_0,c_0)>0$, $\\pi_\\pm=\\pi(s_0\\pm d,c_0)$, and\n\\begin{equation}\\label{eq:V}V=\\frac{\\pi_0}{1-\\beta}>0.\\end{equation}\n\n[Next verbatim source excerpt]\n\n\\section{Proposition: temporary deterioration, permanent output loss}\nAt date zero an incumbent compares $\\pi_j+\\beta V$ with $\\beta W$. There is no ordinary derivative with respect to binary $a_t$; the optimality condition compares these values. Define actual output $y_t^j=a_t^jq(s_t^j)$, losses $L_t=y_t^0-y_t^-$, and gains $G_t=y_t^+-y_t^0$.",
+      "source_input_sha256": "8e8dea938bab041c43b3fd3262e92b96410c2bc426f5713c68c3938be6a07a9c",
+      "source_item": "model_A1_A6_and_reduced_problem",
+      "source_statement": "A1--A6 fix the technology, costs, binary activity and restart state, discounting and information, matched one-period shocks, and positive normal profit; after conditional input optimization the paper studies the displayed infinite-horizon reduced activity problem."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.OperatingEnvironment",
+      "lean_exact_declaration_source": "/-- Exactly the A1--A2 primitives needed by the paper's conditional operating lemma. -/\nstructure OperatingEnvironment where\n  A : \u211d\n  w : \u211d\n  F : \u211d\n  c0 : \u211d\n  alpha : \u211d\n  A_pos : 0 < A\n  w_pos : 0 < w\n  F_pos : 0 < F\n  c0_nonneg : 0 \u2264 c0\n  alpha_pos : 0 < alpha\n  alpha_lt_one : alpha < 1",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 26,
+        "column_start": 0,
+        "line_end": 63,
+        "line_start": 51
+      },
+      "lean_exact_declaration_source_sha256": "2ee9f08fd63bf3a223381d72184bc8190b08dcaa6b0243ca1b7c33a3d578c52e",
+      "lean_expanded_target": "field A:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d\n\nfield w:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d\n\nfield F:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d\n\nfield c0:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d\n\nfield alpha:\nSaco26InstitutionalRestart.OperatingEnvironment \u2192 \u211d\n\nfield A_pos:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), 0 < self.A\n\nfield w_pos:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), 0 < self.w\n\nfield F_pos:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), 0 < self.F\n\nfield c0_nonneg:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), 0 \u2264 self.c0\n\nfield alpha_pos:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), 0 < self.alpha\n\nfield alpha_lt_one:\n\u2200 (self : Saco26InstitutionalRestart.OperatingEnvironment), self.alpha < 1",
+      "lean_expanded_target_sha256": "ce8353674638e6ac4eb1b584bd757fbabc7531b1005b6510534a3e214536bae1",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.OperatingEnvironment:model_A1_A6_and_reduced_problem",
+      "review_kind": "source_model_or_definition",
+      "source_input": "\\textbf{A1. Technology and prices.} Dates are $t=0,1,\\ldots$. Output price is one. Fixed pre-existing property $\\bar k>0$ is normalized to one. With $A>0$, $w>0$, and $0<\\alpha<1$, operating output is $As_t^{1-\\alpha}x_t^\\alpha$. The usable share lies in $(0,1]$. Technology, prices, and physical property do not change across experiments.\n\n\\textbf{A2. Operating costs.} Ordinary overhead is $F>0$. Institutional overhead is constant, $c_t=c_0\\geq0$, and both are paid only when operating. This experiment changes $s$, not $c$.\n\n\\textbf{A3. Feasible choices and state.} Activity $a_t\\in\\{0,1\\}$ and input $x_t\\geq0$ satisfy $x_t=0$ when $a_t=0$. Initially $a_{-1}=1$. Closure is free, has no salvage payment, preserves physical property, and dismantles the organization. Every closed-to-open transition costs the same $\\kappa\\geq0$. Inactivity has zero payoff. No temporary suspension preserves the organization in the main model.\n\n\\textbf{A4. Financing and information.} Financing is available for inputs, operating losses, and restarting. There is no wealth state, capital accumulation, or effect of today's input on tomorrow's opportunities. The firm knows the entire institutional path and maximizes discounted profit with $0<\\beta<1$.\n\n\\textbf{A5. Matched shock paths.} For $j\\in\\{-,0,+\\}$, date-zero usable property is $s_0-d,s_0,s_0+d$, respectively, with $0<d<s_0$ and $s_0+d\\leq1$. Every path returns permanently to $s_0$ at date one. All other primitives are fixed.\n\n\\textbf{A6. Normal viability and scope.} Optimized normal operating profit $\\pi_0$ is strictly positive. The comparison concerns the same incumbent. Potential entrants, endogenous market prices, and reallocation are outside its choice set.\n\nThe firm solves\n\\begin{equation}\\label{eq:full}\n\\max_{\\{a_t,x_t\\}}\\sum_{t=0}^{\\infty}\\beta^t\n\\left[As_t^{1-\\alpha}x_t^\\alpha-wx_t-(F+c_0)a_t\n-\\kappa a_t(1-a_{t-1})\\right].\n\\end{equation}\nOperating revenue is zero when closed because $x_t=0$. Original setup costs are sunk. The free-restart baseline sets $\\kappa=0$; the extension changes only this parameter.\n\nAfter input optimization, write $\\pi_t^j=\\pi(s_t^j,c_0)$. Problem~\\eqref{eq:full} reduces to\n\\begin{equation}\\label{eq:reduced}\n\\max_{a_t\\in\\{0,1\\}}\\sum_{t=0}^{\\infty}\\beta^t\n\\left[a_t\\pi_t^j-\\kappa a_t(1-a_{t-1})\\right].\n\\end{equation}\nThese optimized profits are bounded, say $|\\pi_t^j|\\leq C$. Thus every reduced activity path has an absolutely convergent payoff, bounded in absolute value by $(C+\\kappa)/(1-\\beta)$. Unoptimized plans with infinite discounted losses have value $-\\infty$ and cannot improve on immediate closure. The infinite horizon concerns the firm's future, not the duration of the shock.\n\n[Next verbatim source excerpt]\n\nDefine $q_0=q(s_0)>0$, $\\pi_0=\\pi(s_0,c_0)>0$, $\\pi_\\pm=\\pi(s_0\\pm d,c_0)$, and\n\\begin{equation}\\label{eq:V}V=\\frac{\\pi_0}{1-\\beta}>0.\\end{equation}\n\n[Next verbatim source excerpt]\n\n\\section{Proposition: temporary deterioration, permanent output loss}\nAt date zero an incumbent compares $\\pi_j+\\beta V$ with $\\beta W$. There is no ordinary derivative with respect to binary $a_t$; the optimality condition compares these values. Define actual output $y_t^j=a_t^jq(s_t^j)$, losses $L_t=y_t^0-y_t^-$, and gains $G_t=y_t^+-y_t^0$.",
+      "source_input_sha256": "8e8dea938bab041c43b3fd3262e92b96410c2bc426f5713c68c3938be6a07a9c",
+      "source_item": "model_A1_A6_and_reduced_problem",
+      "source_statement": "A1--A6 fix the technology, costs, binary activity and restart state, discounting and information, matched one-period shocks, and positive normal profit; after conditional input optimization the paper studies the displayed infinite-horizon reduced activity problem."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.cohortTotal",
+      "lean_exact_declaration_source": "/-- Fixed-cohort total used only in the paper's logarithm corollary. -/\ndef cohortTotal (B N : \u211d) (m : Model) (j : Shock) (a : ActivityPath) (t : \u2115) : \u211d :=\n  B + N * actualOutput m j a t",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 30,
+        "column_start": 0,
+        "line_end": 299,
+        "line_start": 297
+      },
+      "lean_exact_declaration_source_sha256": "dd2ea0003989e0e52844ac96de775ae7b17239ab725e8f2c80860be8a28d6268",
+      "lean_expanded_target": "type:\n\u211d \u2192\n  \u211d \u2192\n    Saco26InstitutionalRestart.Model \u2192\n      Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (B N : \u211d) (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ActivityPath) (t : \u2115) =>\n  B + N * Saco26InstitutionalRestart.actualOutput m j a t",
+      "lean_expanded_target_sha256": "7b84c3e30240ecb4017c854149f4006b7577bb881de1ef4b0a80498033e49094",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.cohortTotal:fixed_cohort_aggregation",
+      "review_kind": "source_model_or_definition",
+      "source_input": "Under Proposition~\\ref{prop:main}, suppose $Y_t^j=B+Ny_t^j$ with the same $B>0$ and $N>0$ in all paths. Then $Y_t^j>0$ and\n\\[\n\\log Y_t^0-\\log Y_t^->\\log Y_t^+-\\log Y_t^0\n\\quad\\text{for every }t\\geq0.\n\\]\nThe same comparison applies to per-capita totals if population is identical across paths.",
+      "source_input_sha256": "2981ae12a4b5861f10ceffab69a493e6806c81d20c3987051746a3c01d07e65a",
+      "source_item": "fixed_cohort_aggregation",
+      "source_statement": "The corollary defines matched fixed-cohort totals as Y_t^j=B+N y_t^j and uses the same positive population divisor in every per-capita path."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.perCapitaTotal",
+      "lean_exact_declaration_source": "/-- Per-capita version when all matched paths share population `P`. -/\ndef perCapitaTotal (B N P : \u211d) (m : Model) (j : Shock) (a : ActivityPath) (t : \u2115) : \u211d :=\n  cohortTotal B N m j a t / P",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 29,
+        "column_start": 0,
+        "line_end": 303,
+        "line_start": 301
+      },
+      "lean_exact_declaration_source_sha256": "9bd7b62da9b8168d9023a628ee5db3d959c99341b46c22d143cdb0549e37d822",
+      "lean_expanded_target": "type:\n\u211d \u2192\n  \u211d \u2192\n    \u211d \u2192\n      Saco26InstitutionalRestart.Model \u2192\n        Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ActivityPath \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (B N P : \u211d) (m : Saco26InstitutionalRestart.Model) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ActivityPath) (t : \u2115) =>\n  Saco26InstitutionalRestart.cohortTotal B N m j a t / P",
+      "lean_expanded_target_sha256": "83f69982a8fe4647f5ed1cb3aaf3e8b0a6016fcd3929e5ac4ced5f8fcaf679c1",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.perCapitaTotal:fixed_cohort_aggregation",
+      "review_kind": "source_model_or_definition",
+      "source_input": "Under Proposition~\\ref{prop:main}, suppose $Y_t^j=B+Ny_t^j$ with the same $B>0$ and $N>0$ in all paths. Then $Y_t^j>0$ and\n\\[\n\\log Y_t^0-\\log Y_t^->\\log Y_t^+-\\log Y_t^0\n\\quad\\text{for every }t\\geq0.\n\\]\nThe same comparison applies to per-capita totals if population is identical across paths.",
+      "source_input_sha256": "2981ae12a4b5861f10ceffab69a493e6806c81d20c3987051746a3c01d07e65a",
+      "source_item": "fixed_cohort_aggregation",
+      "source_statement": "The corollary defines matched fixed-cohort totals as Y_t^j=B+N y_t^j and uses the same positive population divisor in every per-capita path."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.suspendedThenResumedOutput",
+      "lean_exact_declaration_source": "/-- Output generated by the paper's date-zero suspension extension: no impact\noutput, followed by costless restoration of the active organization at date one. -/\ndef suspendedThenResumedOutput (m : Model) (t : \u2115) : \u211d :=\n  if t = 0 then 0 else q0 m",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 27,
+        "column_start": 0,
+        "line_end": 280,
+        "line_start": 277
+      },
+      "lean_exact_declaration_source_sha256": "b1f3cf8a4e8aaf67a32e0277403e3d32aaeff679ae901b11de2f8d6a284ec62c",
+      "lean_expanded_target": "type:\nSaco26InstitutionalRestart.Model \u2192 \u2115 \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (t : \u2115) => if t = 0 then 0 else Saco26InstitutionalRestart.q0 m",
+      "lean_expanded_target_sha256": "c0fc25468806a2e7cdb686f05a3a369374e0ff992ec76401f2fe3342b32dbdca",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.suspendedThenResumedOutput:suspension_extension_model",
+      "review_kind": "source_model_or_definition",
+      "source_input": "Maintain A1--A6 and the strict conditions of Proposition~\\ref{prop:main}, except allow an active firm to suspend at date zero, produce nothing, pay a total preservation expense $h\\geq0$ instead of operating overhead, and retain its organization for costless resumption at date one. If $h<\\beta V$, the adverse firm uniquely suspends and resumes at date one. Normal and favorable firms operate. Impact loss remains $q_0$, but losses and gains both vanish from date one.",
+      "source_input_sha256": "075abea1532ab6c6bf37a6b30ab58fbe908de21c6a9041763ed19d557aedef30",
+      "source_item": "suspension_extension_model",
+      "source_statement": "The robustness extension adds a date-zero suspension action that produces zero, pays h instead of operating overhead, preserves the organization, and permits costless resumption at date one."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.suspensionActionValue",
+      "lean_exact_declaration_source": "/-- Impact value when cheap suspension is available only at date zero. -/\ndef suspensionActionValue (m : Model) (h : \u211d) (j : Shock) : ImpactAction \u2192 \u211d\n  | .operate => impactContinueValue m j\n  | .close => impactClosureValue m\n  | .suspend => -h + m.beta * activeValue m",
+      "lean_exact_declaration_source_module": "Saco26InstitutionalRestart.Model",
+      "lean_exact_declaration_source_path": "papers/Saco26InstitutionalRestart/Model.lean",
+      "lean_exact_declaration_source_range": {
+        "column_end": 43,
+        "column_start": 0,
+        "line_end": 326,
+        "line_start": 322
+      },
+      "lean_exact_declaration_source_sha256": "c08dc40fdcf111d332db4dc2f509021ef783d8cfac7f6d5f17a9a606dd1cda71",
+      "lean_expanded_target": "type:\nSaco26InstitutionalRestart.Model \u2192 \u211d \u2192 Saco26InstitutionalRestart.Shock \u2192 Saco26InstitutionalRestart.ImpactAction \u2192 \u211d\n\nvalue:\nfun (m : Saco26InstitutionalRestart.Model) (h : \u211d) (j : Saco26InstitutionalRestart.Shock)\n    (a : Saco26InstitutionalRestart.ImpactAction) =>\n  match a with\n  | Saco26InstitutionalRestart.ImpactAction.operate => Saco26InstitutionalRestart.impactContinueValue m j\n  | Saco26InstitutionalRestart.ImpactAction.close => Saco26InstitutionalRestart.impactClosureValue m\n  | Saco26InstitutionalRestart.ImpactAction.suspend => -h + m.beta * Saco26InstitutionalRestart.activeValue m",
+      "lean_expanded_target_sha256": "44bb6b10e0475763087341a5a865fad2b9a91b8d0ff7d8275e83a14f66412160",
+      "review_id": "source-declaration:Saco26InstitutionalRestart.suspensionActionValue:suspension_extension_model",
+      "review_kind": "source_model_or_definition",
+      "source_input": "Maintain A1--A6 and the strict conditions of Proposition~\\ref{prop:main}, except allow an active firm to suspend at date zero, produce nothing, pay a total preservation expense $h\\geq0$ instead of operating overhead, and retain its organization for costless resumption at date one. If $h<\\beta V$, the adverse firm uniquely suspends and resumes at date one. Normal and favorable firms operate. Impact loss remains $q_0$, but losses and gains both vanish from date one.",
+      "source_input_sha256": "075abea1532ab6c6bf37a6b30ab58fbe908de21c6a9041763ed19d557aedef30",
+      "source_item": "suspension_extension_model",
+      "source_statement": "The robustness extension adds a date-zero suspension action that produces zero, pays h instead of operating overhead, preserves the organization, and permits costless resumption at date one."
+    }
+  ],
+  "source_result_rows": [
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.corollary1_positive_totals_and_logsSpec",
+      "lean_expanded_target": "\u2200 (m : Saco26InstitutionalRestart.Model),\n  Saco26InstitutionalRestart.NormallyViable m \u2192\n    Saco26InstitutionalRestart.piMinus m + m.beta * Saco26InstitutionalRestart.activeValue m < 0 \u2192\n      Saco26InstitutionalRestart.activeValue m < m.kappa \u2192\n        \u2200 {B N : \u211d},\n          0 < B \u2192\n            0 < N \u2192\n              \u2200 (t : \u2115),\n                (0 <\n                      Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.adverse\n                        Saco26InstitutionalRestart.alwaysInactive t \u2227\n                    0 <\n                        Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.unchanged\n                          Saco26InstitutionalRestart.alwaysActive t \u2227\n                      0 <\n                        Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.favorable\n                          Saco26InstitutionalRestart.alwaysActive t) \u2227\n                  Real.log\n                          (Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.unchanged\n                            Saco26InstitutionalRestart.alwaysActive t) -\n                        Real.log\n                          (Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.adverse\n                            Saco26InstitutionalRestart.alwaysInactive t) >\n                      Real.log\n                          (Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.favorable\n                            Saco26InstitutionalRestart.alwaysActive t) -\n                        Real.log\n                          (Saco26InstitutionalRestart.cohortTotal B N m Saco26InstitutionalRestart.Shock.unchanged\n                            Saco26InstitutionalRestart.alwaysActive t) \u2227\n                    \u2200 (P : \u211d),\n                      0 < P \u2192\n                        Real.log\n                              (Saco26InstitutionalRestart.perCapitaTotal B N P m\n                                Saco26InstitutionalRestart.Shock.unchanged Saco26InstitutionalRestart.alwaysActive t) -\n                            Real.log\n                              (Saco26InstitutionalRestart.perCapitaTotal B N P m\n                                Saco26InstitutionalRestart.Shock.adverse Saco26InstitutionalRestart.alwaysInactive t) >\n                          Real.log\n                              (Saco26InstitutionalRestart.perCapitaTotal B N P m\n                                Saco26InstitutionalRestart.Shock.favorable Saco26InstitutionalRestart.alwaysActive t) -\n                            Real.log\n                              (Saco26InstitutionalRestart.perCapitaTotal B N P m\n                                Saco26InstitutionalRestart.Shock.unchanged Saco26InstitutionalRestart.alwaysActive t)",
+      "lean_expanded_target_sha256": "884696e8749e23d6846d77503b07d5620333170dcb898680d9e4611be892614e",
+      "review_id": "source-result:Saco26InstitutionalRestart.corollary1_positive_totals_and_logsSpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{corollary}[Positive totals and logs]\\label{cor:logs}\nUnder Proposition~\\ref{prop:main}, suppose $Y_t^j=B+Ny_t^j$ with the same $B>0$ and $N>0$ in all paths. Then $Y_t^j>0$ and\n\\[\n\\log Y_t^0-\\log Y_t^->\\log Y_t^+-\\log Y_t^0\n\\quad\\text{for every }t\\geq0.\n\\]\nThe same comparison applies to per-capita totals if population is identical across paths.\n\\end{corollary}",
+      "source_input_sha256": "88c8220b1823d0484fd7e53002e477eedb6d7e93802464a08e59cfb6d5995beb",
+      "source_item": "corollary1_positive_totals_and_logs",
+      "source_statement": "Corollary 1: common positive B and N make all three cohort totals positive and the adverse log loss strictly exceed the favorable log gain at every date; the comparison also holds for common-population per-capita totals."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.lemma1_operating_optimumSpec",
+      "lean_expanded_target": "\u2200 (e : Saco26InstitutionalRestart.OperatingEnvironment) {s : \u211d},\n  0 < s \u2192\n    s \u2264 1 \u2192\n      (\u2200 (x : \u211d),\n          0 \u2264 x \u2192\n            Saco26InstitutionalRestart.rawOperatingPayoffAt e s x \u2264\n              Saco26InstitutionalRestart.rawOperatingPayoffAt e s (Saco26InstitutionalRestart.operatingInputStar e s)) \u2227\n        (\u2200 (x : \u211d),\n            0 \u2264 x \u2192\n              (Saco26InstitutionalRestart.rawOperatingPayoffAt e s x =\n                  Saco26InstitutionalRestart.rawOperatingPayoffAt e s\n                    (Saco26InstitutionalRestart.operatingInputStar e s) \u2194\n                x = Saco26InstitutionalRestart.operatingInputStar e s)) \u2227\n          e.alpha * e.A * s.rpow (1 - e.alpha) *\n                (Saco26InstitutionalRestart.operatingInputStar e s).rpow (e.alpha - 1) =\n              e.w \u2227\n            Saco26InstitutionalRestart.operatingInputStar e s = s * (e.alpha * e.A / e.w).rpow (1 / (1 - e.alpha)) \u2227\n              Saco26InstitutionalRestart.rawOperatingOutputAt e s (Saco26InstitutionalRestart.operatingInputStar e s) =\n                  Saco26InstitutionalRestart.operatingOutputAt e s \u2227\n                Saco26InstitutionalRestart.operatingOutputAt e s =\n                    s * e.A * (e.alpha * e.A / e.w).rpow (e.alpha / (1 - e.alpha)) \u2227\n                  Saco26InstitutionalRestart.rawOperatingPayoffAt e s\n                        (Saco26InstitutionalRestart.operatingInputStar e s) =\n                      Saco26InstitutionalRestart.operatingProfitAt e s \u2227\n                    Saco26InstitutionalRestart.operatingProfitAt e s =\n                      (1 - e.alpha) * Saco26InstitutionalRestart.operatingOutputAt e s - e.F - e.c0",
+      "lean_expanded_target_sha256": "11b0dc835556911d614ee0c4812b8952e96b9d778c3af3eccb34864ddd9081a0",
+      "review_id": "source-result:Saco26InstitutionalRestart.lemma1_operating_optimumSpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{lemma}[Operating optimum]\\label{lem:input}\nUnder A1--A2, conditional on operating at $s>0$, the unique global optimum satisfies\n\\begin{align}\n\\alpha As^{1-\\alpha}x^{\\alpha-1}&=w,\\label{eq:foc}\\\\\nx^*(s)&=s(\\alpha A/w)^{1/(1-\\alpha)},\\\\\nq(s)&=sA(\\alpha A/w)^{\\alpha/(1-\\alpha)},\\\\\n\\pi(s,c_0)&=(1-\\alpha)q(s)-F-c_0.\\label{eq:profit}\n\\end{align}\nThe input FOC is independent of the restart cost.\n\\end{lemma}",
+      "source_input_sha256": "53dfe740b95b870f8e7692bb833d44695bac393328171f953ab95d7af35fd523",
+      "source_item": "lemma1_operating_optimum",
+      "source_statement": "Lemma 1: conditional on operating at s>0 under A1--A2, the unique global input optimum satisfies the displayed FOC, optimizer, output, and profit formulas, independently of restart cost."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.lemma2_restored_state_values_and_delaysSpec",
+      "lean_expanded_target": "\u2200 (m : Saco26InstitutionalRestart.Model),\n  Saco26InstitutionalRestart.NormallyViable m \u2192\n    (\u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n        Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa true a \u2264\n          Saco26InstitutionalRestart.activeValue m) \u2227\n      Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa true\n            Saco26InstitutionalRestart.alwaysActive =\n          Saco26InstitutionalRestart.activeValue m \u2227\n        (\u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n            Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false a \u2264\n              Saco26InstitutionalRestart.inactiveValue m) \u2227\n          (m.kappa < Saco26InstitutionalRestart.activeValue m \u2192\n              \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false a =\n                    Saco26InstitutionalRestart.inactiveValue m \u2194\n                  a = Saco26InstitutionalRestart.alwaysActive) \u2227\n            (Saco26InstitutionalRestart.activeValue m < m.kappa \u2192\n                \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                  Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false\n                        a =\n                      Saco26InstitutionalRestart.inactiveValue m \u2194\n                    a = Saco26InstitutionalRestart.alwaysInactive) \u2227\n              (m.kappa = Saco26InstitutionalRestart.activeValue m \u2192\n                (\u2200 (n : \u2115),\n                    Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false\n                        (Saco26InstitutionalRestart.delayedRestart n) =\n                      Saco26InstitutionalRestart.inactiveValue m) \u2227\n                  Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false\n                      Saco26InstitutionalRestart.alwaysInactive =\n                    Saco26InstitutionalRestart.inactiveValue m)",
+      "lean_expanded_target_sha256": "3dedf6bb7c1fd626e031f433190deca157f57b776c92edd7dcf4758f594f9592",
+      "review_id": "source-result:Saco26InstitutionalRestart.lemma2_restored_state_values_and_delaysSpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{lemma}[Restored-state values and delayed restarting]\\label{lem:value}\nUnder A1--A6, at any restored date the value of an active firm is $V$, and that of an inactive firm is $W=\\max\\{V-\\kappa,0\\}$. Immediate restart is uniquely optimal if $V>\\kappa$; permanent inactivity is uniquely optimal if $V<\\kappa$. At equality, any restart date and never restarting give the same value.\n\\end{lemma}",
+      "source_input_sha256": "4646dfe4b81686e564c29a314c44cbaaf7a9356a4dba30e0bdc5ecef2350d083",
+      "source_item": "lemma2_restored_state_values_and_delays",
+      "source_statement": "Lemma 2: V is the active restored value, W=max(V-kappa,0) is the inactive value; restart or permanent inactivity is uniquely optimal on the strict sides, while every delay and never restarting tie at equality."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetrySpec",
+      "lean_expanded_target": "\u2200 (m : Saco26InstitutionalRestart.Model),\n  Saco26InstitutionalRestart.NormallyViable m \u2192\n    Saco26InstitutionalRestart.piMinus m + m.beta * Saco26InstitutionalRestart.activeValue m < 0 \u2192\n      Saco26InstitutionalRestart.activeValue m < m.kappa \u2192\n        ((Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse\n                Saco26InstitutionalRestart.alwaysInactive \u2227\n              \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse a \u2192\n                  a = Saco26InstitutionalRestart.alwaysInactive) \u2227\n            (Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.unchanged\n                  Saco26InstitutionalRestart.alwaysActive \u2227\n                \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.unchanged a \u2192\n                    a = Saco26InstitutionalRestart.alwaysActive) \u2227\n              Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.favorable\n                  Saco26InstitutionalRestart.alwaysActive \u2227\n                \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.favorable a \u2192\n                    a = Saco26InstitutionalRestart.alwaysActive) \u2227\n          (Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                    Saco26InstitutionalRestart.alwaysActive 0 -\n                  Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.adverse\n                    Saco26InstitutionalRestart.alwaysInactive 0 =\n                Saco26InstitutionalRestart.q0 m \u2227\n              Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.favorable\n                      Saco26InstitutionalRestart.alwaysActive 0 -\n                    Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                      Saco26InstitutionalRestart.alwaysActive 0 =\n                  Saco26InstitutionalRestart.q0 m * (m.d / m.s0) \u2227\n                Saco26InstitutionalRestart.q0 m > Saco26InstitutionalRestart.q0 m * (m.d / m.s0) \u2227\n                  (\u2200 (t : \u2115),\n                      Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                            Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                          Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.adverse\n                            Saco26InstitutionalRestart.alwaysInactive (t + 1) =\n                        Saco26InstitutionalRestart.q0 m) \u2227\n                    \u2200 (t : \u2115),\n                      Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.favorable\n                            Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                          Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                            Saco26InstitutionalRestart.alwaysActive (t + 1) =\n                        0) \u2227\n            (have m0 : Saco26InstitutionalRestart.Model :=\n                m.withKappa 0 Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetrySpec._proof_1;\n              (Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.adverse\n                    Saco26InstitutionalRestart.closeThenRestart \u2227\n                  \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                    Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.adverse a \u2192\n                      a = Saco26InstitutionalRestart.closeThenRestart) \u2227\n                (Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.unchanged\n                      Saco26InstitutionalRestart.alwaysActive \u2227\n                    \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                      Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.unchanged a \u2192\n                        a = Saco26InstitutionalRestart.alwaysActive) \u2227\n                  Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.favorable\n                      Saco26InstitutionalRestart.alwaysActive \u2227\n                    \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                      Saco26InstitutionalRestart.IsShockOptimal m0 Saco26InstitutionalRestart.Shock.favorable a \u2192\n                        a = Saco26InstitutionalRestart.alwaysActive) \u2227\n              have m0 : Saco26InstitutionalRestart.Model :=\n                m.withKappa 0 Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetrySpec._proof_1;\n              Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.unchanged\n                      Saco26InstitutionalRestart.alwaysActive 0 -\n                    Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.adverse\n                      Saco26InstitutionalRestart.closeThenRestart 0 =\n                  Saco26InstitutionalRestart.q0 m0 \u2227\n                (\u2200 (t : \u2115),\n                    Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.unchanged\n                          Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                        Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.adverse\n                          Saco26InstitutionalRestart.closeThenRestart (t + 1) =\n                      0) \u2227\n                  \u2200 (t : \u2115),\n                    Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.favorable\n                          Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                        Saco26InstitutionalRestart.actualOutput m0 Saco26InstitutionalRestart.Shock.unchanged\n                          Saco26InstitutionalRestart.alwaysActive (t + 1) =\n                      0",
+      "lean_expanded_target_sha256": "eda19db0dcab1747f55a00017f5bcf62e1e6b40e90570cc634df2c6c1c3a0e8f",
+      "review_id": "source-result:Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetrySpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{proposition}[Persistent strict asymmetry]\\label{prop:main}\nMaintain A1--A6. Suppose\n\\begin{equation}\\label{eq:conditions}\n\\pi_0>0,\\qquad \\pi_-+\\beta V<0,\\qquad \\kappa>V.\n\\end{equation}\nThen the unique optimal activity paths are $a_t^-=0$ and $a_t^0=a_t^+=1$ for every $t\\geq0$. Consequently\n\\begin{align}\nL_0=q_0&>G_0=(d/s_0)q_0,\\\\\nL_t=q_0&>G_t=0\\qquad(t\\geq1).\n\\end{align}\nFor the otherwise identical free-restart baseline, the adverse firm closes at date zero and reopens at date one; the unchanged and favorable firms remain active. Impact losses and gains are the same as above, but $L_t=G_t=0$ for $t\\geq1$.\n\\end{proposition}",
+      "source_input_sha256": "b2ef257857a6261e32f14225ac872e3c445f9d24878f834e65bb59f6f4075a75",
+      "source_item": "proposition1_persistent_strict_asymmetry",
+      "source_statement": "Proposition 1: under positive normal profit, negative adverse continuation value, and kappa>V, adverse closure is permanent and unique, normal and favorable firms remain active, losses strictly exceed gains at every date, while the free-restart adverse firm reopens at date one and later gaps vanish."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.proposition2_complete_closure_thresholdSpec",
+      "lean_expanded_target": "\u2200 (m : Saco26InstitutionalRestart.Model),\n  Saco26InstitutionalRestart.NormallyViable m \u2192\n    ((Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse <\n            Saco26InstitutionalRestart.impactClosureValue m \u2194\n          Saco26InstitutionalRestart.pi0 m + m.beta * min m.kappa (Saco26InstitutionalRestart.activeValue m) <\n            (1 - m.alpha) * Saco26InstitutionalRestart.q0 m * (m.d / m.s0)) \u2227\n        (Saco26InstitutionalRestart.impactClosureValue m <\n              Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse \u2194\n            (1 - m.alpha) * Saco26InstitutionalRestart.q0 m * (m.d / m.s0) <\n              Saco26InstitutionalRestart.pi0 m + m.beta * min m.kappa (Saco26InstitutionalRestart.activeValue m)) \u2227\n          (Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse =\n              Saco26InstitutionalRestart.impactClosureValue m \u2194\n            (1 - m.alpha) * Saco26InstitutionalRestart.q0 m * (m.d / m.s0) =\n              Saco26InstitutionalRestart.pi0 m + m.beta * min m.kappa (Saco26InstitutionalRestart.activeValue m))) \u2227\n      (Saco26InstitutionalRestart.impactClosureValue m <\n            Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse \u2192\n          Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse\n              Saco26InstitutionalRestart.alwaysActive \u2227\n            \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n              Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse a \u2192\n                a = Saco26InstitutionalRestart.alwaysActive) \u2227\n        (Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse <\n              Saco26InstitutionalRestart.impactClosureValue m \u2192\n            (\u2203 (a : Saco26InstitutionalRestart.ActivityPath),\n                Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse a \u2227 a 0 = false) \u2227\n              \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse a \u2192 a 0 = false) \u2227\n          (Saco26InstitutionalRestart.impactContinueValue m Saco26InstitutionalRestart.Shock.adverse =\n                Saco26InstitutionalRestart.impactClosureValue m \u2192\n              Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse\n                  Saco26InstitutionalRestart.alwaysActive \u2227\n                \u2203 (a : Saco26InstitutionalRestart.ActivityPath),\n                  Saco26InstitutionalRestart.IsShockOptimal m Saco26InstitutionalRestart.Shock.adverse a \u2227\n                    a 0 = false) \u2227\n            (m.kappa < Saco26InstitutionalRestart.activeValue m \u2192\n                \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                  Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false\n                        a =\n                      Saco26InstitutionalRestart.inactiveValue m \u2194\n                    a = Saco26InstitutionalRestart.alwaysActive) \u2227\n              (Saco26InstitutionalRestart.activeValue m < m.kappa \u2192\n                  \u2200 (a : Saco26InstitutionalRestart.ActivityPath),\n                    Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa false\n                          a =\n                        Saco26InstitutionalRestart.inactiveValue m \u2194\n                      a = Saco26InstitutionalRestart.alwaysInactive) \u2227\n                (m.kappa = Saco26InstitutionalRestart.activeValue m \u2192\n                    (\u2200 (n : \u2115),\n                        Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa\n                            false (Saco26InstitutionalRestart.delayedRestart n) =\n                          Saco26InstitutionalRestart.inactiveValue m) \u2227\n                      Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa\n                          false Saco26InstitutionalRestart.alwaysInactive =\n                        Saco26InstitutionalRestart.inactiveValue m) \u2227\n                  Nonempty (Saco26InstitutionalRestart.OptimalProfile m) \u2227\n                    \u2200 (p : Saco26InstitutionalRestart.OptimalProfile m),\n                      (\u2200 (t : \u2115),\n                          Saco26InstitutionalRestart.outputLoss m p t \u2265 Saco26InstitutionalRestart.outputGain m p t \u2227\n                            Saco26InstitutionalRestart.outputGain m p t \u2265 0) \u2227\n                        (Saco26InstitutionalRestart.outputLoss m p 0 > Saco26InstitutionalRestart.outputGain m p 0 \u2194\n                            p.adverse 0 = false) \u2227\n                          \u2200 (t : \u2115),\n                            Saco26InstitutionalRestart.outputLoss m p (t + 1) >\n                                Saco26InstitutionalRestart.outputGain m p (t + 1) \u2194\n                              p.adverse (t + 1) = false",
+      "lean_expanded_target_sha256": "a62b8b859835f5c1727146705a3b5c8f01bd2bd88392a60a340d75793f515239",
+      "review_id": "source-result:Saco26InstitutionalRestart.proposition2_complete_closure_thresholdSpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{proposition}[Complete closure threshold and weak asymmetry]\\label{prop:regions}\nUnder A1--A6, for any $\\kappa\\geq0$ the adverse firm strictly prefers closure at date zero if and only if\n\\begin{equation}\\label{eq:threshold}\n(1-\\alpha)q_0\\frac{d}{s_0}>\\pi_0+\\beta\\min\\{\\kappa,V\\}.\n\\end{equation}\nThe reverse strict inequality implies continued operation; equality gives indifference. If it closes, $\\kappa<V$ implies reopening at date one and $\\kappa>V$ implies permanent inactivity; $\\kappa=V$ gives the indifference described in Lemma~\\ref{lem:value}. Under any optimal selection at ties, $L_t\\geq G_t\\geq0$ for every $t$. At impact strictness occurs exactly when the adverse firm closes; after restoration it occurs exactly when that firm remains closed.\n\\end{proposition}",
+      "source_input_sha256": "f3c8a2e56304b4221d2e0b8fad4cef23ef553ba9ce9c1dac89bf50049ebc8cff",
+      "source_item": "proposition2_complete_closure_threshold",
+      "source_statement": "Proposition 2: the adverse closure threshold is an iff with the displayed damage term, with reverse and equality cases, post-restoration behavior for all kappa/V regions, and weak loss-gain asymmetry under any optimal tie selection."
+    },
+    {
+      "approved_review_contexts": [],
+      "declaration": "Saco26InstitutionalRestart.proposition3_cheap_suspensionSpec",
+      "lean_expanded_target": "\u2200 (m : Saco26InstitutionalRestart.Model),\n  Saco26InstitutionalRestart.NormallyViable m \u2192\n    Saco26InstitutionalRestart.piMinus m + m.beta * Saco26InstitutionalRestart.activeValue m < 0 \u2192\n      Saco26InstitutionalRestart.activeValue m < m.kappa \u2192\n        \u2200 {h : \u211d},\n          0 \u2264 h \u2192\n            h < m.beta * Saco26InstitutionalRestart.activeValue m \u2192\n              (Saco26InstitutionalRestart.IsUniqueBestImpactAction m h Saco26InstitutionalRestart.Shock.adverse\n                    Saco26InstitutionalRestart.ImpactAction.suspend \u2227\n                  Saco26InstitutionalRestart.IsUniqueBestImpactAction m h Saco26InstitutionalRestart.Shock.unchanged\n                      Saco26InstitutionalRestart.ImpactAction.operate \u2227\n                    Saco26InstitutionalRestart.IsUniqueBestImpactAction m h Saco26InstitutionalRestart.Shock.favorable\n                      Saco26InstitutionalRestart.ImpactAction.operate) \u2227\n                Saco26InstitutionalRestart.suspendedThenResumedOutput m 0 = 0 \u2227\n                  (\u2200 (t : \u2115),\n                      Saco26InstitutionalRestart.suspendedThenResumedOutput m (t + 1) =\n                        Saco26InstitutionalRestart.q0 m) \u2227\n                    Saco26InstitutionalRestart.restoredPathValue (Saco26InstitutionalRestart.pi0 m) m.beta m.kappa true\n                          Saco26InstitutionalRestart.alwaysActive =\n                        Saco26InstitutionalRestart.activeValue m \u2227\n                      Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                              Saco26InstitutionalRestart.alwaysActive 0 -\n                            Saco26InstitutionalRestart.suspendedThenResumedOutput m 0 =\n                          Saco26InstitutionalRestart.q0 m \u2227\n                        (\u2200 (t : \u2115),\n                            Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                                  Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                                Saco26InstitutionalRestart.suspendedThenResumedOutput m (t + 1) =\n                              0) \u2227\n                          \u2200 (t : \u2115),\n                            Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.favorable\n                                  Saco26InstitutionalRestart.alwaysActive (t + 1) -\n                                Saco26InstitutionalRestart.actualOutput m Saco26InstitutionalRestart.Shock.unchanged\n                                  Saco26InstitutionalRestart.alwaysActive (t + 1) =\n                              0",
+      "lean_expanded_target_sha256": "2a8677b04a940e26137505909c8c62faa7951714b1c77bc3d498bcfcae40f1de",
+      "review_id": "source-result:Saco26InstitutionalRestart.proposition3_cheap_suspensionSpec",
+      "review_kind": "source_result_spec",
+      "source_input": "\\begin{proposition}[Cheap suspension removes persistence]\\label{prop:suspension}\nMaintain A1--A6 and the strict conditions of Proposition~\\ref{prop:main}, except allow an active firm to suspend at date zero, produce nothing, pay a total preservation expense $h\\geq0$ instead of operating overhead, and retain its organization for costless resumption at date one. If $h<\\beta V$, the adverse firm uniquely suspends and resumes at date one. Normal and favorable firms operate. Impact loss remains $q_0$, but losses and gains both vanish from date one.\n\\end{proposition}",
+      "source_input_sha256": "2710c5bba607e5c289b52c0b7ad9baaec70cedcdd246b3e22c347ae380d25d32",
+      "source_item": "proposition3_cheap_suspension",
+      "source_statement": "Proposition 3: under Proposition 1's strict conditions and 0<=h<beta V, the adverse firm uniquely suspends and resumes at date one, normal and favorable firms operate, the impact loss is q0, and all later loss and gain vanish."
+    }
+  ]
+}

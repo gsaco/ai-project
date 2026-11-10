@@ -3,10 +3,11 @@
 <p align="center">
   <strong>Gabriel Saco</strong><br>
   Professor Alexander Quispe · Universidad del Pacífico<br>
-  <sub>AI and Economic Modeling · Track B · Topic presentation · October 2026</sub>
+  <sub>AI and Economic Modeling · Track B · Final presentation · November 2026</sub>
 </p>
 
 <p align="center">
+  <a href="slides/final.pdf"><img src="figures/final-button.svg" width="230" alt="Read the final presentation PDF"></a>
   <a href="https://gsaco.github.io/ai-project/slides/topic.html"><img src="figures/presentation-button.svg" width="286" alt="Open the interactive presentation"></a>
   <a href="proposal/proposal.pdf"><img src="figures/proposal-button.svg" width="160" alt="Read the proposal PDF"></a>
   <a href="slides/topic.pdf"><img src="figures/slides-button.svg" width="160" alt="Read the slides PDF"></a>
@@ -18,70 +19,49 @@
   <a href="proposal/topic-checklist.md">Reading and build guide</a>
 </p>
 
+
 ---
 
-> **Research question** · Can costly restarting make losses from institutional deterioration exceed gains from equal improvements?
+> **Question** · Can equal temporary institutional improvements and deteriorations generate unequal output gains and losses?
 
-<p align="center">
-  <a href="figures/paper_main_figure.pdf"><img src="figures/paper_main_figure.png" width="660" alt="Thesis estimates of cumulative log GDP-per-capita responses: symmetry imposed on the left and asymmetry allowed on the right, with confidence bands."></a>
-</p>
+<p align="center"><a href="figures/paper_main_figure.pdf"><img src="figures/paper_main_figure.png" width="600" alt="Motivating thesis evidence: GDP responses with symmetry imposed and asymmetry allowed."></a></p>
 
-*Thesis evidence motivating the model: cumulative log GDP-per-capita responses, with symmetry imposed (left) and asymmetry allowed (right). [Measurement and confidence bands](figures/README.md).*
+*Thesis evidence motivating the model. [Measurement and confidence bands](figures/README.md).*
 
-## 01 · Model and experiment
+## Model and conditional result
 
-Normalize fixed property to $`\bar{k}=1`$. Institutions determine its usable share $`s\in(0,1]`$ and recurring overhead $`c_0`$. The initially active firm chooses whether to operate, $`a_t\in\{0,1\}`$, and input $`x_t\geq0`$, with $`x_t=0`$ when closed:
+The initially active firm chooses activity $`a_t\in\{0,1\}`$ and input $`x_t\geq0`$; input is zero when closed. Usable property is $`s_t\bar k`$, with fixed $`\bar k=1`$. Output price is one:
 
 ```math
-\max_{\{a_t,x_t\}_{t\geq0}}\;\sum_{t=0}^{\infty}\beta^t
-\bigl[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t-\kappa a_t(1-a_{t-1})\bigr].
+\max_{\{a_t,x_t\}}\sum_{t\geq0}\beta^t
+\left[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t-\kappa a_t(1-a_{t-1})\right].
 ```
 
-Productivity $`A`$, input price $`w`$, and ordinary overhead $`F`$ are positive; $`c_0\geq0`$, $`0<\alpha,\beta<1`$, and $`a_{-1}=1`$. **Baseline:** free restarting, $`\kappa=0`$. **Extension:** a sunk restart cost, $`\kappa>0`$. Closure is free, preserves property, and dismantles the organization. Financing is available; suspension that preserves the organization is excluded.
+Maintain $`A,w,F>0`$, $`c_0\geq0`$, $`0<\alpha,\beta<1`$, and $`a_{-1}=1`$. All prices, technology and costs are fixed across paths. Financing is available; input does not affect future states. Closure is free, has no salvage, preserves physical property and dismantles the organization. Inactivity pays zero; every restart costs $`\kappa\geq0`$. The main model excludes organization-preserving suspension, entry and reallocation.
 
-Compare $`s_0-d`$, $`s_0`$, and $`s_0+d`$ at date 0, where $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ from date 1, as known in advance. All other parameters remain fixed.
+At date zero compare $`s_0-d`$, $`s_0`$ and $`s_0+d`$, with $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ at date one, as known in advance; $`c=c_0`$ throughout.
 
-## 02 · Conditional result
+The unchanged input FOC is $`\alpha As^{1-\alpha}x^{\alpha-1}=w`$. It yields $`q(s)=sA(\alpha A/w)^{\alpha/(1-\alpha)}`$ and $`\pi(s,c_0)=(1-\alpha)q(s)-F-c_0`$. Write $`q_0=q(s_0)`$, $`\pi_0=\pi(s_0,c_0)`$ and $`\pi_-=\pi(s_0-d,c_0)`$.
 
-Restart costs do not depend on input, so the **FOC is unchanged**:
+**Proposition 1.** Under these maintained assumptions, if
 
 ```math
-\alpha As^{1-\alpha}x^{\alpha-1}=w.
+\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>V,
+\qquad V=\frac{\pi_0}{1-\beta},
 ```
 
-Define operating output, profit, and continuation value:
+only the adverse firm closes, and it never restarts. Relative to no change, impact loss $`q_0`$ exceeds gain $`(d/s_0)q_0`$; later the loss remains $`q_0`$ and the gain is zero. With free restarting the same impact closure occurs, but production recovers at date one. **Restart costs change recovery.** Cheap suspension costing $`h<\beta V`$ removes persistence. These are firm-level results, not estimates of an EFW or GDP effect.
 
-```math
-\begin{aligned}
-q(s)&=sA\left(\frac{\alpha A}{w}\right)^{\alpha/(1-\alpha)},
-&\pi(s,c)&=(1-\alpha)q(s)-F-c,\\
-q_0&=q(s_0), &\pi_0&=\pi(s_0,c_0),\\
-\pi_\pm&=\pi(s_0\pm d,c_0), &V&=\frac{\pi_0}{1-\beta}.
-\end{aligned}
-```
+## Materials and status
 
-Under the assumptions above, my conjecture requires:
-
-```math
-\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>V.
-```
-
-Deterioration causes permanent closure; the other paths stay open. The impact loss $`q_0`$ exceeds the gain $`(d/s_0)q_0`$; thereafter the loss remains $`q_0`$ while the gain vanishes. Costly restarting changes **full recovery into a persistent shortfall**. The proposal contains a proof outline; numerical checks support the illustration, not a general proof.
-
-## 03 · Literature and research plan
-
-I apply Dixit’s established sunk-cost mechanism to institutional changes. The [literature review](proposal/literature-check.md) records inspected sources, unavailable materials, and the contribution. I will prove the optimizer and switching comparisons, simulate alternative shocks, and formalize the results in Lean. **Cheap suspension is the principal risk:** it can eliminate persistence.
-
-## 04 · Repository guide
-
-| Material | Read or explore | Status |
+| Material | Files | Status |
 |:--|:--|:--|
-| **Topic proposal** | [PDF](proposal/proposal.pdf) · [LaTeX](proposal/proposal.tex) | Four pages; model, derivations, and conjecture |
-| **Topic presentation** | [Interactive](https://gsaco.github.io/ai-project/slides/topic.html) · [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) | 14 slides; 20-minute plan |
-| **Verification** | [Code and checks](code/README.md) | 10 Python checks and 13 presentation-model checks pass |
-| **Final paper** | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [References](paper/references.bib) | Research outline; development continues |
-| **Final presentation** | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) | Planning deck |
-| **Formal and hand proofs** | [Lean plan](lean/README.md) · [Derivation plan](hand/README.md) | Future work |
-| **AI collaboration** | [Raw conversation](prompts.md) | Recorded; my independent adjudication remains pending |
+| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 27 talk slides + 3 backups; handwritten revision and acceptance included |
+| Working paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | Eight-page argument + Lean appendix; proofs, feasibility, switching and suspension |
+| Numerical checks | [Instructions](code/README.md) · [Results](code/output/final-verification.json) | Original and final checks; Python/browser comparisons |
+| Lean | [Artifacts](lean/) · [Presentation checklist](paper/audit/final-presentation-checklist.md) | Six compiled counterparts; fast check passed; [scope and open bridge](paper/audit/lean-run.md) |
+| Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | Original handwritten revision and verbatim acceptance supplied |
+| October submission | [Proposal](proposal/proposal.pdf) · [Topic PDF](slides/topic.pdf) · [Interactive topic](https://gsaco.github.io/ai-project/slides/topic.html) | Preserved earlier submission |
+| AI collaboration | [Raw conversation log](prompts.md) · [Selected final exchanges](prompts-final.md) | AI explanations distinguished from my own assessment |
 
-<sub>Topic-stage research: the current result is a conditional conjecture with a proof outline and reproducible checks. Complete proofs, Lean formalization, and the final paper remain future work. <a href="https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7">Course requirements</a>.</sub>
+The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [branch review](paper/audit/branch-review.md) lists verification and remaining work. Entry, heterogeneous-firm equilibrium, empirical calibration, and the full handwritten appendix remain open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).

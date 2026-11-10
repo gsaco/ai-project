@@ -1,0 +1,13 @@
+{
+  "paper_commit": "a15ed978282156ba72928ad23940860cccda6f28",
+  "paper_pull_request": "https://github.com/gsaco/ai-project/pull/9",
+  "source_url": "https://github.com/gsaco/ai-project/blob/a15ed978282156ba72928ad23940860cccda6f28/paper/paper.pdf",
+  "pdf_sha256": "6d4bf3819ca99401ef550427ec315ec5bf324573fb97660f0f356f4affcea724",
+  "tex_sha256": "9c8d88e44a491a9f9271d13b85d0460891463096377493047f2f9176c51146e3",
+  "applied_modeling_lib_commit": "194edcc95df74806a39b961d10dedddc6e730cce",
+  "formalization_folder": "Saco26InstitutionalRestart",
+  "agent_model": "gpt-5.6-sol",
+  "reasoning_effort": "xhigh",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "checkout_note": "git pull fetched upstream but refused to overwrite unrelated local changes. An isolated worktree at fetched origin/main is used; original changes are preserved."
+}

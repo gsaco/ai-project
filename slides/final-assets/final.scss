@@ -1,0 +1,78 @@
+/*-- scss:rules --*/
+.reveal .slides section.slide {padding-top:87px;}
+.reveal h2 {font-size:41px;margin-bottom:28px;}
+.reveal li {margin-bottom:25px;line-height:1.28;}
+.reveal .wide-figure {display:block;width:100%;height:445px;object-fit:contain;margin:0 auto;}
+.reveal .regime-figure {display:block;width:100%;height:350px;object-fit:contain;margin:0 auto;}
+.reveal #regimes p {margin:8px 0;}
+.reveal #regimes .katex-display {margin:8px 0;}
+.reveal #regimes .takeaway {font-size:26px;margin-top:15px;padding:13px 20px;}
+.reveal .conditions {margin-top:30px;gap:28px;}
+.reveal .conditions h3 {font-size:27px;}
+.reveal .conditions p {font-size:27px;}
+.reveal #proposition .takeaway {margin-top:18px;}
+.reveal #optimum,.reveal #delay,.reveal #scope,.reveal #proof-status {font-size:29px;}
+.reveal #delay .takeaway,.reveal #scope .takeaway {font-size:27px;}
+.reveal #closure .contrast {padding:20px;}
+.reveal #closure>h3 {margin-top:25px;}
+.reveal #closure p {font-size:29px;}
+.reveal #comparison table {font-size:27px;}
+.reveal .final-explorer {display:grid;grid-template-columns:295px minmax(0,1fr);gap:32px;}
+.reveal .final-explorer .controls-panel {padding-right:23px;}
+.reveal .final-explorer input {margin:10px 0 24px;}
+.reveal .final-presets {display:grid;gap:5px;margin-top:16px;}
+.reveal .final-presets button {text-align:left;font-size:23px;padding:10px;margin:0;}
+.reveal .final-values {display:grid;grid-template-columns:repeat(3,1fr);gap:16px;font-size:21px;}
+.reveal .final-values div {border-top:2px solid var(--line);padding-top:10px;}
+.reveal .final-values strong {display:block;font-size:34px;color:var(--accent);}
+.reveal #final-decision {font-size:25px;margin-top:20px;min-height:63px;}
+.reveal #final-losses {font-size:23px;}
+.reveal .suspension-explorer {display:grid;grid-template-columns:270px 1fr;gap:35px;margin-top:24px;align-items:center;}
+.reveal .suspension-explorer .insight {font-size:24px;}
+.reveal #suspension .takeaway {font-size:27px;margin-top:18px;}
+.reveal .hand-placeholder {min-height:360px;background:var(--pale);border:1px dashed var(--line);padding:30px;display:flex;flex-direction:column;justify-content:center;text-align:center;color:var(--muted);}
+.reveal pre {font-size:24px;box-shadow:none;width:100%;background:var(--pale);padding:20px;box-sizing:border-box;}
+.reveal pre code {max-height:400px;}
+.reveal #discussion li {margin:0 0 52px;}
+.reveal #references {font-size:28px;}
+.reveal #references .takeaway {font-size:27px;}
+.reveal #result .lead {font-size:36px;}
+.reveal #result .rule {margin-top:32px;padding-top:20px;}
+.reveal #feasibility {font-size:29px;}
+.reveal #ties,.reveal #logs {font-size:29px;}
+
+.reveal .chart-key p {display:contents;}
+
+.reveal #lean-statement {font-size:26px;}
+.reveal #lean-statement h3 {font-size:27px;}
+.reveal #lean-statement pre {font-size:20px;line-height:1.3;padding:10px;margin:8px 0 14px;}
+.reveal #lean-statement pre code {max-height:none;white-space:pre-wrap;padding:0;overflow:visible;}
+.reveal #lean-statement div.sourceCode {margin:0;overflow:visible;}
+.reveal #lean-statement .small {font-size:19px;color:var(--muted);}
+.reveal #lean-statement .takeaway {font-size:25px;margin-top:20px;}
+
+/* Original handwriting is preserved; these are presentation viewports only. */
+.reveal .hand-review-layout {display:grid;grid-template-columns:1.65fr 1fr;gap:42px;align-items:start;}
+.reveal .hand-image-button {display:block;padding:0;border:1px solid var(--line);background:white;cursor:zoom-in;border-radius:0;box-shadow:none;}
+.reveal .hand-image-button:focus-visible {outline:4px solid var(--turquoise,#008A92);outline-offset:5px;}
+.reveal .hand-detail {position:relative;width:100%;aspect-ratio:1900/1280;overflow:hidden;}
+.reveal .hand-detail img {position:absolute;width:212.210526%;height:auto;max-width:none;max-height:none;left:-104.736842%;top:-32.03125%;margin:0;}
+.reveal .hand-verdict {font-size:28px;}
+.reveal .hand-verdict h3 {font-size:28px;}
+.reveal .hand-verdict blockquote {font-style:normal;font-weight:600;font-size:42px;padding:18px 0;margin:0 0 30px;border:0;box-shadow:none;width:auto;}
+.reveal .hand-verdict .hand-caption {font-size:21px;color:var(--muted);margin-top:32px;}
+.reveal .hand-full {width:100%;height:700px;border:0;}
+.reveal .hand-full img {display:block;width:100%;height:100%;object-fit:contain;margin:0;max-height:none;max-width:none;}
+.hand-viewer {width:94vw;height:92vh;max-width:none;max-height:none;padding:0;border:0;background:#fff;overflow:auto;}
+.hand-viewer::backdrop {background:rgba(22,27,36,.85);}
+.hand-viewer .hand-viewer-close {position:sticky;top:12px;left:calc(100% - 120px);z-index:2;padding:10px 20px;border:0;background:#223F91;color:#fff;font:600 18px sans-serif;cursor:pointer;}
+.hand-viewer img {display:block;width:1800px;max-width:none;height:auto;margin:0;}
+
+/* All maintained assumptions in one slide, before the proposition. */
+.reveal #assumptions h2 {margin-bottom:20px;}
+.reveal .assumptions-layout {display:grid;grid-template-columns:1fr 1fr;gap:42px;}
+.reveal .assumptions-column {min-width:0;}
+.reveal #assumptions h3 {font-size:26px;line-height:1.16;margin:0 0 6px;}
+.reveal #assumptions p {font-size:25px;line-height:1.21;margin:0 0 17px;}
+.reveal #assumptions .assumptions-conditions {margin-top:7px;padding:14px 20px;}
+.reveal #assumptions .assumptions-conditions p {font-size:26px;margin:0;}

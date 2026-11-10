@@ -1,0 +1,8 @@
+{
+  "base_commit": "194edcc95df74806a39b961d10dedddc6e730cce",
+  "local_run_head": "e7787eaad6c962d2727ab92e0a76d7d710000980",
+  "patch_sha256": "2cdd7465205f9f9ef3d0a876634a44375be11bb3a6f8c087b45539601d20b80c",
+  "toolchain": "leanprover/lean4:v4.30.0-rc2",
+  "proof_sources_unchanged_after_axiom_check": true,
+  "full_semantic_certification": false
+}

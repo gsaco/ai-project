@@ -1,0 +1,38 @@
+{
+  "slides/final.tex": {
+    "sha256": "c0a1b94e6cfb7d452eb0102a69497707c5e41ed985a82bfdc97cbf57bead7e0a",
+    "bytes": 31834
+  },
+  "slides/final.pdf": {
+    "sha256": "f078e51c621bdbf3785335656ec3f1e2b7896c3f4521cd9417d5f7d2ef4cdea8",
+    "bytes": 13979968
+  },
+  "slides/final.qmd": {
+    "sha256": "c01898844426b1977213aeb99aeb4049cbd9ca5dfb1c58bcfbee043b2236b3bf",
+    "bytes": 29017
+  },
+  "slides/final.html": {
+    "sha256": "a73ae3cafc03ea8abccb26f27cebba88ff0962c9cd1820bedccc8e48396e1254",
+    "bytes": 36273048
+  },
+  "slides/guion-final-es.md": {
+    "sha256": "daee609bbf15b1e1ee0f2503f0e9dde4165d8148aecccde56850014c6d8d98f9",
+    "bytes": 28969
+  },
+  "paper/paper.tex": {
+    "sha256": "d797fb8151b45848b994a8330c30e5432977e8883470b519012e3b97825b18cf",
+    "bytes": 25012
+  },
+  "paper/paper.pdf": {
+    "sha256": "4673b5025bce1b83c39c038e6068725875bf1b0174c6c35d5837214b310a2dc0",
+    "bytes": 287148
+  },
+  "hand/final/handwritten-revision-2026-11-09.png": {
+    "sha256": "613452fe5a11258229ee89be0f624af3a24cd54e37cf607ef461558cdf77e757",
+    "bytes": 11930104
+  },
+  "hand/final/verdict.md": {
+    "sha256": "fca8ecd197c5f4b30b1c3f0397ee456c01474b3f3900a810521a913dfa9d9b5a",
+    "bytes": 756
+  }
+}

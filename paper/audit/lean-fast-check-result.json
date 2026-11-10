@@ -1,0 +1,14 @@
+{
+  "command": [
+    "python3",
+    "scripts/paper_contribution.py",
+    "check",
+    "Saco26InstitutionalRestart",
+    "--fast"
+  ],
+  "exit_code": 0,
+  "finished_utc": "2026-11-10T00:26:29.166942+00:00",
+  "elapsed_seconds": 29.54,
+  "timeout": false,
+  "full_semantic_certification": false
+}

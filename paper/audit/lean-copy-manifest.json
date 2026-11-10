@@ -1,0 +1,124 @@
+{
+  "source_directory": "/tmp/efw-applied-final/papers/Saco26InstitutionalRestart",
+  "destination": "lean",
+  "file_count": 29,
+  "exact_copy": true,
+  "files": {
+    ".gitignore": {
+      "sha256": "fd9f67c80e311a15f7b601ef4f38d84825424d2d3e2beae257f1f27c49096c76",
+      "bytes": 260
+    },
+    ".review_traces/draft_semantic_preflight.json": {
+      "sha256": "d7cae4be9352d7acb2bd3952929d3c44a02feae97365ec08c7456b0f5c56849d",
+      "bytes": 77156
+    },
+    "Assumptions.lean": {
+      "sha256": "d5270e250660de20a8ddf27f58f8a09d32ca0af26e68cd27e4d1e2218fbe4539",
+      "bytes": 1050
+    },
+    "MainTheorems.lean": {
+      "sha256": "b57ec95bdc616a9793b36436a4b6b7a5a09bb9f5bcb5229ced3e0feed8a6efdb",
+      "bytes": 20099
+    },
+    "Model.lean": {
+      "sha256": "be264d5141411b727c02546f7f58501dce11466cf2a8b4c3232d21b6a198eea3",
+      "bytes": 12195
+    },
+    "Operating.lean": {
+      "sha256": "3178ff7b8382d443b9e53cfee0a7b788ca5d4e1c1f942dffca29124753ad77bc",
+      "bytes": 12389
+    },
+    "PAPER_NOTES.md": {
+      "sha256": "9b0898289d70d1dee3bb21b0caab341555a18c51a635e3f48abdfba84fcd0acf",
+      "bytes": 1308
+    },
+    "PaperInterface.lean": {
+      "sha256": "3250dfd49de238081f339444076ce58daa15e4fd5c33315bdd6cbc36e9aa14f2",
+      "bytes": 9297
+    },
+    "ProofInterface.lean": {
+      "sha256": "6185f63a8fdc03dea245a5b2133d1272a557a048923065bf50b28e2f4fd5f178",
+      "bytes": 3639
+    },
+    "README.md": {
+      "sha256": "9e612bf1138b9abe0f83331d9dd108a438cb87fcde9ef4d9419ab977c9cb3576",
+      "bytes": 2793
+    },
+    "Results.lean": {
+      "sha256": "39bf0ffdac2fd301b653c4773dd22bfa3578068371e67cfc66f19eea4a2047da",
+      "bytes": 37330
+    },
+    "audit/LEAN_IMPORT_CLOSURE_RECEIPT.json": {
+      "sha256": "b7b53e00f3c4210b1809b8fba051a4722bbd3fa6b2565e63a28630db8d4b38b5",
+      "bytes": 378738
+    },
+    "audit/assumption_match_llm.json": {
+      "sha256": "626443ae297fabb3c540a5aeb40bc198c3c9c18bbc3d54a960b171d91826a4a7",
+      "bytes": 2056
+    },
+    "audit/defect_support_match_llm.json": {
+      "sha256": "daf8bddd11c72af1fdf8514120d8cbc41cefadaab4a5f2536b49545764b4ab81",
+      "bytes": 3058
+    },
+    "audit/library_semantic_review.json": {
+      "sha256": "c53260a6addc3ca1ddb2d550df642d86c991ab254dfa675e9efdfaceaf887ee4",
+      "bytes": 686
+    },
+    "audit/paper_statement_map.json": {
+      "sha256": "71443b30f0c0bdfdcc9c817350d67b8d19833c9e98666f89b6bd0234fa9ae2e0",
+      "bytes": 49973
+    },
+    "audit/source_proof_fidelity.json": {
+      "sha256": "be9969ac846445e64519c1518053079395ea50a8361124eeb165fb6994f63b88",
+      "bytes": 3545
+    },
+    "audit/v11_raw_source_spec_screening.json": {
+      "sha256": "deba5d0c9ad05e1414c48fef4e19ae5049f97b3f6320bab819b5136d4979a92e",
+      "bytes": 775
+    },
+    "audit/v11_source_map_preparation_config.json": {
+      "sha256": "0b60e50eb84b6be8ff2aa6e5e349e400e8db29e711f85ac7fe83859db9e44d79",
+      "bytes": 10553
+    },
+    "docs/AGENT_SOURCE_AUDIT.md": {
+      "sha256": "e706ba23e35e028391b552806cf9f1a9609029330bdf8fc4bc97b5e00ce79e9f",
+      "bytes": 1782
+    },
+    "docs/FORMALIZATION_NOTES.md": {
+      "sha256": "55dd6c66ff0711cb3a724c0d48c7409f18d11dc3eb7ffd24c5f25dd93750b95a",
+      "bytes": 526
+    },
+    "docs/FORMALIZATION_PLAN.md": {
+      "sha256": "915d80e11390c1513ce3b151ee2d303be54a4088bdfb4cf3f8283f9c05f9b137",
+      "bytes": 15624
+    },
+    "docs/FORMALIZATION_WORKING_MEMO.md": {
+      "sha256": "f8bdfead307a25d2bf54948af81e8246123a6dca73656c97fc88f614a346cf97",
+      "bytes": 1189
+    },
+    "docs/PARTIAL_RUN_REPORT.md": {
+      "sha256": "30514f0de1584cc788f5f18c2087f8a1b1d6de0ee71cbd36cfa787af5b5f7440",
+      "bytes": 2830
+    },
+    "review-dashboard.sh": {
+      "sha256": "f2e587a1a991bbb3fdb76b1b3d5433c64578a944d02a1d4d7c47396e20147f9f",
+      "bytes": 263
+    },
+    "source.pdf": {
+      "sha256": "6d4bf3819ca99401ef550427ec315ec5bf324573fb97660f0f356f4affcea724",
+      "bytes": 278237
+    },
+    "source.tex": {
+      "sha256": "9c8d88e44a491a9f9271d13b85d0460891463096377493047f2f9176c51146e3",
+      "bytes": 21486
+    },
+    "source.txt": {
+      "sha256": "ea4800ff7d82daf75d7e003c6b66664092e233e6a050a41026deada0e27b9073",
+      "bytes": 22125
+    },
+    "status.json": {
+      "sha256": "83135c1e9826579690ced6920b110e120f2741f70404e1309e69fb246c88598a",
+      "bytes": 11778
+    }
+  }
+}

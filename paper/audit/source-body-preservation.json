@@ -1,0 +1,7 @@
+{
+  "pinned_tex_sha256": "9c8d88e44a491a9f9271d13b85d0460891463096377493047f2f9176c51146e3",
+  "body_prefix_unchanged": false,
+  "mathematical_statements_assumptions_and_proofs_unchanged": true,
+  "body_change": "Only the author-adjudication status paragraph was updated to record the supplied handwritten revision and exact acceptance. Reversing that prose substitution reproduces the pinned body byte for byte, apart from trailing whitespace.",
+  "appendix_changes": "Lean coverage/reporting appendix added; author evidence status updated. No proposition was changed after formalization."
+}

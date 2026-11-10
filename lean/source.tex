@@ -1,0 +1,198 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,graphicx,enumitem,xcolor}
+\definecolor{blue}{HTML}{223F91}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\title{Economic freedom and firm entry--exit decisions\\\large Working paper for the final presentation}
+\author{Gabriel Saco\\Universidad del Pac\'ifico\\Professor Alexander Quispe}
+\date{November 8, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Can a temporary institutional deterioration cause a larger and more persistent output loss than the gain from an equal improvement? I study an initially active firm with Cobb--Douglas production, institutionally usable property, recurring institutional overhead, and a sunk restart cost. Equal property-use shocks produce symmetric output changes conditional on operating. Closure creates impact asymmetry; costly restarting can prevent recovery. I prove a conditional permanent-loss result, derive the complete switching comparison, and show how cheap suspension eliminates persistence. Numerical illustrations check the algebra and decisions; they are not an empirical calibration. Formalization coverage and the author's independent handwritten check are reported separately and must not be inferred from numerical success.
+\end{abstract}
+\section{Question, interpretation, and contribution}
+My thesis studies real GDP per capita after changes in economic freedom. This paper develops one firm-level mechanism behind the direction of the estimated asymmetry. The institutional variables below are economic conditions, not Economic Freedom of the World (EFW) index points. Usable property captures restrictions on productive use; institutional overhead captures recurring fixed expenses. Neither variable exhausts the EFW framework.
+
+Dixit (1989) studies entry and exit with sunk costs under uncertainty. Here institutional restoration is known: waiting brings no new information. I retain the distinction between an incumbent and an inactive owner, and derive a matched loss--gain comparison. Sunk-cost persistence is established theory, not a novelty claim. Dixit (1992) distinguishes suspension from abandonment, motivating the first robustness exercise. The source search and unavailable materials are documented in \texttt{proposal/literature-check.md}.
+
+The contribution to my thesis is a transparent conditional mechanism. The central result changes the free-restart baseline's full recovery into persistent inactivity. It does not identify an EFW coefficient or prove that institutional deteriorations always dominate improvements in aggregate data.
+
+\textbf{Research status.} The results below have analytic proofs. Simulations check finite illustrations and parameter grids. Independent author adjudication and complete source-to-Lean validation are separate tasks; their actual status is recorded in the final-presentation materials.
+\newpage
+\section{Model and maintained assumptions}
+\textbf{A1. Technology and prices.} Dates are $t=0,1,\ldots$. Output price is one. Fixed pre-existing property $\bar k>0$ is normalized to one. With $A>0$, $w>0$, and $0<\alpha<1$, operating output is $As_t^{1-\alpha}x_t^\alpha$. The usable share lies in $(0,1]$. Technology, prices, and physical property do not change across experiments.
+
+\textbf{A2. Operating costs.} Ordinary overhead is $F>0$. Institutional overhead is constant, $c_t=c_0\geq0$, and both are paid only when operating. This experiment changes $s$, not $c$.
+
+\textbf{A3. Feasible choices and state.} Activity $a_t\in\{0,1\}$ and input $x_t\geq0$ satisfy $x_t=0$ when $a_t=0$. Initially $a_{-1}=1$. Closure is free, has no salvage payment, preserves physical property, and dismantles the organization. Every closed-to-open transition costs the same $\kappa\geq0$. Inactivity has zero payoff. No temporary suspension preserves the organization in the main model.
+
+\textbf{A4. Financing and information.} Financing is available for inputs, operating losses, and restarting. There is no wealth state, capital accumulation, or effect of today's input on tomorrow's opportunities. The firm knows the entire institutional path and maximizes discounted profit with $0<\beta<1$.
+
+\textbf{A5. Matched shock paths.} For $j\in\{-,0,+\}$, date-zero usable property is $s_0-d,s_0,s_0+d$, respectively, with $0<d<s_0$ and $s_0+d\leq1$. Every path returns permanently to $s_0$ at date one. All other primitives are fixed.
+
+\textbf{A6. Normal viability and scope.} Optimized normal operating profit $\pi_0$ is strictly positive. The comparison concerns the same incumbent. Potential entrants, endogenous market prices, and reallocation are outside its choice set.
+
+The firm solves
+\begin{equation}\label{eq:full}
+\max_{\{a_t,x_t\}}\sum_{t=0}^{\infty}\beta^t
+\left[As_t^{1-\alpha}x_t^\alpha-wx_t-(F+c_0)a_t
+-\kappa a_t(1-a_{t-1})\right].
+\end{equation}
+Operating revenue is zero when closed because $x_t=0$. Original setup costs are sunk. The free-restart baseline sets $\kappa=0$; the extension changes only this parameter.
+
+After input optimization, write $\pi_t^j=\pi(s_t^j,c_0)$. Problem~\eqref{eq:full} reduces to
+\begin{equation}\label{eq:reduced}
+\max_{a_t\in\{0,1\}}\sum_{t=0}^{\infty}\beta^t
+\left[a_t\pi_t^j-\kappa a_t(1-a_{t-1})\right].
+\end{equation}
+These optimized profits are bounded, say $|\pi_t^j|\leq C$. Thus every reduced activity path has an absolutely convergent payoff, bounded in absolute value by $(C+\kappa)/(1-\beta)$. Unoptimized plans with infinite discounted losses have value $-\infty$ and cannot improve on immediate closure. The infinite horizon concerns the firm's future, not the duration of the shock.
+\newpage
+\section{Input choice and continuation values}
+\begin{lemma}[Operating optimum]\label{lem:input}
+Under A1--A2, conditional on operating at $s>0$, the unique global optimum satisfies
+\begin{align}
+\alpha As^{1-\alpha}x^{\alpha-1}&=w,\label{eq:foc}\\
+x^*(s)&=s(\alpha A/w)^{1/(1-\alpha)},\\
+q(s)&=sA(\alpha A/w)^{\alpha/(1-\alpha)},\\
+\pi(s,c_0)&=(1-\alpha)q(s)-F-c_0.\label{eq:profit}
+\end{align}
+The input FOC is independent of the restart cost.
+\end{lemma}
+\begin{proof}
+For $x>0$, differentiate $As^{1-\alpha}x^\alpha-wx-F-c_0$. The derivative is $\alpha As^{1-\alpha}x^{\alpha-1}-w$ and the second derivative is $\alpha(\alpha-1)As^{1-\alpha}x^{\alpha-2}<0$. The first derivative decreases continuously from $+\infty$ to $-w$. Its unique zero is a global maximum: profit initially rises above its value at zero and tends to $-\infty$ as $x\to\infty$. Rearranging the FOC gives $x^{1-\alpha}=\alpha As^{1-\alpha}/w$, hence the displayed optimizer. Substitution yields output. Multiplying the FOC by $x^*$ gives $wx^*=\alpha q$, which gives profit. Restart costs do not depend on input and input does not change future states, so the conditional problem separates across dates.
+\end{proof}
+Define $q_0=q(s_0)>0$, $\pi_0=\pi(s_0,c_0)>0$, $\pi_\pm=\pi(s_0\pm d,c_0)$, and
+\begin{equation}\label{eq:V}V=\frac{\pi_0}{1-\beta}>0.\end{equation}
+\begin{lemma}[Restored-state values and delayed restarting]\label{lem:value}
+Under A1--A6, at any restored date the value of an active firm is $V$, and that of an inactive firm is $W=\max\{V-\kappa,0\}$. Immediate restart is uniquely optimal if $V>\kappa$; permanent inactivity is uniquely optimal if $V<\kappa$. At equality, any restart date and never restarting give the same value.
+\end{lemma}
+\begin{proof}
+An active firm earns $\pi_0$ each period by remaining active, giving the convergent geometric series $V$. Closing forgoes strictly positive profits and can add a nonnegative restart payment; it cannot improve this path. For a closed firm, any path with a first restart at date $n\geq0$ is weakly improved by remaining active thereafter. Its value is then $\beta^n(V-\kappa)$. Never restarting gives zero. If $V-\kappa>0$, $n=0$ strictly dominates all positive delays and never restarting. If $V-\kappa<0$, every finite delay gives a negative value and never restarting attains zero. If it is zero, all these alternatives tie. This covers arbitrary reopening sequences, not only a finite simulation horizon.
+\end{proof}
+\newpage
+\section{Proposition: temporary deterioration, permanent output loss}
+At date zero an incumbent compares $\pi_j+\beta V$ with $\beta W$. There is no ordinary derivative with respect to binary $a_t$; the optimality condition compares these values. Define actual output $y_t^j=a_t^jq(s_t^j)$, losses $L_t=y_t^0-y_t^-$, and gains $G_t=y_t^+-y_t^0$.
+\begin{proposition}[Persistent strict asymmetry]\label{prop:main}
+Maintain A1--A6. Suppose
+\begin{equation}\label{eq:conditions}
+\pi_0>0,\qquad \pi_-+\beta V<0,\qquad \kappa>V.
+\end{equation}
+Then the unique optimal activity paths are $a_t^-=0$ and $a_t^0=a_t^+=1$ for every $t\geq0$. Consequently
+\begin{align}
+L_0=q_0&>G_0=(d/s_0)q_0,\\
+L_t=q_0&>G_t=0\qquad(t\geq1).
+\end{align}
+For the otherwise identical free-restart baseline, the adverse firm closes at date zero and reopens at date one; the unchanged and favorable firms remain active. Impact losses and gains are the same as above, but $L_t=G_t=0$ for $t\geq1$.
+\end{proposition}
+\begin{proof}
+Lemma~\ref{lem:value} and $\kappa>V$ give $W=0$. Closing at date zero therefore has value zero. Adverse continuation gives $\pi_-+\beta V<0$, so immediate closure is uniquely optimal; restarting is strictly unprofitable at every later date. Under no change, continuation yields $\pi_0+\beta V=V>0$. Under improvement, $\pi_+>\pi_0$, so continuation is also strictly positive. Lemma~\ref{lem:value} establishes perpetual operation for both once normal conditions return.
+
+Lemma~\ref{lem:input} makes output linear in $s$, so $q(s_0+d)=q_0(1+d/s_0)$. Date-zero output is zero under deterioration, $q_0$ under no change, and $q_0(1+d/s_0)$ under improvement. Subtract to obtain the first comparison; strictness uses $0<d<s_0$. Later the adverse output remains zero while the other two outputs equal $q_0$.
+
+For the baseline, set $\kappa=0$. Then $W=V$ and closing is worth $\beta V$, while continuing is worth $\pi_-+\beta V$. The assumed inequality implies $\pi_-<0$, so closing strictly dominates. Lemma~\ref{lem:value} gives immediate reopening at date one because $V>0$. The other paths stay open because their date-zero operating profits are positive. Thus restarting costs change recovery, not the existence of impact asymmetry in this experiment.
+\end{proof}
+
+The conditions do not assert an outcome as an assumption: each inequality compares values derived from the primitive optimization problem. Positive normal profits are compatible with an unprofitable restart because the incumbent has already paid its original setup cost. No conclusion about entry by other owners is implied by $\kappa>V$.
+\newpage
+\section{Switching regions and the strength of the conditions}
+\begin{proposition}[Complete closure threshold and weak asymmetry]\label{prop:regions}
+Under A1--A6, for any $\kappa\geq0$ the adverse firm strictly prefers closure at date zero if and only if
+\begin{equation}\label{eq:threshold}
+(1-\alpha)q_0\frac{d}{s_0}>\pi_0+\beta\min\{\kappa,V\}.
+\end{equation}
+The reverse strict inequality implies continued operation; equality gives indifference. If it closes, $\kappa<V$ implies reopening at date one and $\kappa>V$ implies permanent inactivity; $\kappa=V$ gives the indifference described in Lemma~\ref{lem:value}. Under any optimal selection at ties, $L_t\geq G_t\geq0$ for every $t$. At impact strictness occurs exactly when the adverse firm closes; after restoration it occurs exactly when that firm remains closed.
+\end{proposition}
+\begin{proof}
+Linearity gives $\pi_-=\pi_0-(1-\alpha)q_0d/s_0$. Subtract closure value from continuation value:
+\[
+\pi_-+\beta V-\beta\max\{V-\kappa,0\}
+=\pi_0-(1-\alpha)q_0d/s_0+\beta\min\{\kappa,V\}.
+\]
+Its sign yields the threshold. Lemma~\ref{lem:value} gives all subsequent decisions. Normal and favorable continuation strictly dominates closure because $\pi_+>\pi_0>0$ and $W\leq V$. If the adverse firm operates at impact, $L_0=G_0=(d/s_0)q_0$; otherwise $L_0=q_0>G_0$. Later favorable and normal output coincide, so $G_t=0$, while adverse output is either zero or $q_0$. This also covers delayed restarting at indifference.
+\end{proof}
+For strict permanent closure the conditions reduce to
+\[
+\kappa>V,\qquad (1-\alpha)q_0(d/s_0)>V.
+\]
+Equivalently, the normal profit margin relative to revenue net of variable input must obey
+\[
+0<\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac d{s_0}.
+\]
+This requires a sufficiently thin normal margin and a sufficiently severe admissible shock. It is not a universal result about all firms. A higher restart cost raises the closure threshold until $\kappa=V$: it can discourage closure today even while discouraging reopening later.
+
+\textbf{Nonempty parameter region.} Take $A=2$, $\alpha=1/2$, $w=1.25$, $F=0.30$, $c_0=0.09$, $s_0=0.50$, $d=0.20$, $\beta=0.90$, and $\kappa=0.40$. Then $x^*(s_0)=0.32$, $q_0=0.80$, $\pi_0=0.01$, $\pi_-=-0.15$, $\pi_+=0.17$, and $V=0.10$. Thus $\pi_-+\beta V=-0.06<0$ and $\kappa>V$. Impact loss is $0.80$ and gain is $0.32$. All inequalities are strict, so a neighborhood of this example also satisfies the proposition.
+\newpage
+\section{Simulations and what they establish}
+The single entry point \texttt{code/verify.py} reproduces the model checks and final-presentation figures. The three central cases retain the topic calibration: a small shock ($d=0.05$, $\kappa=0.40$), free restarting ($d=0.20$, $\kappa=0$), and costly restarting ($d=0.20$, $\kappa=0.40$). These are illustrative model units; a period is not calibrated to calendar years.
+
+\begin{center}
+\begin{tabular}{lrrrr}\toprule
+Case & $y_0^-$ & $y_{t\geq1}^-$ & $L_0$ & $G_0$\\\midrule
+Small shock & 0.72 & 0.80 & 0.08 & 0.08\\
+Free restart & 0 & 0.80 & 0.80 & 0.32\\
+Costly restart & 0 & 0 & 0.80 & 0.32\\\bottomrule
+\end{tabular}
+\end{center}
+For the small shock, continued operation is worth $0.06>0$ and levels are symmetric. For the large shock, continuation is $-0.06$ in both restart cases. Closure is worth $0.09$ with free restart and zero with costly restart. This is why replacing the closure value by zero in every case would solve the wrong problem.
+
+The $(d,\kappa)$ comparison separates continued operation, closure followed by reopening, and permanent closure. At the illustrative normal conditions, $V=0.10$ and the closure boundary is
+\[
+d=\frac{0.50}{0.40}\left[0.01+0.90\min\{\kappa,0.10\}\right].
+\]
+It rises from $0.0125$ when restarting is free to $0.125$ when $\kappa\geq V$. Boundary ties are reported separately. Computation retains operation at a tie and declines a zero-value restart; strict propositions do not depend on these conventions.
+
+Checks compare closed-form decisions with exhaustive finite activity sequences and an exact stationary tail. That tail avoids treating the terminal simulation date as the end of the firm. Additional comparisons vary normal overhead, shock size, and restart cost, and check the suspension option below. Cross-language checks compare the browser examples with Python.
+
+These calculations detect algebra, implementation, and timing errors on a finite grid. They cannot prove the continuum of parameter cases, identify the empirical mechanism, estimate an EFW effect, or demonstrate aggregate general-equilibrium persistence. The analytic proofs establish the stated parameter-wide results. Lean coverage must be judged from its actual statements and checked dependencies.
+\newpage
+\section{Robustness and aggregation}
+\begin{proposition}[Cheap suspension removes persistence]\label{prop:suspension}
+Maintain A1--A6 and the strict conditions of Proposition~\ref{prop:main}, except allow an active firm to suspend at date zero, produce nothing, pay a total preservation expense $h\geq0$ instead of operating overhead, and retain its organization for costless resumption at date one. If $h<\beta V$, the adverse firm uniquely suspends and resumes at date one. Normal and favorable firms operate. Impact loss remains $q_0$, but losses and gains both vanish from date one.
+\end{proposition}
+\begin{proof}
+Adverse continuation is negative and closure has value zero. Suspension is worth $-h+\beta V>0$, so it strictly dominates both. On restoration, positive normal profit makes resumption optimal. Normal and favorable operation yields $\pi_j+\beta V>-h+\beta V$ because $\pi_j>0$ and $h\geq0$, and also exceeds closure. Subtract outputs to obtain the result. At $h=\beta V$, suspension and closure tie; above that threshold, under these maintained strict conditions, closure is preferred. In the illustration $h=0.02$ gives suspension value $0.07$, compared with $-0.06$ for operation and zero for closure.
+\end{proof}
+\begin{corollary}[Positive totals and logs]\label{cor:logs}
+Under Proposition~\ref{prop:main}, suppose $Y_t^j=B+Ny_t^j$ with the same $B>0$ and $N>0$ in all paths. Then $Y_t^j>0$ and
+\[
+\log Y_t^0-\log Y_t^->\log Y_t^+-\log Y_t^0
+\quad\text{for every }t\geq0.
+\]
+The same comparison applies to per-capita totals if population is identical across paths.
+\end{corollary}
+\begin{proof}
+The proposition gives $Y_t^0-Y_t^->Y_t^+-Y_t^0$, hence $2Y_t^0>Y_t^-+Y_t^+\geq2\sqrt{Y_t^-Y_t^+}$. Positivity gives $(Y_t^0)^2>Y_t^-Y_t^+$; apply increasing logarithms and rearrange. Common population cancels from log differences.
+\end{proof}
+This is a fixed-cohort accounting comparison, not a model of GDP. A closed firm's log output is undefined. Even symmetric nonzero level changes can be asymmetric in logs; log curvature alone must not be attributed to restart costs.
+
+\textbf{Entry and heterogeneity.} Neither is solved here. The condition $\kappa>V$ excludes this incumbent's later restart, not favorable date-zero entry by another owner: such entry has value $\pi_++\beta V-\kappa$. Excluding it would require further assumptions or the stronger cost restriction. Heterogeneous firms may cross different thresholds; aggregation must account for their weights, unaffected production, entry, prices, and reallocation. These are research questions, not results of the current simulations.
+\newpage
+\section{Proof status, formalization, and independent review}
+The proofs of Lemmas~\ref{lem:input}--\ref{lem:value}, Propositions~\ref{prop:main}--\ref{prop:suspension}, and Corollary~\ref{cor:logs} are complete as mathematical arguments under the numbered assumptions. The delicate step is Lemma~\ref{lem:value}: closure retains an option to reopen, and arbitrarily delayed or repeated switching must be covered. The finite simulations alone cannot establish it.
+
+Formal verification is a separate claim. The formalization run uses a pinned GitHub commit of this paper, the AppliedModelingLib procedure, and a paper-scoped check. The exact source hash, declarations, results of commands, and additional assumptions or open endpoints are recorded in \texttt{lean/} and \texttt{paper/audit/}. No theorem is described as Lean-verified solely because it has a Lean-like statement on a slide. An algebraic result conditional on value identities does not by itself verify the underlying optimization or infinite-horizon argument.
+
+\textbf{Author adjudication.} The selected AI-assisted step is the closure value $\beta\max\{V-\kappa,0\}$. The independent worksheet in \texttt{hand/final/} asks for the geometric sum, every possible first restart date, the never-restart option, and the conversion from date-one to date-zero value. The author's handwritten work and verdict must be supplied by the author. Until then, the final deck labels this component as awaiting those materials.
+
+\section{Questions for discussion}
+\begin{enumerate}
+\item What evidence could distinguish organization-destroying closure from cheap suspension after an institutional deterioration?
+\item Which minimal aggregation structure would preserve the firm-level comparison once entry and reallocation are allowed?
+\item Are low normal profit margins and a known one-period institutional reversal the most informative starting point, or should restoration duration be the next extension?
+\end{enumerate}
+\section{Conclusion}
+The model makes a precise conditional statement. Input choices have a standard unchanged FOC. Equal property-use shocks have equal and opposite effects while a firm operates. When the adverse shock makes continuation unattractive and rebuilding exceeds the restored business value, the adverse firm exits permanently. Free restarting restores production; cheap suspension can do so too. The mechanism's empirical relevance turns on whether institutional setbacks actually destroy organizations and on how other firms respond.
+
+\begin{thebibliography}{9}\small
+\bibitem{dixit89} Dixit, A. K. (1989). Entry and exit decisions under uncertainty. \emph{Journal of Political Economy}, 97(3), 620--638. \href{https://doi.org/10.1086/261619}{doi:10.1086/261619}.
+\bibitem{dixit92} Dixit, A. K. (1992). Investment and hysteresis. \emph{Journal of Economic Perspectives}, 6(1), 107--132. \href{https://doi.org/10.1257/jep.6.1.107}{doi:10.1257/jep.6.1.107}.
+\bibitem{efw} Lawson, R., Murphy, R., and Mitchell, M. D. (2025). Economic Freedom of the World: 2025 Annual Report. Fraser Institute.
+\end{thebibliography}
+\end{document}

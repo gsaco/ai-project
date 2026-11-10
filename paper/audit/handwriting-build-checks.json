@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-09",
+  "pdf_pages": 29,
+  "main_slides": 26,
+  "backups": 3,
+  "pdf_latex_passes": 2,
+  "pdf_latex_exit_code": 0,
+  "builtin_compile": "success",
+  "latex_warnings": [],
+  "quarto_render_exit_code": 0,
+  "original_image_bytes_preserved": true,
+  "html_both_images_embedded_unchanged": true,
+  "author_verdict_verbatim": "I accept it.",
+  "source": "slides/final.tex",
+  "pdf": "slides/final.pdf",
+  "interactive": "slides/final.html",
+  "layout_audit": "slides/build/handwriting-audit/audit_report.md",
+  "browser_preview": "blocked by automatic local-file URL review; not live-tested",
+  "changes_committed": false
+}

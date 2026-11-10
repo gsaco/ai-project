@@ -1,0 +1,96 @@
+diff --git a/config/formalization_engine_revisions.json b/config/formalization_engine_revisions.json
+index 00d2205c..4790a7e7 100644
+--- a/config/formalization_engine_revisions.json
++++ b/config/formalization_engine_revisions.json
+@@ -1118,6 +1118,15 @@
+       "verification": [
+         "MSVV accepted source-present receipt passes; existing export and packet regression checks passed."
+       ]
++    },
++    {
++      "engine_tree_sha256": "8ada0fb3383fb89b4dd874898f2e582fd8ee9e8216e5f9ca54e4ad577a7124db",
++      "formalization_review_protocol_sha256": "ca5ffddd01335d26b9b44d361eeaea34261ea281d4fed0eb4f8d38d85a6c4e70",
++      "rationale": "Permit bounded Lean closure processes on macOS where finite RLIMIT_AS is unavailable, and align the non-evidence draft display timeout with the existing graph budget.",
++      "sequence": 97,
++      "verification": [
++        "18 focused draft-semantic-preflight and Lean-closure-trampoline regressions pass; the complete 12-row Saco26InstitutionalRestart draft preflight succeeds under the unchanged Lean heap cap."
++      ]
+     }
+   ],
+   "schema": 2
+diff --git a/lakefile.toml b/lakefile.toml
+index 497ca287..2ee55b17 100644
+--- a/lakefile.toml
++++ b/lakefile.toml
+@@ -248,3 +248,7 @@ srcDir = "papers"
+ [[lean_lib]]
+ name = "GolzHaghtalabYang2025Distortion"
+ srcDir = "papers"
++
++[[lean_lib]]
++name = "Saco26InstitutionalRestart"
++srcDir = "papers"
+diff --git a/scripts/current_closeout/draft_semantic_preflight.py b/scripts/current_closeout/draft_semantic_preflight.py
+index cb48be5a..62e5aa7e 100644
+--- a/scripts/current_closeout/draft_semantic_preflight.py
++++ b/scripts/current_closeout/draft_semantic_preflight.py
+@@ -50,9 +50,9 @@ DRAFT_SEMANTIC_PREFLIGHT_MAX_ROOTS_PER_BATCH = 4
+ # A single bounded display can still legitimately need more than the generic
+ # declaration-inventory default: large source-facing Specs must be rendered in
+ # full so this repair-stage preflight can reject printer elision.  This remains
+-# below the closeout graph's 900-second transaction budget and applies only to
+-# this non-evidentiary, bounded display surface.
+-DRAFT_SEMANTIC_PREFLIGHT_DISPLAY_TIMEOUT_SECONDS = 600
++# the closeout graph's 900-second transaction budget and applies only to this
++# non-evidentiary, bounded display surface.
++DRAFT_SEMANTIC_PREFLIGHT_DISPLAY_TIMEOUT_SECONDS = 900
+ 
+ 
+ class DraftSemanticPreflightError(ValueError):
+diff --git a/scripts/lean_closure_subprocess.py b/scripts/lean_closure_subprocess.py
+index c193a4ce..f130c62a 100644
+--- a/scripts/lean_closure_subprocess.py
++++ b/scripts/lean_closure_subprocess.py
+@@ -22,6 +22,12 @@ def apply_posix_address_space_limit(limit_bytes: int) -> None:
+         raise RuntimeError("address-space limit must be positive")
+     if os.name != "posix":
+         return
++    # Darwin exposes RLIMIT_AS but rejects every finite value with
++    # ``ValueError: current limit exceeds maximum limit`` on supported Python
++    # runtimes.  Lean still receives its independent finite `-M` heap cap from
++    # the caller, so treat the unavailable OS ceiling like a non-POSIX host.
++    if sys.platform == "darwin":
++        return
+     try:
+         import resource
+     except ImportError as error:  # pragma: no cover - unavailable on non-POSIX.
+diff --git a/scripts/tests/test_lean_closure_subprocess.py b/scripts/tests/test_lean_closure_subprocess.py
+index 2a280f65..a59efb1d 100644
+--- a/scripts/tests/test_lean_closure_subprocess.py
++++ b/scripts/tests/test_lean_closure_subprocess.py
+@@ -32,7 +32,10 @@ class LeanClosureSubprocessTests(unittest.TestCase):
+                 self.updated = (resource_kind, limits)
+ 
+         fake_resource = FakeResource()
+-        with mock.patch.dict(sys.modules, {"resource": fake_resource}):
++        with (
++            mock.patch.object(trampoline.sys, "platform", "linux"),
++            mock.patch.dict(sys.modules, {"resource": fake_resource}),
++        ):
+             trampoline.apply_posix_address_space_limit(12345)
+ 
+         self.assertEqual(
+@@ -40,6 +43,13 @@ class LeanClosureSubprocessTests(unittest.TestCase):
+             (fake_resource.RLIMIT_AS, (12345, fake_resource.RLIM_INFINITY)),
+         )
+ 
++    def test_darwin_skips_unusable_address_space_limit(self) -> None:
++        with (
++            mock.patch.object(trampoline.sys, "platform", "darwin"),
++            mock.patch.dict(sys.modules, {"resource": None}),
++        ):
++            trampoline.apply_posix_address_space_limit(12345)
++
+     def test_main_passes_the_exact_command_to_exec(self) -> None:
+         with (
+             mock.patch.object(trampoline, "apply_posix_address_space_limit") as cap,

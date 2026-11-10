@@ -1,10 +1,10 @@
-"""Single entry point for topic-stage symbolic/numerical checks and model figures.
+"""Single entry point for symbolic/numerical checks and final-presentation figures.
 Run: python3 code/verify.py. Raises on failure; this is not a formal proof.
 """
 from pathlib import Path
 from itertools import product
 from math import isclose, log
-import json, runpy
+import json, runpy, shutil, subprocess
 import numpy as np
 import sympy as sp
 from firm_model import DEFAULTS, operating, simulate
@@ -64,6 +64,12 @@ check(f'optimal switching versus {comparisons} enumerated scenario problems and 
 r=simulate();suspend=-.02+.9*r['V']
 check('cheap suspension defeats permanent closure in the illustration',suspend>max(r['paths']['negative']['continueValue'],r['paths']['negative']['closeValue']))
 # Export figures and numerical examples from this project's model, not the template toy.
-runpy.run_path(str(ROOT/'slides/figures/build_topic_figures.py'),run_name='__main__')
-(OUT/'verification.json').write_text(json.dumps(dict(status='passed',scope='topic-stage checks; not a proof',checks=checks,enumerated_scenarios=comparisons),indent=2)+'\n')
-print(f'{len(checks)} checks passed; own-model figures regenerated.')
+# The submitted topic figures are preserved. Reproduce current results separately.
+runpy.run_path(str(ROOT/'code/final_analysis.py'),run_name='__main__')
+node=shutil.which('node')
+if node is None:
+    raise RuntimeError('Node.js 18 or newer is required for the browser-model checks.')
+subprocess.run([node,str(ROOT/'slides/reveal/model.test.js')],check=True,cwd=ROOT)
+subprocess.run([node,str(ROOT/'code/check_browser_model.cjs')],check=True,cwd=ROOT)
+(OUT/'verification.json').write_text(json.dumps(dict(status='passed',scope='original and final-presentation checks; finite checks are not proofs',checks=checks,enumerated_scenarios=comparisons,browser_checks='13 model tests and final cross-language grid passed'),indent=2)+'\n')
+print(f'{len(checks)} original checks, 8 final check groups, and browser-model checks passed; final figures regenerated.')
