@@ -7,8 +7,8 @@
   "slide_lean_snippets_match_actual_source": true,
   "reader_facing_local_links_checked": 43,
   "broken_links": [],
-  "slides": 29,
-  "main_slides": 26,
+  "slides": 30,
+  "main_slides": 27,
   "backups": 3,
   "paper_pages": 9,
   "talk_seconds": 1800,
@@ -43,5 +43,7 @@
   ],
   "local_verification": "Model checks, four LaTeX builds, Quarto render, full Lean proof build and required fast check passed.",
   "review_record": "paper/audit/branch-review.md",
-  "author_concern_supplied": "November 10, 2026: suspected an error in the equivalence of the max and min expressions."
+  "author_concern_supplied": "November 10, 2026: suspected an error in the equivalence of the max and min expressions.",
+  "assumptions_slide": 9,
+  "all_proposition_conditions_on_one_slide": true
 }

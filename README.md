@@ -56,7 +56,7 @@ only the adverse firm closes, and it never restarts. Relative to no change, impa
 
 | Material | Files | Status |
 |:--|:--|:--|
-| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 26 talk slides + 3 backups; handwritten revision and acceptance included |
+| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 27 talk slides + 3 backups; handwritten revision and acceptance included |
 | Working paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | Eight-page argument + Lean appendix; proofs, feasibility, switching and suspension |
 | Numerical checks | [Instructions](code/README.md) · [Results](code/output/final-verification.json) | Original and final checks; Python/browser comparisons |
 | Lean | [Artifacts](lean/) · [Presentation checklist](paper/audit/final-presentation-checklist.md) | Six compiled counterparts; fast check passed; [scope and open bridge](paper/audit/lean-run.md) |

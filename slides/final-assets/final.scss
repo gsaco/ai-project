@@ -67,3 +67,12 @@
 .hand-viewer::backdrop {background:rgba(22,27,36,.85);}
 .hand-viewer .hand-viewer-close {position:sticky;top:12px;left:calc(100% - 120px);z-index:2;padding:10px 20px;border:0;background:#223F91;color:#fff;font:600 18px sans-serif;cursor:pointer;}
 .hand-viewer img {display:block;width:1800px;max-width:none;height:auto;margin:0;}
+
+/* All maintained assumptions in one slide, before the proposition. */
+.reveal #assumptions h2 {margin-bottom:20px;}
+.reveal .assumptions-layout {display:grid;grid-template-columns:1fr 1fr;gap:42px;}
+.reveal .assumptions-column {min-width:0;}
+.reveal #assumptions h3 {font-size:26px;line-height:1.16;margin:0 0 6px;}
+.reveal #assumptions p {font-size:25px;line-height:1.21;margin:0 0 17px;}
+.reveal #assumptions .assumptions-conditions {margin-top:7px;padding:14px 20px;}
+.reveal #assumptions .assumptions-conditions p {font-size:26px;margin:0;}

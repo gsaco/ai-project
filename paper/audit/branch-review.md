@@ -5,7 +5,7 @@ Reviewed November 9; author assessment updated November 10, 2026, against the pr
 ## Present and checked
 
 - The topic proposal, topic slides and original build workflow are preserved.
-- `slides/final.tex` and `slides/final.pdf` contain 26 talk slides and three backups, covering the eight required presentation points. `final.qmd` and the self-contained `final.html` provide the interactive companion.
+- `slides/final.tex` and `slides/final.pdf` contain 27 talk slides and three backups, covering the eight required presentation points. `final.qmd` and the self-contained `final.html` provide the interactive companion.
 - The original handwritten revision and the author's exact acceptance, “I accept it,” are included. The 30-minute Spanish speaking script remains local by the author's existing preference; it is not a required submission artifact.
 - The newly supplied conversation export is appended verbatim to `prompts.md`, preserving all earlier bytes. The exact offset and hashes are in `raw-transcript-addition.json`.
 - All four LaTeX sources compile. Quarto rendering succeeds. The model's original checks, eight final check groups, and Python/JavaScript comparisons pass.

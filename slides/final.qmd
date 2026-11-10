@@ -646,6 +646,49 @@ The input FOC is unchanged by $\kappa$: restarting is independent of input, and 
 :::
 
 
+## [Assumptions]{.teal} behind the proposition {#assumptions}
+
+::: {.kicker}
+3 · A1–A6 from the working paper, in plain language
+:::
+
+:::: {.assumptions-layout}
+::: {.assumptions-column}
+
+<h3><span class="teal">A1 · The same production technology</span></h3>
+
+Dates $t=0,1,\ldots$; fixed property $\bar k=1$ and output price $1$. Operating output is $As_t^{1-\alpha}x_t^\alpha$, with $A,w>0$, $0<\alpha<1$, and $0<s_t\leq1$. Technology and prices stay fixed.
+
+<h3><span class="teal">A2 · Costs are paid while open</span></h3>
+
+Overhead is $F+c_0$, with $F>0$ and $c_0\geq0$. Both are paid only when operating; $c_0$ stays constant.
+
+<h3><span class="orange">A3 · Closing dismantles the organization</span></h3>
+
+Initially open: $a_{-1}=1$. Choose $a_t\in\{0,1\}$ and $x_t\geq0$; $x_t=0$ when closed. Closing is free: no salvage or closed-firm payoff. Physical property stays; the organization is lost. Each restart costs $\kappa\geq0$. No suspension option; earlier setup costs are sunk.
+
+:::
+::: {.assumptions-column}
+
+<h3><span class="teal">A4 · Finance is available; the future is known</span></h3>
+
+Financing covers inputs, operating losses, and restarting. No wealth state or capital accumulation; today's input does not affect tomorrow. The whole institutional path is known; $0<\beta<1$ discounts future profits.
+
+<h3><span class="teal">A5 · Equal shocks, then full restoration</span></h3>
+
+At $t=0$, compare $s_0-d$, $s_0$, and $s_0+d$, with $0<d<s_0$ and $s_0+d\leq1$. Every path returns permanently to $s_0$ from $t=1$. All other parameters stay fixed.
+
+<h3><span class="teal">A6 · One normally profitable firm</span></h3>
+
+Normal operating profit is positive: $\pi_0>0$. Compare the same incumbent; no entry, endogenous prices, or reallocation.
+
+:::
+::::
+
+::: {.takeaway .assumptions-conditions}
+**Result conditions:** $\pi_0>0,\quad\pi_-+\beta V<0,\quad\kappa>V,\qquad V=\dfrac{\pi_0}{1-\beta}.$
+:::
+
 ## Proposition: a temporary setback, a [lasting loss]{.orange} {#proposition}
 
 
