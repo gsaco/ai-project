@@ -1,38 +1,38 @@
 {
   "slides/final.tex": {
-    "sha256": "2ec044b8cf0c98740df3fcbe4d7b96568177ec1373c3247651958cde66108021",
-    "bytes": 29854
+    "sha256": "bd695359b4e02a461b8036ffb478afa74789e57793c198e873d015a1c213cbc5",
+    "bytes": 29907
   },
   "slides/final.pdf": {
-    "sha256": "06f0cb5eeb01329c3e281b5d38c9594059e10fd820d55508fa070675ab1437cd",
-    "bytes": 13983363
+    "sha256": "e01e4aecdfe0b70f246c1f18d2f7028fdda49c8f445f05d6f89e750484c11739",
+    "bytes": 13976867
   },
   "slides/final.qmd": {
-    "sha256": "ce74057724742dec06073a10ce44f018603bccc2ae4ee5c5835816bb61c24ae8",
-    "bytes": 27043
+    "sha256": "257c5eddb46303881e675c55558940ff0357171bb2204ba83baa0603f5752f86",
+    "bytes": 27095
   },
   "slides/final.html": {
-    "sha256": "0de3ef5439904f0476219a20554ad9c8ed3763afa323a9c2ede1701f87e0b335",
-    "bytes": 36269419
+    "sha256": "5922f42464bf72683ae9fce3220ef0586fee3a9b181d430f9806a0caabc14dcb",
+    "bytes": 36269441
   },
   "slides/guion-final-es.md": {
-    "sha256": "aab5bc409ed6abd05961347567a75b58ccd33929450f41f632b114aa7c93e60e",
-    "bytes": 28624
+    "sha256": "465934c03245b77ab3b705cde6a5819d88931b19a3e39738f00b6d141879d99e",
+    "bytes": 28835
   },
   "paper/paper.tex": {
-    "sha256": "ec3cefa5d627e60f5b2fa01b2bf580ea3d7ee26a39588dca5c8340c0b7c3e010",
-    "bytes": 25005
+    "sha256": "d797fb8151b45848b994a8330c30e5432977e8883470b519012e3b97825b18cf",
+    "bytes": 25012
   },
   "paper/paper.pdf": {
-    "sha256": "c465d192ab31e219a57ae83a6d4657e65eabca59079752989060dfe8b74b3df4",
-    "bytes": 287208
+    "sha256": "4673b5025bce1b83c39c038e6068725875bf1b0174c6c35d5837214b310a2dc0",
+    "bytes": 287148
   },
   "hand/final/handwritten-revision-2026-11-09.png": {
     "sha256": "613452fe5a11258229ee89be0f624af3a24cd54e37cf607ef461558cdf77e757",
     "bytes": 11930104
   },
   "hand/final/verdict.md": {
-    "sha256": "3682b586f8b0f4008c4d464d5e62f2396eb32ad7df25c1a895bea783fae00898",
-    "bytes": 372
+    "sha256": "fca8ecd197c5f4b30b1c3f0397ee456c01474b3f3900a810521a913dfa9d9b5a",
+    "bytes": 756
   }
 }

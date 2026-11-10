@@ -1260,13 +1260,12 @@ An AI-generated uniqueness helper allowed $\beta=0$: then future actions do not 
 <div class="hand-verdict">
 <h3 class="teal">My verdict</h3>
 <blockquote>I accept it.</blockquote>
-<h3>My restart calculation</h3>
+<h3>The equivalence I checked</h3>
 ```
 
-$$R_n=\beta^n(V-\kappa),\qquad n\geq0,$$
-$$R_{\mathrm{never}}=0.$$
+I initially suspected an error in the equivalence between the max and min expressions. My handwritten derivation confirmed:
 
-Compare delayed reopening with never reopening, then discount once to date zero.
+$$\begin{aligned}V-\max\{V-\kappa,0\}\\=\min\{\kappa,V\}.\end{aligned}$$
 
 ```{=html}
 <p class="hand-caption">Enlarged excerpt of my original photograph.<br>Click the image to inspect the complete page.</p>

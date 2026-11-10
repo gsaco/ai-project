@@ -1,6 +1,6 @@
 # Final-presentation branch review
 
-Reviewed November 9, 2026, against the professor's [term-project instructions](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7). Branch: `codex/final-presentation-review`. This package is for the final presentation; it is not a claim that every final-paper obligation is finished.
+Reviewed November 9; author assessment updated November 10, 2026, against the professor's [term-project instructions](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7). Branch: `codex/final-presentation-review`. This package is for the final presentation; it is not a claim that every final-paper obligation is finished.
 
 ## Present and checked
 
@@ -14,8 +14,9 @@ Reviewed November 9, 2026, against the professor's [term-project instructions](h
 
 ## Still outstanding for the presentation
 
-1. The author's own brief explanation of the AI step initially questioned and why the handwritten work supports accepting it. The supplied verdict is recorded faithfully; no fuller personal explanation has been invented.
-2. Merge the reviewed branch through a pull request into `main` by **November 10, 22:00 Lima**. The present request authorizes a branch push, not that merge. The repository-link comment has already been posted on the course issue; no second comment is required.
+The author clarified on November 10 that the initial doubt concerned the max–min equivalence. The handwritten-check slide now identifies that doubt and the identity confirmed by the derivation.
+
+1. Merge the reviewed branch through a pull request into `main` by **November 10, 22:00 Lima**. The present request authorizes a branch push, not that merge. The repository-link comment has already been posted on the course issue; no second comment is required.
 
 The final presentation is explicitly work in progress. The complete joint-input/activity-to-reduced-program bridge and the full semantic certification remain open and are disclosed on the Lean scope slide. That is not represented as completed verification.
 

@@ -308,3 +308,14 @@ Attachment preserved unchanged: `hand/final/handwritten-revision-2026-11-09.png`
 **Integration**
 
 The final slide displays an enlarged portion of the photograph and that exact verdict. The complete page is retained in a backup slide and the interactive image viewer. No handwriting is generated, corrected, or replaced; display clipping does not change the source image. The supplied acceptance is separate from other pending author assessments and from the incomplete formal audit.
+
+
+## Author's specific concern — November 10, 2026
+
+**User (verbatim)**
+
+> the handwriting and “I accept it” are included. Add a brief explanation of what you initially questioned and why your hand derivation convinced you. ---> I though there was an error in the equivalence of the expressions that contain max and min functions.
+
+**Assistant (verbatim)**
+
+> I’ll add that to the handwritten-check slide: you suspected an error in the equivalence between the max and min expressions, and your handwritten derivation confirmed it. I’ll show the identity \(V-\max\{V-\kappa,0\}=\min\{\kappa,V\}\) beside your acceptance.

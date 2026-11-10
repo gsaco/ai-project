@@ -21,7 +21,7 @@
   "handwriting_update_browser_preview": "Blocked by local-file URL policy; embedded original image and JavaScript syntax checked.",
   "review_branch": "codex/final-presentation-review",
   "raw_final_export_in_prompts_md": true,
-  "remaining_personal_clarification": "A short explanation in the author\u2019s own words of what was questioned and why the handwritten derivation supports the acceptance.",
+  "remaining_personal_clarification": null,
   "main_submission": "Not merged as part of this branch-only request.",
   "required_files_present": [
     "README.md",
@@ -42,5 +42,6 @@
     "hand/final/verdict.md"
   ],
   "local_verification": "Model checks, four LaTeX builds, Quarto render, full Lean proof build and required fast check passed.",
-  "review_record": "paper/audit/branch-review.md"
+  "review_record": "paper/audit/branch-review.md",
+  "author_concern_supplied": "November 10, 2026: suspected an error in the equivalence of the max and min expressions."
 }
