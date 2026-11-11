@@ -77,5 +77,6 @@
 .reveal #assumptions .assumptions-conditions {margin-top:7px;padding:14px 20px;}
 .reveal #assumptions .assumptions-conditions p {font-size:26px;margin:0;}
 
-.reveal #optimum .card p {margin:8px 0;}
-.reveal #optimum .katex-display {margin:10px 0;}
+/* Center the experiment table in the available slide body. */
+.reveal #setup .setup-table {min-height:540px;display:flex;align-items:center;justify-content:center;}
+.reveal #setup .setup-table table {width:85%;margin:0 auto;}
