@@ -434,37 +434,6 @@ An institutional shock changes the usable share $s$. The physical stock $\bar k$
 
 
 
-::: {.two .setup-baselines}
-
-
-
-::: {.card}
-
-
-<h3>Baseline: free restarting</h3>
-
-$$\kappa=0$$
-
-
-:::
-
-
-
-::: {.card}
-
-
-<h3>Extension: costly restarting</h3>
-
-$$\kappa>0$$
-
-
-:::
-
-
-
-:::
-
-
 | Institutional path | Shock: $t=0$ | Restored: $t\geq1$ |
 |:--|:--:|:--:|
 | Deterioration | $s_0-d$ | $s_0$ |

@@ -1,19 +1,19 @@
 {
   "slides/final.tex": {
-    "sha256": "c0a1b94e6cfb7d452eb0102a69497707c5e41ed985a82bfdc97cbf57bead7e0a",
-    "bytes": 31834
+    "sha256": "4dfb67a69426c00fc06619c69e03d1685e6cf7714508d233c89781d3bef0bd4b",
+    "bytes": 31524
   },
   "slides/final.pdf": {
-    "sha256": "f078e51c621bdbf3785335656ec3f1e2b7896c3f4521cd9417d5f7d2ef4cdea8",
-    "bytes": 13979968
+    "sha256": "74db159e3d52196f0279c164f6f09024e99051f60b74fd3067ac36573fe49fda",
+    "bytes": 13979651
   },
   "slides/final.qmd": {
-    "sha256": "c01898844426b1977213aeb99aeb4049cbd9ca5dfb1c58bcfbee043b2236b3bf",
-    "bytes": 29017
+    "sha256": "d04b83a22b81f4e70d7aa0c3b03b10005d110159beaea53044648786d386a291",
+    "bytes": 28833
   },
   "slides/final.html": {
-    "sha256": "a73ae3cafc03ea8abccb26f27cebba88ff0962c9cd1820bedccc8e48396e1254",
-    "bytes": 36273048
+    "sha256": "eaf0dfb912de102e5380715067af6f6ef84cb511ca989606c71abd5182756cf9",
+    "bytes": 36272775
   },
   "slides/guion-final-es.md": {
     "sha256": "daee609bbf15b1e1ee0f2503f0e9dde4165d8148aecccde56850014c6d8d98f9",
