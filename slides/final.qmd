@@ -878,7 +878,14 @@ $$\pi_-+\beta V=-0.06<0,\quad\kappa>V.$$
 
 <h3>Why a thin margin matters</h3>
 Permanent closure requires
+::: {.margin-equation-link}
+
 $$\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac d{s_0}.$$
+
+[Derivation →](#margin-derivation){.derivation-button}
+
+:::
+
 Here $0.025<0.04$. Normal operation is profitable, but future earnings are small relative to the shock loss.
 
 :::
@@ -1372,3 +1379,63 @@ This is not a model of GDP: it holds background output and the cohort fixed and 
 <img src="../hand/final/handwritten-revision-2026-11-09.png" alt="The complete original handwritten revision by Gabriel Saco, supplied November 9, 2026.">
 </button>
 ```
+
+
+## Deriving the [profit-margin condition]{.teal} {#margin-derivation}
+
+::: {.derivation-heading}
+
+<span class="kicker">Backup · From continuation value to the normal profit margin</span>
+
+[← Back to the example](#feasibility){.derivation-button}
+
+:::
+
+:::: {.two .margin-steps}
+::: {.card}
+
+### 1 · Express the shock profit
+
+Normal profit is $\pi_0$. Deterioration reduces it by $(1-\alpha)q_0(d/s_0)$:
+
+$$\pi_-=\pi_0-(1-\alpha)q_0\frac{d}{s_0}.$$
+
+### 2 · Substitute into the initial condition
+
+Start with $\pi_-+\beta V<0$, where $V=\pi_0/(1-\beta)$:
+
+$$\pi_0-(1-\alpha)q_0\frac{d}{s_0}
++\beta\frac{\pi_0}{1-\beta}<0.$$
+
+Move the shock loss to the right:
+
+$$\pi_0+\frac{\beta\pi_0}{1-\beta}
+<(1-\alpha)q_0\frac{d}{s_0}.$$
+
+:::
+::: {.card}
+
+### 3 · Combine the terms on the left
+
+Use a common denominator:
+
+$$\pi_0+\frac{\beta\pi_0}{1-\beta}
+=\frac{(1-\beta)\pi_0+\beta\pi_0}{1-\beta}
+=\frac{\pi_0}{1-\beta}.$$
+
+The terms $-\beta\pi_0$ and $+\beta\pi_0$ cancel. Therefore:
+
+$$\frac{\pi_0}{1-\beta}<(1-\alpha)q_0\frac{d}{s_0}.$$
+
+### 4 · Rearrange using positive quantities
+
+Multiply by $1-\beta>0$:
+
+$$\pi_0<(1-\beta)(1-\alpha)q_0\frac{d}{s_0}.$$
+
+Divide by $(1-\alpha)q_0>0$; the inequality keeps its direction:
+
+$$\boxed{\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac{d}{s_0}}.$$
+
+:::
+::::
