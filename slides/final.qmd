@@ -741,29 +741,6 @@ The same adverse firm closes on impact in both experiments. Free restarting perm
 :::
 
 
-## Proof roadmap: [three decisions, one comparison]{.teal} {#proof}
-
-
-::: {.kicker}
-
-4 · Proof progress
-
-:::
-
-
-1. **Input:** strict concavity gives $x^*(s)$, $q(s)$, and $\pi(s,c_0)$.
-2. **After restoration:** solve the active and inactive firm's values, including every possible restart date.
-3. **At date zero:** compare continuing with closing while retaining the option to reopen.
-4. **Output:** apply the activity paths to the linear operating-output function $q(s)$.
-
-
-::: {.takeaway}
-
-The delicate step is the value of closing. Zero is always feasible; it is not always the best value.
-
-:::
-
-
 ## Waiting cannot improve the [restart value]{.teal} {#delay}
 
 
@@ -772,6 +749,8 @@ The delicate step is the value of closing. Zero is always feasible; it is not al
 4 · Lemma 2: all restart dates, including never
 
 :::
+
+A closed firm retains the option to reopen, so its value is not necessarily zero.
 
 
 
