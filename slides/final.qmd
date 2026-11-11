@@ -878,6 +878,7 @@ $$\pi_-+\beta V=-0.06<0,\quad\kappa>V.$$
 
 <h3>Why a thin margin matters</h3>
 Permanent closure requires
+
 ::: {.margin-equation-link}
 
 $$\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac d{s_0}.$$
@@ -886,7 +887,9 @@ $$\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac d{s_0}.$$
 
 :::
 
-Here $0.025<0.04$. Normal operation is profitable, but future earnings are small relative to the shock loss.
+Here $0.025<0.04$.
+
+Normal operation is profitable, but future earnings are small relative to the shock loss.
 
 :::
 
@@ -1003,6 +1006,7 @@ Small shocks: keep operating. Large shocks: close. Restart costs distinguish rec
 
 
 Strict closure if
+
 ::: {.margin-equation-link}
 
 $$ (1-\alpha)q_0\frac d{s_0}>\pi_0+\beta\min\{\kappa,V\}. $$

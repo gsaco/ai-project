@@ -96,3 +96,12 @@
 .reveal :is(#margin-derivation, #closure-derivation) h3:not(:first-child) {margin-top:23px;}
 .reveal :is(#margin-derivation, #closure-derivation) p {margin:10px 0;line-height:1.25;}
 .reveal :is(#margin-derivation, #closure-derivation) .katex-display {font-size:0.94em;margin:14px 0;}
+
+/* Keep the equation/button row inside its card; explanations remain below it. */
+.reveal #feasibility .two {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+.reveal #feasibility .card {min-width:0;}
+.reveal #feasibility .margin-equation-link {gap:12px;margin:14px 0 18px;}
+.reveal #feasibility .margin-equation-link .math {font-size:25px;}
+.reveal #feasibility .margin-equation-link .katex-display {margin:8px 0;}
+.reveal #feasibility .derivation-button {font-size:20px;padding:9px 12px;}
+.reveal #regimes .margin-equation-link {justify-content:center;gap:28px;}
