@@ -592,15 +592,15 @@ $$x^*(s)=s(\alpha A/w)^{1/(1-\alpha)}.$$
 
 ::: {.card}
 
-<h3>3 · Substitute and use <span class="math inline">wx^*=\alpha q</span></h3>
+<h3>3 · Substitute the optimal input</h3>
 $$q(s)=sA(\alpha A/w)^{\alpha/(1-\alpha)},$$
-$$\pi(s,c_0)=(1-\alpha)q(s)-F-c_0.$$
+Multiply the FOC by $x^*$:
+$$wx^*=\alpha As^{1-\alpha}(x^*)^\alpha=\alpha q(s).$$
+$$\begin{aligned}\pi(s,c_0)&=q(s)-wx^*(s)-F-c_0\\&=(1-\alpha)q(s)-F-c_0.\end{aligned}$$
 
-Actual output is $y_t=a_tq(s_t)$.
+Operating output is $q(s)$; actual output is $y_t=a_tq(s_t)$.
 
-Normal values: $q_0=q(s_0)$ and $\pi_0=\pi(s_0,c_0)$.
-
-Shock profits: $\pi_\pm=\pi(s_0\pm d,c_0)$.
+Normal: $q_0=q(s_0)$, $\pi_0=\pi(s_0,c_0)$. Shock profits: $\pi_\pm=\pi(s_0\pm d,c_0)$.
 
 :::
 
