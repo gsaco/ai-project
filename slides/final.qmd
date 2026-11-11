@@ -1003,7 +1003,13 @@ Small shocks: keep operating. Large shocks: close. Restart costs distinguish rec
 
 
 Strict closure if
+::: {.margin-equation-link}
+
 $$ (1-\alpha)q_0\frac d{s_0}>\pi_0+\beta\min\{\kappa,V\}. $$
+
+[Derivation →](#closure-derivation){.derivation-button}
+
+:::
 
 ![](final-assets/regimes.png){.regime-figure alt="Shock size versus restart cost, at three overhead levels: operating, closure with reopening, and permanent closure regions."}
 
@@ -1436,6 +1442,64 @@ $$\pi_0<(1-\beta)(1-\alpha)q_0\frac{d}{s_0}.$$
 Divide by $(1-\alpha)q_0>0$; the inequality keeps its direction:
 
 $$\boxed{\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac{d}{s_0}}.$$
+
+:::
+::::
+
+
+## Deriving the [closure condition]{.orange} {#closure-derivation}
+
+::: {.derivation-heading}
+
+<span class="kicker">Backup · Compare closing and continuing at date zero</span>
+
+[← Back to operating regimes](#regimes){.derivation-button}
+
+:::
+
+:::: {.two .margin-steps}
+::: {.card}
+
+### 1 · Close when its value is higher
+
+Closing retains the option to reopen next period:
+
+$$\underbrace{\beta\max\{V-\kappa,0\}}_{\text{value of closing}}
+>\underbrace{\pi_-+\beta V}_{\text{value of continuing}}.$$
+
+### 2 · Substitute the shock profit
+
+$$\pi_-=\pi_0-(1-\alpha)q_0\frac{d}{s_0}.$$
+
+Therefore:
+
+$$\beta\max\{V-\kappa,0\}
+>\pi_0-(1-\alpha)q_0\frac{d}{s_0}+\beta V.$$
+
+Move the shock loss to the left and the closing value to the right:
+
+$$(1-\alpha)q_0\frac{d}{s_0}
+>\pi_0+\beta\left[V-\max\{V-\kappa,0\}\right].$$
+
+:::
+::: {.card}
+
+### 3 · Use the identity checked by hand
+
+$$V-\max\{V-\kappa,0\}=\min\{\kappa,V\}.$$
+
+If $\kappa\leq V$, the maximum is $V-\kappa$, so the difference is $\kappa$.
+
+If $\kappa>V$, the maximum is $0$, so the difference is $V$.
+
+### 4 · Obtain the closure threshold
+
+$$\boxed{(1-\alpha)q_0\frac{d}{s_0}
+>\pi_0+\beta\min\{\kappa,V\}}.$$
+
+The shock-induced profit loss must exceed normal current profit plus the discounted value of preserving the organization.
+
+Equality means indifference; reversing the inequality favors continued operation.
 
 :::
 ::::
