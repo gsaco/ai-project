@@ -16,7 +16,7 @@
       const r=model.simulate(p), neg=r.paths.negative, norm=r.normal.q;
       get('out-d').textContent=fmt(p.d);get('out-k').textContent=fmt(p.kappa);get('out-c').textContent=fmt(p.c,3);
       get('value-operate').textContent=fmt(neg.continueValue,3);get('value-close').textContent=fmt(neg.closeValue,3);get('value-restart').textContent=fmt(neg.restartValue,3);
-      const restartTie=Math.abs(neg.restartValue)<1e-10;
+      const restartTie=neg.restartTie;
       let message=neg.decision==='operate'?'Keep operating during the shock; normal output returns at date 1.':neg.restart?'Close during the shock; reopen at date 1.':'Close during the shock; remain closed after restoration.';
       if(neg.tie) message='Closure and operation tie. The displayed path keeps operating.';
       if(neg.decision==='close'&&restartTie) message='Close during the shock. Restarting at any restored date and never restarting tie; the displayed path stays closed.';

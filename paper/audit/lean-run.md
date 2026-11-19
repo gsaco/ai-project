@@ -5,7 +5,7 @@ Six formal counterparts compile, and the professor's required fast check passed.
 ## Source and environment
 
 - Merged paper: `a15ed978282156ba72928ad23940860cccda6f28`, through [PR 9](https://github.com/gsaco/ai-project/pull/9).
-- Exact paper hashes: [source-version.json](source-version.json). The current paper adds a reporting appendix and updates the author-evidence status; [body preservation](source-body-preservation.json) records that all mathematical statements, assumptions, and proofs are unchanged.
+- Exact paper hashes: [source-version.json](source-version.json). The [presentation-stage comparison](source-body-preservation.json) describes the November 10 manuscript. The November 19 final paper retains the six numbered statements and assumptions A1–A6 from the pinned source. It adds a written proof of the joint-program reduction and numerical experiments. The archived Lean run covers the scope listed below.
 - AppliedModelingLib base: `194edcc95df74806a39b961d10dedddc6e730cce`; local run HEAD and patch hash: [environment record](formalization-environment.json).
 - Actual agent: `gpt-5.6-sol`, `xhigh`; Lean `leanprover/lean4:v4.30.0-rc2`.
 - Paper identifier: `Saco26InstitutionalRestart`.

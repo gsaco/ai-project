@@ -1,10 +1,12 @@
-<h1 align="center">Economic freedom and firm entry–exit decisions</h1>
+<h1 align="center">Temporary Institutional Shocks, Firm Closure, and Costly Reopening</h1>
 
 <p align="center">
   <strong>Gabriel Saco</strong><br>
   Professor Alexander Quispe · Universidad del Pacífico<br>
-  <sub>AI and Economic Modeling · Track B · Final presentation · November 2026</sub>
+  <sub>AI and Economic Modeling · Track B · Final paper · November 19, 2026</sub>
 </p>
+
+<p align="center"><strong><a href="paper/paper.pdf">Read the final paper</a></strong> · <a href="paper/paper.tex">LaTeX source</a></p>
 
 <p align="center">
   <a href="slides/final.pdf"><img src="figures/final-button.svg" width="230" alt="Read the final presentation PDF"></a>
@@ -56,12 +58,12 @@ only the adverse firm closes, and it never restarts. Relative to no change, impa
 
 | Material | Files | Status |
 |:--|:--|:--|
+| Final paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | November 19 manuscript with joint-program reduction, four shock comparisons, patience cutoff and evidence on reopening |
 | Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 27 talk slides + 3 backups; handwritten revision and acceptance included |
-| Working paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | Eight-page argument + Lean appendix; proofs, feasibility, switching and suspension |
-| Numerical checks | [Instructions](code/README.md) · [Results](code/output/final-verification.json) | Original and final checks; Python/browser comparisons |
+| Numerical checks | [Instructions](code/README.md) · [Results](code/output/final-verification.json) | Paper tables and figure reproduced, including exact-arithmetic checks at four cutoffs |
 | Lean | [Artifacts](lean/) · [Presentation checklist](paper/audit/final-presentation-checklist.md) | Six compiled counterparts; fast check passed; [scope and open bridge](paper/audit/lean-run.md) |
-| Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | Original handwritten revision and verbatim acceptance supplied |
+| Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | One handwritten derivation and verdict supplied. Full manuscript derivations and remaining personal verdicts are outstanding. |
 | October submission | [Proposal](proposal/proposal.pdf) · [Topic PDF](slides/topic.pdf) · [Interactive topic](https://gsaco.github.io/ai-project/slides/topic.html) | Preserved earlier submission |
 | AI collaboration | [Raw conversation log](prompts.md) · [Selected final exchanges](prompts-final.md) | AI explanations distinguished from my own assessment |
 
-The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [branch review](paper/audit/branch-review.md) lists verification and remaining work. Entry, heterogeneous-firm equilibrium, empirical calibration, and the full handwritten appendix remain open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).
+The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [November presentation review](paper/audit/branch-review.md) records work at that stage. Entry, heterogeneous-firm equilibrium, empirical calibration, and the full handwritten appendix remain open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).

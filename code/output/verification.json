@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "original and final-presentation checks; finite checks are not proofs",
+  "scope": "paper and presentation numerical checks",
   "checks": [
     "symbolic FOC",
     "symbolic second derivative",
@@ -11,8 +11,337 @@
     "small shock: symmetric levels while active",
     "overhead leaves input unchanged",
     "optimal switching versus 324 enumerated scenario problems and conditional log comparison",
-    "cheap suspension defeats permanent closure in the illustration"
+    "cheap suspension defeats permanent closure in the illustration",
+    "paper tables and both sides of four decision thresholds agree with exact arithmetic"
   ],
   "enumerated_scenarios": 324,
-  "browser_checks": "13 model tests and final cross-language grid passed"
+  "paper_examples": [
+    {
+      "parameters": {
+        "d": 0.1,
+        "kappa": 0.0,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": true,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": 0.02,
+      "close": 0.09,
+      "y0": 0.0,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.1,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "operate",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": 0.02,
+      "close": 0.0,
+      "y0": 0.64,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.0,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": true,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.09,
+      "y0": 0.0,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": true,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": true,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9375
+      },
+      "action": "operate",
+      "tie": true,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.16,
+      "keep": 0.0,
+      "close": 0.0,
+      "y0": 0.48,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.95
+      },
+      "action": "operate",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.2,
+      "keep": 0.04,
+      "close": 0.0,
+      "y0": 0.48,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.12499999999,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "operate",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": 8e-12,
+      "close": 0.0,
+      "y0": 0.600000000016,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.125,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "operate",
+      "tie": true,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": 0.0,
+      "close": 0.0,
+      "y0": 0.6,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.12500000001,
+        "kappa": 0.4,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": true,
+      "V": 0.1,
+      "keep": -8e-12,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.09999999999,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": true,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 9e-12,
+      "y0": 0.0,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.1,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": true,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.10000000001,
+        "beta": 0.9
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": true,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9,
+        "h": 0.08999999999
+      },
+      "action": "suspend",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9,
+        "h": 0.09
+      },
+      "action": "suspend",
+      "tie": true,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9,
+        "h": 0.09000000001
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1,
+      "keep": -0.06,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.93749999999
+      },
+      "action": "close",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": true,
+      "V": 0.1599999999744,
+      "keep": -2.5599999995904e-11,
+      "close": 0.0,
+      "y0": 0.0,
+      "y1": 0.0
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.9375
+      },
+      "action": "operate",
+      "tie": true,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.16,
+      "keep": 0.0,
+      "close": 0.0,
+      "y0": 0.48,
+      "y1": 0.8
+    },
+    {
+      "parameters": {
+        "d": 0.2,
+        "kappa": 0.4,
+        "beta": 0.93750000001
+      },
+      "action": "operate",
+      "tie": false,
+      "restart": false,
+      "restart_tie": false,
+      "strict": false,
+      "V": 0.1600000000256,
+      "keep": 2.5600000004096e-11,
+      "close": 0.0,
+      "y0": 0.48,
+      "y1": 0.8
+    }
+  ],
+  "browser_checks": "13 model tests, final grid and rational boundary cases passed"
 }

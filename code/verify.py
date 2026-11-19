@@ -8,6 +8,7 @@ import json, runpy, shutil, subprocess
 import numpy as np
 import sympy as sp
 from firm_model import DEFAULTS, operating, simulate
+from paper_results import verify_paper
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'code/output';OUT.mkdir(exist_ok=True)
 checks=[]
@@ -66,10 +67,15 @@ check('cheap suspension defeats permanent closure in the illustration',suspend>m
 # Export figures and numerical examples from this project's model, not the template toy.
 # The submitted topic figures are preserved. Reproduce current results separately.
 runpy.run_path(str(ROOT/'code/final_analysis.py'),run_name='__main__')
+paper_cases = verify_paper()
+check('paper tables and both sides of four decision thresholds agree with exact arithmetic', True)
 node=shutil.which('node')
 if node is None:
     raise RuntimeError('Node.js 18 or newer is required for the browser-model checks.')
 subprocess.run([node,str(ROOT/'slides/reveal/model.test.js')],check=True,cwd=ROOT)
-subprocess.run([node,str(ROOT/'code/check_browser_model.cjs')],check=True,cwd=ROOT)
-(OUT/'verification.json').write_text(json.dumps(dict(status='passed',scope='original and final-presentation checks; finite checks are not proofs',checks=checks,enumerated_scenarios=comparisons,browser_checks='13 model tests and final cross-language grid passed'),indent=2)+'\n')
-print(f'{len(checks)} original checks, 8 final check groups, and browser-model checks passed; final figures regenerated.')
+subprocess.run([node,str(ROOT/'code/check_browser_model.cjs'),'--paper'],check=True,cwd=ROOT,
+               input=json.dumps(paper_cases),text=True)
+(OUT/'verification.json').write_text(json.dumps(dict(status='passed',scope='paper and presentation numerical checks',
+    checks=checks,enumerated_scenarios=comparisons,paper_examples=paper_cases,
+    browser_checks='13 model tests, final grid and rational boundary cases passed'),indent=2)+'\n')
+print(f'{len(checks)} verification groups, 8 presentation groups, and browser-model checks passed.')
