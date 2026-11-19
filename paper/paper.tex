@@ -80,7 +80,7 @@ An active firm earns $\pi_0$ each period by remaining active, giving the converg
 \end{proof}
 \clearpage
 \section{Output after a temporary deterioration}
-At date zero an incumbent compares $\pi_j+\beta V$ with $\beta W$. There is no ordinary derivative with respect to binary $a_t$; the optimality condition compares these values. Define actual output $y_t^j=a_t^jq(s_t^j)$, losses $L_t=y_t^0-y_t^-$, and gains $G_t=y_t^+-y_t^0$.
+Binary activity requires comparing $\pi_j+\beta V$ with $\beta W$ at date zero. Define actual output $y_t^j=a_t^jq(s_t^j)$, losses $L_t=y_t^0-y_t^-$, and gains $G_t=y_t^+-y_t^0$.
 \begin{proposition}[Persistent strict asymmetry]\label{prop:main}
 Maintain A1--A6. Suppose
 \begin{equation}\label{eq:conditions}
@@ -101,7 +101,13 @@ Lemma~\ref{lem:input} makes output linear in $s$, so $q(s_0+d)=q_0(1+d/s_0)$. Da
 For the baseline, set $\kappa=0$. Then $W=V$ and closing is worth $\beta V$, while continuing is worth $\pi_-+\beta V$. The assumed inequality implies $\pi_-<0$, so closing strictly dominates. Lemma~\ref{lem:value} gives immediate reopening at date one because $V>0$. The other paths stay open because their date-zero operating profits are positive. Thus restarting costs change recovery, not the existence of impact asymmetry in this experiment.
 \end{proof}
 
-The conditions do not assert an outcome as an assumption: each inequality compares values derived from the primitive optimization problem. Positive normal profits are compatible with an unprofitable restart because the incumbent has already paid its original setup cost. No conclusion about entry by other owners is implied by $\kappa>V$.
+
+\begin{figure}[!hb]
+\centering
+\includegraphics[width=.88\linewidth]{figures/impact-and-recovery.pdf}
+\caption{Output relative to the no-shock path under Proposition~\ref{prop:main} ($d=0.20$). Reopening costs determine recovery after the same initial output loss.}\label{fig:impact-recovery}
+\end{figure}
+
 \clearpage
 \section{Switching regions and the strength of the conditions}
 \begin{proposition}[Complete closure threshold and weak asymmetry]\label{prop:regions}
@@ -125,6 +131,8 @@ For the adverse firm to close today and strictly prefer to stay closed after res
        \qquad\text{and}\qquad \kappa>\frac{\pi_0}{1-\beta}.\quad}
 \]
 The first condition compares normal profit, as a share of revenue net of variable input cost, with the size of the restriction. Given the second condition, the current loss is large enough to justify giving up the incumbent's future profits. Under the second condition, the entire stream of restored profits falls short of the expense of reopening. With free rebuilding, the same thin-margin firm can close during the restriction and profitably reopen one date later.
+
+The conditions do not assert an outcome as an assumption: each inequality compares values derived from the primitive optimization problem. Positive normal profits are compatible with an unprofitable restart because the incumbent has already paid its original setup cost. No conclusion about entry by other owners is implied by $\kappa>V$.
 
 \textbf{Nonempty parameter region.} Take $A=2$, $\alpha=1/2$, $w=1.25$, $F=0.30$, $c_0=0.09$, $s_0=0.50$, $d=0.20$, $\beta=0.90$, and $\kappa=0.40$. Then $x^*(s_0)=0.32$, $q_0=0.80$, $\pi_0=0.01$, $\pi_-=-0.15$, $\pi_+=0.17$, and $V=0.10$. The normal margin is $0.01/0.40=2.5\%$, below the cutoff of $4\%$. Rebuilding costs $0.40$ against a business worth $0.10$. Adverse continuation is worth $-0.06$. Impact loss is $0.80$ and gain is $0.32$. All inequalities are strict, so the result holds throughout a neighborhood of these parameters.
 \clearpage
@@ -170,7 +178,7 @@ Below this cutoff the adverse loss outweighs the discounted profits preserved by
 \paragraph{How the calculations are checked.}
 The single entry point \path{code/verify.py} checks the input first-order condition symbolically and compares the optimizer with an input grid. For switching decisions it enumerates finite activity sequences, adds the restored-state value at the endpoint, and compares the best payoff with the analytic solution. Using the exact stationary continuation value avoids imposing liquidation on a terminal simulation date. The infinite-horizon justification for that value is Lemma~\ref{lem:value}.
 
-For the parameters in the two tables, $\alpha=1/2$ gives $q(s)=A^2s/(2w)$, so every reported value can also be computed in rational arithmetic. The script generates the table entries, reproduces the switching diagram, and compares both numerical implementations with the rational solution at, just below, and just above each of the $d$, $\kappa$, $h$, and $\beta$ cutoffs. For example, at $d=0.125$ and $\kappa=0.40$ the exact impact values tie. Raising $d$ by $10^{-11}$ lowers continuation relative to closure by $8\times10^{-12}$, making closure strictly preferable. The implementations compare differences at the scale of the cash flows with a machine-precision allowance. Ties are reported explicitly. At impact the display selects the first maximizing action in the order operation, suspension (when available), and closure. After closure it declines a zero-value restart. For the two-action model, Proposition~\ref{prop:regions} covers every optimal selection at indifference.
+For the parameters in the two tables, $\alpha=1/2$ gives $q(s)=A^2s/(2w)$, so every reported value can also be computed in rational arithmetic. The script generates the table entries, reproduces the three figures, and compares both numerical implementations with the rational solution at, just below, and just above each of the $d$, $\kappa$, $h$, and $\beta$ cutoffs. For example, at $d=0.125$ and $\kappa=0.40$ the exact impact values tie. Raising $d$ by $10^{-11}$ lowers continuation relative to closure by $8\times10^{-12}$, making closure strictly preferable. The implementations compare differences at the scale of the cash flows with a machine-precision allowance. Ties are reported explicitly. At impact the display selects the first maximizing action in the order operation, suspension (when available), and closure. After closure it declines a zero-value restart. For the two-action model, Proposition~\ref{prop:regions} covers every optimal selection at indifference.
 
 \clearpage
 \section{Robustness and aggregation}
@@ -180,6 +188,11 @@ Maintain A1--A6 and the strict conditions of Proposition~\ref{prop:main}, except
 \begin{proof}
 Adverse continuation is negative and closure has value zero. Suspension is worth $-h+\beta V>0$, so it strictly dominates both. On restoration, positive normal profit makes resumption optimal. Normal and favorable operation yields $\pi_j+\beta V>-h+\beta V$ because $\pi_j>0$ and $h\geq0$, and also exceeds closure. Subtract outputs to obtain the result. At $h=\beta V$, suspension and closure tie; above that threshold, under these maintained strict conditions, closure is preferred. In the illustration $h=0.02$ gives suspension value $0.07$, compared with $-0.06$ for operation and zero for closure.
 \end{proof}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=.87\linewidth]{figures/suspension-threshold.pdf}
+\caption{The value of preserving the organization under the adverse shock ($d=0.20$, $\kappa=0.40$). Suspension and closure tie at $h=\beta V=0.09$. Below this cost the firm preserves the organization and resumes at date one. Above it, the firm dismantles the organization and remains closed.}\label{fig:suspension}
+\end{figure}
 \begin{corollary}[Positive totals and logs]\label{cor:logs}
 Under Proposition~\ref{prop:main}, suppose $Y_t^j=B+Ny_t^j$ with the same $B>0$ and $N>0$ in all paths. Then $Y_t^j>0$ and
 \[

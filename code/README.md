@@ -9,7 +9,7 @@ python -m pip install -r code/requirements.txt
 python code/verify.py
 ```
 
-The single entry point fails on an unsuccessful assertion or browser-model check. It generates the paper's two tables in `paper/tables/`, its switching diagram in `paper/figures/`, and the final deck's figures in `slides/final-assets/`.
+The single entry point fails on an unsuccessful assertion or browser-model check. It generates the paper's two tables in `paper/tables/`, its three figures in `paper/figures/`, and the final deck's figures in `slides/final-assets/`.
 
 The checks cover:
 

@@ -119,4 +119,6 @@ def verify_paper():
                  *rows, r'\bottomrule\end{tabular}']
         (tables / f'{name}.tex').write_text('\n'.join(lines) + '\n')
     draw_regions(shock_cases, tables.parent / 'figures' / 'switching-regions.pdf')
+    from paper_figures import draw_additional_figures
+    draw_additional_figures(tables.parent / 'figures')
     return shock_cases + discount_cases + boundary_cases
