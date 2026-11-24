@@ -1,5 +1,5 @@
 November 24, 2026. Final manuscript verification
-Paper LaTeX SHA-256: c907374c8f178b1aca5465217f8a580814fd102b74beeeed016a194ccfd70eaa
+Paper LaTeX SHA-256: 83bc4b80e1340cedf04267236d73a19c00676e524433889c848fc3ff3dd804d3
 All six theorem environments and six assumptions equal the merged source a15ed978.
 
 lake build +Saco26InstitutionalRestart
