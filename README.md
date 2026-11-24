@@ -3,7 +3,7 @@
 <p align="center">
   <strong>Gabriel Saco</strong><br>
   Professor Alexander Quispe · Universidad del Pacífico<br>
-  <sub>AI and Economic Modeling · Track B · Final paper · November 19, 2026</sub>
+  <sub>AI and Economic Modeling · Track B · Final paper · November 24, 2026</sub>
 </p>
 
 <p align="center"><strong><a href="paper/paper.pdf">Read the final paper</a></strong> · <a href="paper/paper.tex">LaTeX source</a></p>
@@ -43,7 +43,7 @@ Maintain $`A,w,F>0`$, $`c_0\geq0`$, $`0<\alpha,\beta<1`$, and $`a_{-1}=1`$. All 
 
 At date zero compare $`s_0-d`$, $`s_0`$ and $`s_0+d`$, with $`0<d<s_0`$ and $`s_0+d\leq1`$. All paths return permanently to $`s_0`$ at date one, as known in advance; $`c=c_0`$ throughout.
 
-The unchanged input FOC is $`\alpha As^{1-\alpha}x^{\alpha-1}=w`$. It yields $`q(s)=sA(\alpha A/w)^{\alpha/(1-\alpha)}`$ and $`\pi(s,c_0)=(1-\alpha)q(s)-F-c_0`$. Write $`q_0=q(s_0)`$, $`\pi_0=\pi(s_0,c_0)`$ and $`\pi_-=\pi(s_0-d,c_0)`$.
+The input FOC is $`\alpha As^{1-\alpha}x^{\alpha-1}=w`$. It yields $`q(s)=sA(\alpha A/w)^{\alpha/(1-\alpha)}`$ and $`\pi(s,c_0)=(1-\alpha)q(s)-F-c_0`$. Write $`q_0=q(s_0)`$, $`\pi_0=\pi(s_0,c_0)`$ and $`\pi_-=\pi(s_0-d,c_0)`$.
 
 **Proposition 1.** Under these maintained assumptions, if
 
@@ -52,18 +52,18 @@ The unchanged input FOC is $`\alpha As^{1-\alpha}x^{\alpha-1}=w`$. It yields $`q
 \qquad V=\frac{\pi_0}{1-\beta},
 ```
 
-only the adverse firm closes, and it never restarts. Relative to no change, impact loss $`q_0`$ exceeds gain $`(d/s_0)q_0`$; later the loss remains $`q_0`$ and the gain is zero. With free restarting the same impact closure occurs, but production recovers at date one. **Restart costs change recovery.** Cheap suspension costing $`h<\beta V`$ removes persistence. These are firm-level results, not estimates of an EFW or GDP effect.
+only the adverse firm closes, and it never restarts. Relative to no change, impact loss $`q_0`$ exceeds gain $`(d/s_0)q_0`$; later the loss remains $`q_0`$ and the gain is zero. With free restarting the same impact closure occurs, but production recovers at date one. With a milder restriction, a higher rebuilding cost can keep the firm open in the first place. **Proposition 2** quantifies the incentive. The value of preserving the organization is $`\beta\min\{\kappa,V\}`$, which stops growing once rebuilding costs reach the value of the restored business. Affordable suspension at $`h<\beta V`$ removes persistence under the conditions of Proposition 1.
 
 ## Materials and status
 
 | Material | Files | Status |
 |:--|:--|:--|
-| Final paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | November 19 manuscript with joint-program reduction, four shock comparisons, patience cutoff and evidence on reopening |
-| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 27 talk slides + 3 backups; handwritten revision and acceptance included |
-| Numerical checks | [Instructions](code/README.md) · [Results](code/output/final-verification.json) | Paper tables and figure reproduced, including exact-arithmetic checks at four cutoffs |
-| Lean | [Artifacts](lean/) · [Presentation checklist](paper/audit/final-presentation-checklist.md) | Six compiled counterparts; fast check passed; [scope and open bridge](paper/audit/lean-run.md) |
-| Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | One handwritten derivation and verdict supplied. Full manuscript derivations and remaining personal verdicts are outstanding. |
+| Final paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | 17 pages, including the handwritten scans in Appendix C, on the complete closure threshold, matched GDP responses, and what establishment-level evidence could test the mechanism |
+| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 26 talk slides + 3 backups; handwritten revision and acceptance included |
+| Numerical checks | [Instructions](code/README.md) · [Results](code/output/verification.json) | Four manuscript figures and two model tables reproduced. Includes the original Stata estimates and four exact decision cutoffs. |
+| Lean | [Final proof record](paper/audit/lean-run.md) · [Proof files](lean/ProofInterface.lean) | Six numbered results and the joint-to-reduced proof compile. The generated November 8 records describe the earlier version. |
+| Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | Author's slide correction, handwritten max–min check, and verdicts recorded. Two handwritten pages cover input choice, restart values and the main decision thresholds. [Scans and remaining steps](hand/README.md). |
 | October submission | [Proposal](proposal/proposal.pdf) · [Topic PDF](slides/topic.pdf) · [Interactive topic](https://gsaco.github.io/ai-project/slides/topic.html) | Preserved earlier submission |
 | AI collaboration | [Raw conversation log](prompts.md) · [Selected final exchanges](prompts-final.md) | AI explanations distinguished from my own assessment |
 
-The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [November presentation review](paper/audit/branch-review.md) records work at that stage. Entry, heterogeneous-firm equilibrium, empirical calibration, and the full handwritten appendix remain open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).
+The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [November presentation review](paper/audit/branch-review.md) records work at that stage. Entry, heterogeneous-firm equilibrium, empirical calibration, and the remaining handwritten derivations are open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).

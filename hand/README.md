@@ -1,16 +1,24 @@
-# Handwritten derivations and independent assessment
+# Handwritten derivations
 
-The working paper contains typeset analytic proofs. My complete handwritten appendix remains in progress. For the final presentation, the selected independent check is the value of closing while retaining the option to reopen. The [AI-prepared worksheet](final/independent-check.md) explains the calculation and requests my own derivation and verdict; it is not handwritten evidence.
+[Read the two handwritten pages for the final paper](handwritten-derivations.pdf). The pages follow the order of the manuscript.
 
-My [original handwritten revision](final/handwritten-revision-2026-11-09.png) and [verbatim acceptance](final/verdict.md) were supplied on November 9, 2026 and are shown in the final deck. The photograph explicitly ranks restart delays for V > kappa; it does not separately write out the equality, V < kappa, or beta = 0 cases. Those cases remain distinguished from the supplied evidence.
+| Page | Derivations shown |
+|---|---|
+| 1 | Firm objective, first and second input derivatives, optimal input and output, input expenditure, operating profit, and profits under matched shocks. The page also derives the intact business value and the value of restarting after a delay, and lists the three restart cases. |
+| 2 | Proposition 1’s output loss and gain under costly reopening. Proposition 2’s value of preserving the organization, closure threshold and thin-margin condition. Proposition 3’s adverse-path payoffs and suspension threshold. |
 
-The complete handwritten appendix will cover:
+## Remaining handwritten work
 
-1. Conditional input problem, interior optimum, second derivative, and boundary behavior.
-2. Optimal input, operating output, and profit identities.
-3. Discounted value after restoration, closure value, and all delayed restart alternatives.
-4. Proposition with every maintained condition; optimal paths and loss–gain comparison.
-5. Positive-output aggregation and the log inequality.
-6. Suspension counterexample and the assumptions on which persistence depends.
+| Manuscript location | Steps still to write or expand |
+|---|---|
+| Section 4, input and activity | Check the sign of the second derivative and both boundary limits. For a fixed activity path, compare finite discounted sums, take their limits, and show the optimal inputs attain the reduced payoff. |
+| Sections 4–6, closure and reopening | Justify the ordering of all restart dates, including permanent inactivity and indifference. Compare operation and closure on all three shock paths, repeat with free reopening, and show weak asymmetry for each optimal choice at a tie. |
+| Sections 7–8, worked examples and suspension | Show the substitutions behind the numerical decisions and the shock, rebuilding, patience and suspension cutoffs. Complete the suspension comparison on the normal and favorable paths, including what happens at restoration and at the cutoff. |
+| Section 8, Corollary 1 | Establish positivity, cancel common output, apply the arithmetic–geometric mean inequality, take logs, and cancel the common population. Work through the example with symmetric level changes. |
+| Section 9 and Appendix A | Include the favorable-path entry payoff and the short counterexample at zero discounting. |
 
-I will show each algebraic manipulation, state the rule used, and check the conditions supporting each step. My supplied evaluation is saved in `final/verdict.md` with the original photograph in the same folder. The final AI record distinguishes that author-supplied evaluation from AI-prepared explanations. No evaluation or scan is fabricated or inferred from the typeset proofs.
+The [manuscript](../paper/paper.pdf) gives the assumptions and derivations in order. Cite the rule and check its conditions as you use it.
+
+## Earlier presentation check
+
+The [November 9 handwritten check](final/handwritten-revision-2026-11-09.png) and [author’s verdict](final/verdict.md) accompanied the final presentation. The [AI-prepared worksheet](final/independent-check.md) records the prompt for that check.

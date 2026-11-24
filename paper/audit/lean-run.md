@@ -1,40 +1,35 @@
-# Lean formalization run
+# Formal verification of the final paper
 
-Six formal counterparts compile, and the professor's required fast check passed. Full source-correspondence certification is incomplete. The formalization covers the conditional input problem and the reduced infinite-horizon activity model; it does not yet prove their equivalence to the original joint optimization problem.
+The six numbered results and the equivalence of the primitive and reduced optimization problems compiled together on November 19, 2026. The latter proof accounts for feasible input paths with arbitrarily large losses. A joint optimum exists under the paper's normal-viability assumption. The paper-scoped fast check passed. Full independent certification of the correspondence between the formalization and the manuscript remains outstanding. [Build output, source hashes and axiom inspection](joint-reduction-check.txt)
 
-## Source and environment
+The [November 24 verification](final-paper-lean-check.txt) records the final manuscript fingerprint, a fresh proof build, the required fast check and the ten axiom inspections. The archived generated package matches the original copy manifest. The final package adds JointReduction.lean.
 
-- Merged paper: `a15ed978282156ba72928ad23940860cccda6f28`, through [PR 9](https://github.com/gsaco/ai-project/pull/9).
-- Exact paper hashes: [source-version.json](source-version.json). The [presentation-stage comparison](source-body-preservation.json) describes the November 10 manuscript. The November 19 final paper retains the six numbered statements and assumptions A1–A6 from the pinned source. It adds a written proof of the joint-program reduction and numerical experiments. The archived Lean run covers the scope listed below.
-- AppliedModelingLib base: `194edcc95df74806a39b961d10dedddc6e730cce`; local run HEAD and patch hash: [environment record](formalization-environment.json).
-- Actual agent: `gpt-5.6-sol`, `xhigh`; Lean `leanprover/lean4:v4.30.0-rc2`.
-- Paper identifier: `Saco26InstitutionalRestart`.
+## What the new proof establishes
 
-The initial pull fetched upstream but refused to overwrite unrelated local changes. An isolated worktree at the fetched revision preserved the original checkout. Existing downloaded dependencies were reused.
+For any of the three shock paths, fix an arbitrary sequence of operating and closure decisions. The discounted reduced payoff is summable. Each feasible input choice can only lower the period's payoff relative to the conditional optimum. Taking limits gives a finite joint value or a value of minus infinity. Setting the input to its conditional optimum on operating dates attains the reduced payoff on that same activity path.
 
-## Actual outcomes
+| Claim in the final paper | Declaration in the joint reduction |
+|---|---|
+| Discounted primitive partial sums converge to their stated extended-real value | `jointValue_is_limit` |
+| The primitive and reduced programs have the same supremum | `joint_reduction` |
+| A plan maximizes the primitive program exactly when its activity path is optimal and it attains that path's reduced payoff | `jointPlan_optimal_iff` |
+| An optimum exists under normal viability on each shock path | `jointMaximum_exists` |
 
-- [Full proof build](lean-proof-build.txt): successful, all six endpoints compiled.
-- [Required fast check](lean-fast-check.txt): exit 0; [machine-readable outcome](lean-fast-check-result.json). The command checks the statement build and isolation. It does not itself establish the proof-body or full semantic coverage claims; those require the separate proof build and further review.
-- [Independent axiom inspection](endpoint-axioms-check.txt): all six endpoints report only `propext`, `Classical.choice`, and `Quot.sound`, with no `sorryAx` or custom axiom. [Source hashes](endpoint-axioms-result.json) match the packaged Lean files.
-- [Preliminary source review](preliminary-lean-review.md): 12 matches, no mismatches or uncertain rows. This context-isolated review is diagnostic, not a terminal acceptance receipt.
-- [Stop record](audit-stop-record.json): the author requested simplification if the longer code/audit work did not finish. The extended audit stopped before certification. No accepted final semantic audit is claimed.
+The new file uses the original period payoffs, feasible activity paths, and operating optimum. The six existing theorem statements and proofs use the same source bytes as the November 8 inspection. The final TeX also preserves the exact text of the six numbered statements and assumptions A1–A6. The combined check of the six original and four new declarations reported only `propext`, `Classical.choice`, and `Quot.sound`. [Joint reduction](../../lean/JointReduction.lean) · [Original source hashes](endpoint-axioms-result.json) · [Current check](joint-reduction-check.txt)
 
-The remaining formal gap is the joint-to-reduced program equivalence, including unoptimized feasible plans with value minus infinity. No additional economic condition was imposed to complete the six formal counterparts. The source already assumes strictly positive discounting.
+## Reproduction
 
-## Reproduce the checked development
-
-Use the base AppliedModelingLib revision above in a separate checkout. Apply [the exact local patch](applied-modeling-lib-local.patch), copy the project's entire `lean/` folder to `papers/Saco26InstitutionalRestart/`, and copy [the root module](Saco26InstitutionalRestart.lean) to `papers/Saco26InstitutionalRestart.lean`. Restore the pinned source bytes from the identified paper when a source audit requires ignored local inputs. Install dependencies using the library's documented setup, then run:
+The November 19 build used Lean `v4.30.0-rc2` and an isolated checkout at the archived local AppliedModelingLib revision `e7787eaad6c962d2727ab92e0a76d7d710000980`. To reconstruct that environment from the upstream base, check out `194edcc95df74806a39b961d10dedddc6e730cce` and apply the [recorded patch](applied-modeling-lib-local.patch). Install the library's pinned dependencies. Copy the contents of the project's [Lean folder](../../lean/) into `papers/Saco26InstitutionalRestart/`. Copy the [combined root module](Saco26InstitutionalRestart.lean) into `papers/Saco26InstitutionalRestart.lean`. From the library root run
 
 ```sh
 lake build +Saco26InstitutionalRestart
 python3 scripts/paper_contribution.py check Saco26InstitutionalRestart --fast
 ```
 
-The patch registers the target, records the engine revision, avoids an unsupported macOS address-space operation while retaining Lean's memory limit, and raises an extraction timeout. It changes no economic statement. Focused subprocess tests are retained in [the test output](lean-environment-tests.txt).
+To inspect the axiom dependencies, create a Lean file with the `import` and `#print axioms` lines in the [November 19 check record](joint-reduction-check.txt) and pass it to `lake env lean`. The fast check builds the statement interface and checks isolation. The full build compiles the proofs.
 
-The generated paper folder is copied verbatim, including its own `.gitignore`; [the manifest](lean-copy-manifest.json) checks every copied byte. Build caches are excluded from Git without force-adding ignored source inputs. Generated plans and unfinished audit sidecars remain provenance, not certification.
+## November 8 records
 
-## Independent author review
+The original run used the [merged paper at a15ed978](https://github.com/gsaco/ai-project/tree/a15ed978282156ba72928ad23940860cccda6f28), `gpt-5.6-sol` at `xhigh`, and the library environment above. The saved [source hashes](source-version.json), [environment record](formalization-environment.json), and [copy manifest](lean-copy-manifest.json) identify that earlier snapshot.
 
-The [beta-zero finding](ai-beta-zero-finding.md) refutes an early AI-generated uniqueness helper, not the paper's strict discount assumption. The [original handwritten closure-value derivation](../../hand/final/handwritten-revision-2026-11-09.png) and [verbatim acceptance](../../hand/final/verdict.md) were supplied on November 9, 2026. The full handwritten appendix and reasoned assessments of other AI contributions remain open. The copied Lean folder records the earlier formalization run; its historical author-evidence status is not the current presentation status.
+The [original proof build](lean-proof-build.txt), [fast check](lean-fast-check-result.json), and [axiom inspection](endpoint-axioms-check.txt) cover the six numbered results. The [preliminary source review](preliminary-lean-review.md) recorded twelve matches. The extended independent audit [stopped](audit-stop-record.json) before certification. The new mathematical proof addresses the joint-program gap named in those historical reports. The [author's assessment](final-ai-log.md) records the separate personal review.

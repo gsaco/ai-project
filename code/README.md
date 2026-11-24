@@ -9,13 +9,14 @@ python -m pip install -r code/requirements.txt
 python code/verify.py
 ```
 
-The single entry point fails on an unsuccessful assertion or browser-model check. It generates the paper's two tables in `paper/tables/`, its three figures in `paper/figures/`, and the final deck's figures in `slides/final-assets/`.
+The command rebuilds all four manuscript figures, both model tables, and the presentation figures. For Figure 1 it checks the digest of the archived Stata PDF and draws the displayed graph in its original layout from the exported slopes and both sets of interval endpoints. It writes the statistics quoted in the introduction directly to LaTeX. The original inputs and estimation instructions are described in the [figure record](../figures/README.md).
 
 The checks cover:
 
-- The symbolic FOC and second derivative, plus the closed-form optimum against numerical input grids.
+- The first and second derivatives, the optimal input against numerical grids, and the input bill implied by the first-order condition. In the normal example, the bill is 0.40 on revenue of 0.80.
 - Normal output 0.80, profit 0.01, adverse profit −0.15, favorable profit 0.17, and restored value 0.10.
 - Small shocks, free restart, costly restart, and fixed institutional overhead.
+- The severe-shock impact loss split between reduced production and closure, and the positive-total example in which all incumbents operate and symmetric changes in levels yield asymmetric log changes.
 - All four-date activity paths in 324 scenario problems, using an exact stationary tail; conditional level and positive-total log comparisons.
 - All five-date activity paths at 168 parameter points, checked against the complete closure threshold and weak asymmetry.
 - Delayed restarting at 200 candidate dates plus never restarting; tie cases; a case in which higher restart cost discourages current closure.

@@ -1,1 +1,2 @@
 import Saco26InstitutionalRestart.ProofInterface
+import Saco26InstitutionalRestart.JointReduction
