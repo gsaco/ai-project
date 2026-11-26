@@ -3,3 +3,4 @@ numpy
 pandas
 sympy
 matplotlib
+reportlab

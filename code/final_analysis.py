@@ -9,19 +9,18 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'slides/final-assets'
 
 def decision(d=.2,kappa=.4,c=.09,h=None):
-    r=simulate(d=d,kappa=kappa,c=c)
+    r=simulate(d=d,kappa=kappa,c=c,h=h)
     p=r['params']; neg=r['paths']['negative']; V=r['V']
     values={'operate':neg['continueValue'],'close':neg['closeValue']}
     if h is not None:
-        assert h>=0
         values['suspend']=-h+p['beta']*V
-    best=max(values.values()); choices=[k for k,v in values.items() if abs(v-best)<1e-10]
-    # Keep operating at ties, otherwise preserve the organization at a tie.
-    selected=next(k for k in ['operate','suspend','close'] if k in choices)
-    state='operate' if selected=='operate' else 'suspend' if selected=='suspend' else 'reopen' if V>kappa+1e-10 else 'closed'
-    y0=neg['output'][0] if selected=='operate' else 0.
-    y1=0. if state=='closed' else r['normal']['q']
-    return dict(state=state,tie=len(choices)>1 or (selected=='close' and abs(kappa-V)<1e-10),values=values,y0=y0,y1=y1,V=V,piMinus=neg['pi'],normal=r['normal'])
+    state = neg['decision']
+    tie = neg['tie']
+    if state == 'close':
+        state = 'reopen' if neg['restart'] else 'closed'
+        tie = tie or r['restartTie']
+    return dict(state=state,tie=tie,values=values,y0=neg['output'][0],y1=neg['output'][1],
+                V=V,piMinus=neg['pi'],normal=r['normal'])
 
 def verify_final():
     reports=[]

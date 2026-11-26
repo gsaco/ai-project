@@ -1,0 +1,55 @@
+November 19, 2026
+AppliedModelingLib e7787eaad6c962d2727ab92e0a76d7d710000980
+Lean v4.30.0-rc2
+
+Source SHA-256
+c3b2c4afc5a7d2d5a9c990de5c44752d160fd147d6efb2060c19fb8e46ec1d54  lean/JointReduction.lean
+1f9ed47263ea8943b1615fe6bdb4ee8f0b298b046af6db8f47a9a275a1314fa9  paper/audit/Saco26InstitutionalRestart.lean
+3547c59b53224eef9700e76703e3d69e7f377a2e2a19a06ab84b0a7c79050c5b  paper/paper.tex
+All seven original .lean files match endpoint-axioms-result.json.
+All six numbered theorem environments and all six assumptions match the pinned TeX.
+
+lake build +Saco26InstitutionalRestart (exit 0)
+✔ [3320/3321] Built Saco26InstitutionalRestart.JointReduction (10s)
+✔ [3321/3321] Built Saco26InstitutionalRestart (3.0s)
+Build completed successfully (3321 jobs).
+
+python3 scripts/paper_contribution.py check Saco26InstitutionalRestart --fast (exit 0)
++ lake build +Saco26InstitutionalRestart.PaperInterface
+Build completed successfully (3315 jobs).
++ git diff --check -- papers/Saco26InstitutionalRestart papers/Saco26InstitutionalRestart.lean lakefile.toml ':(exclude)papers/Saco26InstitutionalRestart/source/'
+
+lake env lean November19Axioms.lean (exit 0)
+
+import Saco26InstitutionalRestart
+#print axioms Saco26InstitutionalRestart.lemma1_operating_optimum_proof
+#print axioms Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof
+#print axioms Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetry_proof
+#print axioms Saco26InstitutionalRestart.proposition2_complete_closure_threshold_proof
+#print axioms Saco26InstitutionalRestart.proposition3_cheap_suspension_proof
+#print axioms Saco26InstitutionalRestart.corollary1_positive_totals_and_logs_proof
+#print axioms Saco26InstitutionalRestart.jointValue_is_limit
+#print axioms Saco26InstitutionalRestart.joint_reduction
+#print axioms Saco26InstitutionalRestart.jointPlan_optimal_iff
+#print axioms Saco26InstitutionalRestart.jointMaximum_exists
+
+'Saco26InstitutionalRestart.lemma1_operating_optimum_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetry_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition2_complete_closure_threshold_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition3_cheap_suspension_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.corollary1_positive_totals_and_logs_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.jointValue_is_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.joint_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.jointPlan_optimal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.jointMaximum_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
