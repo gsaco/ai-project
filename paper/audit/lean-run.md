@@ -2,7 +2,7 @@
 
 The six numbered results and the equivalence of the primitive and reduced optimization problems compiled together on November 19, 2026. The latter proof accounts for feasible input paths with arbitrarily large losses. A joint optimum exists under the paper's normal-viability assumption. The paper-scoped fast check passed. Full independent certification of the correspondence between the formalization and the manuscript remains outstanding. [Build output, source hashes and axiom inspection](joint-reduction-check.txt)
 
-The [November 24 verification](final-paper-lean-check.txt) records the final manuscript fingerprint, a fresh proof build, the required fast check and the ten axiom inspections. The archived generated package matches the original copy manifest. The final package adds JointReduction.lean.
+The [November 26 verification](final-paper-lean-check.txt) records the current manuscript and PDF fingerprints, hashes of every Lean source and the combined root module, a fresh proof build, the required fast check, and all ten axiom inspections. All checks passed against proof files identical to the submitted files; the six numbered statements and assumptions A1–A6 match the original formalized manuscript byte-for-byte. The [full build output](final-paper-lean-build-nov26.txt) preserves the compiler messages. The archived generated package matches the original copy manifest. The final package adds JointReduction.lean.
 
 ## What the new proof establishes
 

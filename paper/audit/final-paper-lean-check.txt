@@ -1,16 +1,41 @@
-November 24, 2026. Final manuscript verification
-Paper LaTeX SHA-256: 83bc4b80e1340cedf04267236d73a19c00676e524433889c848fc3ff3dd804d3
-All six theorem environments and six assumptions equal the merged source a15ed978.
+November 26, 2026 (Lima). Final manuscript verification
 
-lake build +Saco26InstitutionalRestart
+Verified submission snapshot: 1168574c64865dda7c1787c7e1ddf170fc76e493.
+This documentation-only update preserves the manuscript and proof bytes below.
+Original formalized paper: a15ed978282156ba72928ad23940860cccda6f28.
+All six numbered theorem environments and all six assumptions A1-A6 were
+compared with that original source and are byte-for-byte identical.
+
+Environment: AppliedModelingLib e7787eaad6c962d2727ab92e0a76d7d710000980,
+Lean v4.30.0-rc2. The environment is reproducible using the base revision and
+patch documented in lean-run.md. Before these commands, every submitted Lean
+source and the combined root module were compared byte-for-byte with the
+files in the build environment; all matched. The existing environment and
+its dependency cache were reused; these are fresh command executions.
+
+SHA-256 of the verified manuscript and proof files
+1429b2c0008132fbc06fd60968d5756410b6da071eb2e7f2acae195fc3cd1a54  paper/paper.tex
+80abf97aa1dff1845d8454df566da6178f36307c6e9ef47334bd3264cb16687f  paper/paper.pdf
+1f9ed47263ea8943b1615fe6bdb4ee8f0b298b046af6db8f47a9a275a1314fa9  paper/audit/Saco26InstitutionalRestart.lean
+d5270e250660de20a8ddf27f58f8a09d32ca0af26e68cd27e4d1e2218fbe4539  lean/Assumptions.lean
+c3b2c4afc5a7d2d5a9c990de5c44752d160fd147d6efb2060c19fb8e46ec1d54  lean/JointReduction.lean
+b57ec95bdc616a9793b36436a4b6b7a5a09bb9f5bcb5229ced3e0feed8a6efdb  lean/MainTheorems.lean
+be264d5141411b727c02546f7f58501dce11466cf2a8b4c3232d21b6a198eea3  lean/Model.lean
+3178ff7b8382d443b9e53cfee0a7b788ca5d4e1c1f942dffca29124753ad77bc  lean/Operating.lean
+3250dfd49de238081f339444076ce58daa15e4fd5c33315bdd6cbc36e9aa14f2  lean/PaperInterface.lean
+6185f63a8fdc03dea245a5b2133d1272a557a048923065bf50b28e2f4fd5f178  lean/ProofInterface.lean
+39bf0ffdac2fd301b653c4773dd22bfa3578068371e67cfc66f19eea4a2047da  lean/Results.lean
+
+lake build +Saco26InstitutionalRestart (exit 0)
 Build completed successfully (3321 jobs).
+The full build log is preserved in final-paper-lean-build-nov26.txt.
 
-python3 scripts/paper_contribution.py check Saco26InstitutionalRestart --fast
+python3 scripts/paper_contribution.py check Saco26InstitutionalRestart --fast (exit 0)
 + lake build +Saco26InstitutionalRestart.PaperInterface
 Build completed successfully (3315 jobs).
 + git diff --check -- papers/Saco26InstitutionalRestart papers/Saco26InstitutionalRestart.lean lakefile.toml ':(exclude)papers/Saco26InstitutionalRestart/source/'
 
-lake env lean axioms.lean
+lake env lean axioms.lean (exit 0)
 'Saco26InstitutionalRestart.lemma1_operating_optimum_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof' depends on axioms: [propext,
  Classical.choice,
@@ -31,3 +56,9 @@ lake env lean axioms.lean
 'Saco26InstitutionalRestart.joint_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Saco26InstitutionalRestart.jointPlan_optimal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Saco26InstitutionalRestart.jointMaximum_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Scope: successful compilation and axiom inspection establish the stated Lean
+results. The axiom reports contain only propext, Classical.choice and Quot.sound.
+Manuscript correspondence above checks the six numbered statements and assumptions;
+it is not a new independent semantic certification of the whole manuscript.
+Historical November 8 and November 19 records remain available in lean-run.md.
