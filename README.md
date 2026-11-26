@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://gsaco.github.io/ai-project/slides/topic.html"><img src="figures/presentation-button.svg" width="286" alt="Open the interactive presentation"></a>
+  <a href="https://gsaco.github.io/ai-project/slides/final.html"><img src="figures/presentation-button.svg" width="286" alt="Open the latest interactive presentation"></a>
   <a href="proposal/proposal.pdf"><img src="figures/proposal-button.svg" width="160" alt="Read the proposal PDF"></a>
   <a href="slides/topic.pdf"><img src="figures/slides-button.svg" width="160" alt="Read the slides PDF"></a>
 </p>
@@ -80,7 +80,7 @@ I apply Dixit’s established sunk-cost mechanism to institutional changes. The 
 | **Topic presentation** | [Interactive](https://gsaco.github.io/ai-project/slides/topic.html) · [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) | 14 slides; 20-minute plan |
 | **Verification** | [Code and checks](code/README.md) | 10 Python checks and 13 presentation-model checks pass |
 | **Final paper** | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [References](paper/references.bib) | Research outline; development continues |
-| **Final presentation** | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) | Planning deck |
+| **Final presentation** | [Interactive](https://gsaco.github.io/ai-project/slides/final.html) · [PDF](slides/final.pdf) | Latest published final presentation |
 | **Formal and hand proofs** | [Lean plan](lean/README.md) · [Derivation plan](hand/README.md) | Future work |
 | **AI collaboration** | [Raw conversation](prompts.md) | Recorded; my independent adjudication remains pending |
 
