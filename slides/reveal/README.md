@@ -35,4 +35,4 @@ The Python runner creates static model figures. The browser model is `model.js`;
 
 ## Public presentation
 
-[Open the presentation on GitHub Pages](https://gsaco.github.io/ai-project/slides/topic.html). Pages publishes the root of `codex/topic-collateral-asymmetry`; pushing an updated `slides/topic.html` to that branch updates the public deck. The root `index.html` redirects visitors to the slides, and `.nojekyll` preserves the generated HTML without Jekyll processing.
+[Open the latest presentation on GitHub Pages](https://gsaco.github.io/ai-project/). The homepage opens `slides/final.html`; the [earlier topic presentation](https://gsaco.github.io/ai-project/slides/topic.html) remains available. Pages publishes the root of `codex/topic-collateral-asymmetry`; pushing an updated `slides/final.html` to that branch updates the public deck. The root `index.html` redirects visitors to the slides, and `.nojekyll` preserves the generated HTML without Jekyll processing.
