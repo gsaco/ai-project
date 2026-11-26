@@ -4,8 +4,8 @@
 
 | Page | Derivations shown |
 |---|---|
-| 1 | Firm objective, first and second input derivatives, optimal input and output, input expenditure, operating profit, and profits under matched shocks. The page also derives the intact business value and the value of restarting after a delay, and lists the three restart cases. |
-| 2 | Proposition 1’s output loss and gain under costly reopening. Proposition 2’s value of preserving the organization, closure threshold and thin-margin condition. Proposition 3’s adverse-path payoffs and suspension threshold. |
+| 1 | Firm objective, first and second input derivatives, optimal input and output, input expenditure, operating profit, and profits under matched shocks. The page also derives the intact business value and the value of restarting after a delay, lists the three restart cases, and gives the partial-sum comparison between primitive and reduced payoffs. |
+| 2 | Proposition 1’s output loss and gain under costly reopening. Proposition 2’s value of preserving the organization, closure threshold and thin-margin condition. Proposition 3’s adverse-path payoffs and suspension threshold, followed by the corollary’s positive-output and logarithmic comparisons. |
 
 ## Scope of the handwritten record
 
