@@ -434,36 +434,7 @@ An institutional shock changes the usable share $s$. The physical stock $\bar k$
 
 
 
-::: {.two .setup-baselines}
-
-
-
-::: {.card}
-
-
-<h3>Baseline: free restarting</h3>
-
-$$\kappa=0$$
-
-
-:::
-
-
-
-::: {.card}
-
-
-<h3>Extension: costly restarting</h3>
-
-$$\kappa>0$$
-
-
-:::
-
-
-
-:::
-
+::: {.setup-table}
 
 | Institutional path | Shock: $t=0$ | Restored: $t\geq1$ |
 |:--|:--:|:--:|
@@ -471,6 +442,8 @@ $$\kappa>0$$
 | No change | $s_0$ | $s_0$ |
 | Improvement | $s_0+d$ | $s_0$ |
 
+
+:::
 
 ## The complete [firm problem]{.teal} {#formal-problem}
 
@@ -623,7 +596,7 @@ $$x^*(s)=s(\alpha A/w)^{1/(1-\alpha)}.$$
 
 ::: {.card}
 
-<h3>3 · Substitute and use <span class="math inline">wx^*=\alpha q</span></h3>
+### 3 · Substitute and use $wx^*=\alpha q$
 $$q(s)=sA(\alpha A/w)^{\alpha/(1-\alpha)},$$
 $$\pi(s,c_0)=(1-\alpha)q(s)-F-c_0.$$
 
@@ -768,29 +741,6 @@ The same adverse firm closes on impact in both experiments. Free restarting perm
 :::
 
 
-## Proof roadmap: [three decisions, one comparison]{.teal} {#proof}
-
-
-::: {.kicker}
-
-4 · Proof progress
-
-:::
-
-
-1. **Input:** strict concavity gives $x^*(s)$, $q(s)$, and $\pi(s,c_0)$.
-2. **After restoration:** solve the active and inactive firm's values, including every possible restart date.
-3. **At date zero:** compare continuing with closing while retaining the option to reopen.
-4. **Output:** apply the activity paths to the linear operating-output function $q(s)$.
-
-
-::: {.takeaway}
-
-The delicate step is the value of closing. Zero is always feasible; it is not always the best value.
-
-:::
-
-
 ## Waiting cannot improve the [restart value]{.teal} {#delay}
 
 
@@ -799,6 +749,8 @@ The delicate step is the value of closing. Zero is always feasible; it is not al
 4 · Lemma 2: all restart dates, including never
 
 :::
+
+A closed firm retains the option to reopen, so its value is not necessarily zero.
 
 
 
@@ -926,8 +878,18 @@ $$\pi_-+\beta V=-0.06<0,\quad\kappa>V.$$
 
 <h3>Why a thin margin matters</h3>
 Permanent closure requires
+
+::: {.margin-equation-link}
+
 $$\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac d{s_0}.$$
-Here $0.025<0.04$. Normal operation is profitable, but future earnings are small relative to the shock loss.
+
+[Derivation →](#margin-derivation){.derivation-button}
+
+:::
+
+Here $0.025<0.04$.
+
+Normal operation is profitable, but future earnings are small relative to the shock loss.
 
 :::
 
@@ -1044,7 +1006,14 @@ Small shocks: keep operating. Large shocks: close. Restart costs distinguish rec
 
 
 Strict closure if
+
+::: {.margin-equation-link}
+
 $$ (1-\alpha)q_0\frac d{s_0}>\pi_0+\beta\min\{\kappa,V\}. $$
+
+[Derivation →](#closure-derivation){.derivation-button}
+
+:::
 
 ![](final-assets/regimes.png){.regime-figure alt="Shock size versus restart cost, at three overhead levels: operating, closure with reopening, and permanent closure regions."}
 
@@ -1420,3 +1389,121 @@ This is not a model of GDP: it holds background output and the cohort fixed and 
 <img src="../hand/final/handwritten-revision-2026-11-09.png" alt="The complete original handwritten revision by Gabriel Saco, supplied November 9, 2026.">
 </button>
 ```
+
+
+## Deriving the [profit-margin condition]{.teal} {#margin-derivation}
+
+::: {.derivation-heading}
+
+<span class="kicker">Backup · From continuation value to the normal profit margin</span>
+
+[← Back to the example](#feasibility){.derivation-button}
+
+:::
+
+:::: {.two .margin-steps}
+::: {.card}
+
+### 1 · Express the shock profit
+
+Normal profit is $\pi_0$. Deterioration reduces it by $(1-\alpha)q_0(d/s_0)$:
+
+$$\pi_-=\pi_0-(1-\alpha)q_0\frac{d}{s_0}.$$
+
+### 2 · Substitute into the initial condition
+
+Start with $\pi_-+\beta V<0$, where $V=\pi_0/(1-\beta)$:
+
+$$\pi_0-(1-\alpha)q_0\frac{d}{s_0}
++\beta\frac{\pi_0}{1-\beta}<0.$$
+
+Move the shock loss to the right:
+
+$$\pi_0+\frac{\beta\pi_0}{1-\beta}
+<(1-\alpha)q_0\frac{d}{s_0}.$$
+
+:::
+::: {.card}
+
+### 3 · Combine the terms on the left
+
+Use a common denominator:
+
+$$\pi_0+\frac{\beta\pi_0}{1-\beta}
+=\frac{(1-\beta)\pi_0+\beta\pi_0}{1-\beta}
+=\frac{\pi_0}{1-\beta}.$$
+
+The terms $-\beta\pi_0$ and $+\beta\pi_0$ cancel. Therefore:
+
+$$\frac{\pi_0}{1-\beta}<(1-\alpha)q_0\frac{d}{s_0}.$$
+
+### 4 · Rearrange using positive quantities
+
+Multiply by $1-\beta>0$:
+
+$$\pi_0<(1-\beta)(1-\alpha)q_0\frac{d}{s_0}.$$
+
+Divide by $(1-\alpha)q_0>0$; the inequality keeps its direction:
+
+$$\boxed{\frac{\pi_0}{(1-\alpha)q_0}<(1-\beta)\frac{d}{s_0}}.$$
+
+:::
+::::
+
+
+## Deriving the [closure condition]{.orange} {#closure-derivation}
+
+::: {.derivation-heading}
+
+<span class="kicker">Backup · Compare closing and continuing at date zero</span>
+
+[← Back to operating regimes](#regimes){.derivation-button}
+
+:::
+
+:::: {.two .margin-steps}
+::: {.card}
+
+### 1 · Close when its value is higher
+
+Closing retains the option to reopen next period:
+
+$$\underbrace{\beta\max\{V-\kappa,0\}}_{\text{value of closing}}
+>\underbrace{\pi_-+\beta V}_{\text{value of continuing}}.$$
+
+### 2 · Substitute the shock profit
+
+$$\pi_-=\pi_0-(1-\alpha)q_0\frac{d}{s_0}.$$
+
+Therefore:
+
+$$\beta\max\{V-\kappa,0\}
+>\pi_0-(1-\alpha)q_0\frac{d}{s_0}+\beta V.$$
+
+Move the shock loss to the left and the closing value to the right:
+
+$$(1-\alpha)q_0\frac{d}{s_0}
+>\pi_0+\beta\left[V-\max\{V-\kappa,0\}\right].$$
+
+:::
+::: {.card}
+
+### 3 · Use the identity checked by hand
+
+$$V-\max\{V-\kappa,0\}=\min\{\kappa,V\}.$$
+
+If $\kappa\leq V$, the maximum is $V-\kappa$, so the difference is $\kappa$.
+
+If $\kappa>V$, the maximum is $0$, so the difference is $V$.
+
+### 4 · Obtain the closure threshold
+
+$$\boxed{(1-\alpha)q_0\frac{d}{s_0}
+>\pi_0+\beta\min\{\kappa,V\}}.$$
+
+The shock-induced profit loss must exceed normal current profit plus the discounted value of preserving the organization.
+
+Equality means indifference; reversing the inequality favors continued operation.
+
+:::
+::::

@@ -17,3 +17,20 @@ for(let i=0;i<=150;i++){
   if(h>.09+1e-10)assert.equal(p.decision,'close');
 }
 console.log(`PASS final browser/Python agreement: ${data.grid.length} parameter points and 151 suspension costs.`);
+if (process.argv.includes('--paper')) {
+  const cases = JSON.parse(require('node:fs').readFileSync(0, 'utf8'));
+  for (const expected of cases) {
+    const params = expected.parameters;
+    const result = model.simulate({...params, suspension: params.h !== undefined});
+    const adverse = result.paths.negative;
+    const context = JSON.stringify(params);
+    assert.equal(adverse.decision, expected.action, context);
+    assert.equal(adverse.tie, expected.tie, context);
+    assert.equal(adverse.restart, expected.restart, context);
+    assert.equal(adverse.restartTie, expected.restart_tie, context);
+    assert.equal(result.conjecture.holds, expected.strict, context);
+    near(adverse.output[0], expected.y0);
+    near(adverse.output[1], expected.y1);
+  }
+  console.log(`PASS ${cases.length} manuscript and threshold comparisons against rational arithmetic.`);
+}

@@ -1,0 +1,33 @@
+November 24, 2026. Final manuscript verification
+Paper LaTeX SHA-256: 83bc4b80e1340cedf04267236d73a19c00676e524433889c848fc3ff3dd804d3
+All six theorem environments and six assumptions equal the merged source a15ed978.
+
+lake build +Saco26InstitutionalRestart
+Build completed successfully (3321 jobs).
+
+python3 scripts/paper_contribution.py check Saco26InstitutionalRestart --fast
++ lake build +Saco26InstitutionalRestart.PaperInterface
+Build completed successfully (3315 jobs).
++ git diff --check -- papers/Saco26InstitutionalRestart papers/Saco26InstitutionalRestart.lean lakefile.toml ':(exclude)papers/Saco26InstitutionalRestart/source/'
+
+lake env lean axioms.lean
+'Saco26InstitutionalRestart.lemma1_operating_optimum_proof' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.lemma2_restored_state_values_and_delays_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition1_persistent_strict_asymmetry_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition2_complete_closure_threshold_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.proposition3_cheap_suspension_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.corollary1_positive_totals_and_logs_proof' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Saco26InstitutionalRestart.jointValue_is_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.joint_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.jointPlan_optimal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Saco26InstitutionalRestart.jointMaximum_exists' depends on axioms: [propext, Classical.choice, Quot.sound]

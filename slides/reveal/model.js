@@ -11,9 +11,11 @@
     beta: 0.9, kappa: 0.4, s0: 0.5, d: 0.2,
     suspension: false, h: 0.02
   });
-  const EPSILON = 1e-10;
-  const greater = (a, b) => a - b > EPSILON * Math.max(1, Math.abs(a), Math.abs(b));
-  const tied = (a, b) => !greater(a, b) && !greater(b, a);
+  function valueOrder(left, right, scale) {
+    const band = 32 * Number.EPSILON * Math.max(scale, Math.abs(left), Math.abs(right));
+    if (Math.abs(left - right) <= band) return 0;
+    return left > right ? 1 : -1;
+  }
 
   function requireCondition(condition, message) {
     if (!condition) throw new RangeError(message);
@@ -52,12 +54,13 @@
     requireCondition(typeof p.suspension === "boolean", "suspension must be true or false.");
     requireCondition(p.d >= 0 && p.d < p.s0 && p.s0 + p.d <= 1, "Use a shock with 0 <= d < s0 and s0 + d <= 1.");
     const normal = solveOperating(Object.assign({}, p, {s: p.s0}));
-    requireCondition(greater(normal.pi, 0), "The illustration requires positive normal operating profit pi0. Adjust the normal margin first.");
+    requireCondition(valueOrder(normal.pi, 0, normal.q) > 0, "The illustration requires positive normal operating profit pi0 at working precision. Adjust the normal margin first.");
     const V = normal.pi / (1 - p.beta);
     const restartValue = V - p.kappa;
-    const restartProfitable = greater(restartValue, 0);
+    const restartOrder = valueOrder(normal.pi, (1 - p.beta) * p.kappa, normal.q);
+    const restartProfitable = restartOrder > 0;
     // A closed owner can reopen next period. Closure is worth zero only when kappa >= V.
-    const W = restartProfitable ? restartValue : 0;
+    const W = Math.max(restartValue, 0);
     const timing = [0, 1, 2, 3, 4];
 
     function scenario(key, direction) {
@@ -66,29 +69,25 @@
       const continueValue = conditional.pi + p.beta * V;
       const closeValue = p.beta * W;
       const suspendValue = p.suspension ? -p.h + p.beta * V : null;
-      // At ties keep operating. If closure and suspension tie below continuation,
-      // preserve the organization by suspending rather than dismantling it.
-      let decision = "operate";
-      let chosenValue = continueValue;
-      if (p.suspension && greater(suspendValue, chosenValue)) {
-        decision = "suspend";
-        chosenValue = suspendValue;
-      }
-      if (greater(closeValue, chosenValue)) {
-        decision = "close";
-        chosenValue = closeValue;
-      }
+      // Compare flows after removing the common beta*V from each action.
+      const scores = {operate: conditional.pi};
+      if (p.suspension) scores.suspend = -p.h;
+      scores.close = -p.beta * Math.min(p.kappa, V);
+      const best = Math.max(...Object.values(scores));
+      const scale = Math.max(normal.q, conditional.q);
+      const choices = Object.keys(scores).filter(action => valueOrder(scores[action], best, scale) === 0);
+      const decision = choices[0]; // At a tie prefer operation, then suspension.
+      const chosenValue = {operate: continueValue, close: closeValue, suspend: suspendValue}[decision];
       const restart = decision === "close" && restartProfitable;
       const restorationDecision = decision === "operate" ? "continue"
         : decision === "suspend" ? "resume"
         : restart ? "restart" : "remain closed";
       const subsequentOutput = decision !== "close" || restart ? normal.q : 0;
       const output = timing.map(t => t === 0 ? (decision === "operate" ? conditional.q : 0) : subsequentOutput);
-      const alternatives = [continueValue, closeValue].concat(p.suspension ? [suspendValue] : []);
-      const tie = alternatives.filter(value => tied(value, chosenValue)).length > 1;
+      const tie = choices.length > 1;
       return {
         key, direction, s, conditional, continueValue, closeValue, suspendValue,
-        chosenValue, decision, tie, restart, restartValue, restorationDecision, output
+        chosenValue, decision, tie, restart, restartValue, restartTie: restartOrder === 0, restorationDecision, output
       };
     }
 
@@ -106,16 +105,16 @@
       V, W, restartValue
     };
     // The sufficient conditions use the same scenario profits as the slides.
-    const adverseContinuationNegative = greater(0, paths.negative.continueValue);
-    const restartUnprofitable = greater(p.kappa, V);
+    const adverseContinuationNegative = valueOrder(paths.negative.conditional.pi, -p.beta * V, normal.q) < 0;
+    const restartUnprofitable = restartOrder < 0;
     const shockAdmissible = p.d > 0 && p.d < p.s0 && p.s0 + p.d <= 1;
     return {
       params: p, timing, normal, constants, paths,
       comparison: {
         loss, gain,
-        levelDominance: timing.map((_, t) => !greater(gain[t], loss[t])),
-        strictLevelDominance: timing.map((_, t) => greater(loss[t], gain[t])),
-        persistentLoss: greater(loss[1], 0)
+        levelDominance: timing.map((_, t) => valueOrder(loss[t], gain[t], normal.q) >= 0),
+        strictLevelDominance: timing.map((_, t) => valueOrder(loss[t], gain[t], normal.q) > 0),
+        persistentLoss: valueOrder(loss[1], 0, normal.q) > 0
       },
       conjecture: {
         holds: shockAdmissible && adverseContinuationNegative && restartUnprofitable && !p.suspension,

@@ -76,3 +76,32 @@
 .reveal #assumptions p {font-size:25px;line-height:1.21;margin:0 0 17px;}
 .reveal #assumptions .assumptions-conditions {margin-top:7px;padding:14px 20px;}
 .reveal #assumptions .assumptions-conditions p {font-size:26px;margin:0;}
+
+/* Center the experiment table in the available slide body. */
+.reveal #setup .setup-table {min-height:540px;display:flex;align-items:center;justify-content:center;}
+.reveal #setup .setup-table table {width:85%;margin:0 auto;}
+
+/* Optional derivation: direct navigation without changing the main sequence. */
+.reveal .margin-equation-link {display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.reveal .margin-equation-link > p {margin:0;}
+.reveal a.derivation-button {display:inline-block;white-space:nowrap;padding:10px 16px;border:2px solid #008A92;border-radius:8px;color:#008A92;background:#F0F8F8;font-size:22px;font-weight:600;text-decoration:none;}
+.reveal a.derivation-button:hover {background:#008A92;color:white;}
+.reveal a.derivation-button:focus-visible {outline:3px solid #D45D00;outline-offset:4px;}
+.reveal :is(#margin-derivation, #closure-derivation) .derivation-heading {display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.reveal :is(#margin-derivation, #closure-derivation) .derivation-heading p {margin:0;}
+.reveal :is(#margin-derivation, #closure-derivation) .kicker {margin:0;}
+.reveal :is(#margin-derivation, #closure-derivation) .margin-steps {gap:30px;}
+.reveal :is(#margin-derivation, #closure-derivation) .card {padding:20px 24px;font-size:25px;}
+.reveal :is(#margin-derivation, #closure-derivation) h3 {font-size:27px;margin:0 0 10px;}
+.reveal :is(#margin-derivation, #closure-derivation) h3:not(:first-child) {margin-top:23px;}
+.reveal :is(#margin-derivation, #closure-derivation) p {margin:10px 0;line-height:1.25;}
+.reveal :is(#margin-derivation, #closure-derivation) .katex-display {font-size:0.94em;margin:14px 0;}
+
+/* Keep the equation/button row inside its card; explanations remain below it. */
+.reveal #feasibility .two {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+.reveal #feasibility .card {min-width:0;}
+.reveal #feasibility .margin-equation-link {gap:12px;margin:14px 0 18px;}
+.reveal #feasibility .margin-equation-link .math {font-size:25px;}
+.reveal #feasibility .margin-equation-link .katex-display {margin:8px 0;}
+.reveal #feasibility .derivation-button {font-size:20px;padding:9px 12px;}
+.reveal #regimes .margin-equation-link {justify-content:center;gap:28px;}
