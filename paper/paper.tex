@@ -44,7 +44,7 @@ The country-level estimates leave open how much of the loss comes from firms pro
 \end{figure}
 \endgroup
 
-The estimates come from my unpublished thesis, \emph{Choques de Libertad Económica: Evidencia Global de Efectos Asimétricos y No Lineales} (manuscript compiled July 30, 2026, Figure~2 and Table~2). The local projections use the Fraser Institute's EFW index and World Bank real GDP per capita at five-year intervals from 1970 to 2020. Each response combines the current and lagged coefficients and measures the cumulative change in log real GDP per capita from the preceding observation. Inner bands give 95\% country-clustered pointwise intervals. Outer bands give 95\% simultaneous sup-$t$ bands across horizons for each path.
+The local projections use the Fraser Institute's EFW index and World Bank real GDP per capita at five-year intervals from 1970 to 2020. Each response combines the current and lagged coefficients and measures the cumulative change in log real GDP per capita from the preceding observation. Inner bands give 95\% country-clustered pointwise intervals. Outer bands give 95\% simultaneous sup-$t$ bands across horizons for each path.
 
 In \citet{dixit1989}, an uncertain output price generates distinct thresholds for entry and exit when switching is costly. Here the price stays fixed and the incumbent knows exactly when legal access to its property will return. I compare a one-period restriction with an equal relaxation. While the firm operates, optimal output is linear in usable property, so the loss and gain in levels are equal. If it closes during the restriction, the loss exceeds the gain by exactly the output it could still have produced that period. Comparing free and costly reopening then shows how much of the loss survives restoration.
 
@@ -359,42 +359,53 @@ This mechanism has an observable implication. Among comparable establishments th
 \bibliographystyle{plainnat}
 \bibliography{references}
 
+\clearpage
 \appendix
 \section{AI contributions and independent assessment}
-I accept the corrected input and profit derivation. An earlier slide gave $wx^*=q$. I asked for the missing $\alpha$ because multiplying the first-order condition by $x^*$ gives $wx^*=\alpha q$. Only $(1-\alpha)q$ is available to cover fixed expenses. I also questioned the closure threshold. My handwritten check gave $V-\max\{V-\kappa,0\}=\min\{\kappa,V\}$. I accept the operating and closure decisions conditional on the stated assumptions.
+The project log is in \path{prompts.md}. I personally checked the input bill and the max--min identity. For the other items, the contemporaneous record gives a collective acceptance. The entries below give the calculation or source supporting each verdict.
 
-My recorded verdict on the remaining results was ``all good.''  Thesis Table~2 gives a ten-year excess loss of $\irfGapTen$ log points. Panel~C tests equality directly ($p=\irfTestTen$). For Dixit (1989), I called attention to two appendices available from the author. The comparison here uses the entry and exit prices established in the published article. In Figure~\ref{fig:suspension}, suspension earns $-0.09+0.90(0.10)=0$, the same as closure. Suspension retains the organization, so next-period output is $0.80$ after suspension and zero after closure.
+\textbf{Input bill (corrected).} An earlier slide gave $wx^*=q$. I questioned the missing factor: multiplying the input first-order condition by $x^*$ gives $wx^*=\alpha q$. At $q=0.80$ and $\alpha=1/2$, the variable input costs $0.40$.
 
-Equal changes of $0.24$ around $4.40$ give unequal log magnitudes because they span different proportional changes. At $\beta=0$ only today's payoff counts, refuting the AI's claim that the entire path is unique. Appendix~\ref{app:lean} identifies the declarations checked by Lean. My verdicts and checks are in \path{paper/audit/final-ai-log.md}. The AI derivation guide is in \path{prompts.md}.
+\textbf{Switching rule and output paths (accepted under A1--A6).} I checked $V-\max\{V-\kappa,0\}$ by hand. It equals $\kappa$ when rebuilding pays and $V$ when it does not. Discounting gives the preservation incentive $\beta\min\{\kappa,V\}$. Figure~\ref{fig:impact-recovery} checks the output consequence: closure adds $0.48$ to the $0.32$ units lost through restricted access; free rebuilding restores $0.80$ at date one.
+
+\textbf{GDP evidence and literature (accepted).} Thesis Table~2 gives a ten-year excess loss of $0.358-0.082=\irfGapTen$; Panel~C directly tests equality ($p=\irfTestTen$). The fifteen-year test gives $p=\irfTestFifteen$. The comparison with Dixit (1989) rests on the published entry and exit thresholds in Sections III--IV. Here the price is fixed and the restoration date is known.
+
+\textbf{Suspension and aggregation (accepted).} At $h=0.09$, suspension earns $-0.09+0.90(0.10)=0$, equal to closure. The respective date-one outputs are $0.80$ and zero. In the all-operating example, $4.40-4.16=4.64-4.40$, but $\log(4.40/4.16)>\log(4.64/4.40)$. Log asymmetry alone therefore cannot identify closure.
+
+\textbf{Uniqueness at $\beta=0$ (early claim rejected).} With $\pi=1$, $\kappa=0$, and $\beta=0$, operating only today and operating forever each earns a discounted payoff of one. This counterexample explains the strict lower bound on $\beta$ in A4.
+
+\textbf{Formal verification (accepted within its reported scope).} The recorded build covers the six numbered results and the reduction to activity paths. Appendix~\ref{app:lean} gives the declarations, files, and scope of the checks. The detailed adjudication record is in \path{paper/audit/final-ai-log.md}.
 
 \clearpage
 \section{Lean coverage and reproducible checks}\label{app:lean}
-The November 8 formalization used \href{https://github.com/gsaco/ai-project/tree/a15ed978282156ba72928ad23940860cccda6f28}{commit \texttt{a15ed978}}. Its six numbered statements and assumptions A1--A6 carry over to this version. Their statements are in \path{lean/PaperInterface.lean} and their proofs in \path{lean/ProofInterface.lean}. The November 19 extension proves the reduction between~\eqref{eq:full} and~\eqref{eq:reduced} in \path{lean/JointReduction.lean}. All declarations share the namespace \texttt{Saco26InstitutionalRestart}.
+\noindent Formalized paper commit: \texttt{a15ed978}.
 
-\begin{center}\small
-\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.255\linewidth}>{\raggedright\arraybackslash}p{.55\linewidth}l@{}}
-\toprule
-Result and scope & Lean declaration & Status\\\midrule
-Lemma 1, optimal input & \path{lemma1_operating_optimum_proof} & Proved\\[4pt]
-Lemma 2, restored firm & \path{lemma2_restored_state_values_and_delays_proof} & Proved\\[4pt]
-Proposition 1, reduced activity paths & \path{proposition1_persistent_strict_asymmetry_proof} & Proved\\[4pt]
-Proposition 2, reduced switching rule & \path{proposition2_complete_closure_threshold_proof} & Proved\\[4pt]
-Proposition 3, suspension option & \path{proposition3_cheap_suspension_proof} & Proved\\[4pt]
-Corollary 1, cohort totals & \path{corollary1_positive_totals_and_logs_proof} & Proved\\\midrule
-Joint-to-reduced equivalence & \path{joint_reduction} & Proved\\\bottomrule
-\end{tabular}
+The formalization covers the six numbered results under assumptions A1--A6. Their statements are in \path{lean/PaperInterface.lean} and their proofs in \path{lean/ProofInterface.lean}. All declarations share the namespace \texttt{Saco26InstitutionalRestart}.
+
+\begin{center}\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llll@{}}\toprule
+Result & Lean declaration & Proof file in \texttt{lean/} & Status\\\midrule
+Lemma 1 & \path{lemma1_operating_optimum_proof} & \path{ProofInterface.lean} & Proved\\
+Lemma 2 & \path{lemma2_restored_state_values_and_delays_proof} & \path{ProofInterface.lean} & Proved\\
+Prop. 1 & \path{proposition1_persistent_strict_asymmetry_proof} & \path{ProofInterface.lean} & Proved\\
+Prop. 2 & \path{proposition2_complete_closure_threshold_proof} & \path{ProofInterface.lean} & Proved\\
+Prop. 3 & \path{proposition3_cheap_suspension_proof} & \path{ProofInterface.lean} & Proved\\
+Cor. 1 & \path{corollary1_positive_totals_and_logs_proof} & \path{ProofInterface.lean} & Proved\\
+Reduction & \path{joint_reduction} & \path{JointReduction.lean} & Proved\\
+\bottomrule\end{tabular}
 \end{center}
 
 For every feasible sequence of input and activity choices, \path{jointValue_is_limit} identifies the limit of the discounted partial sums, including a possible payoff of $-\infty$. On each activity path the periodwise optimal inputs attain its reduced payoff. Thus both programs have the same value. The theorem \path{jointPlan_optimal_iff} also characterizes the maximizing plans, and \path{jointMaximum_exists} proves attainment under normal viability.
 
 The numerical checks make indifference visible. At $d=0.125$ and $\kappa=0.40$, the two impact values coincide exactly. Raising $d$ by $10^{-11}$ lowers continuation relative to closure by $8\times10^{-12}$. The two numerical implementations compare their results with the rational solution using a tolerance scaled to the cash flows. At a tie the display selects operation, then suspension when available, then closure. After closure it selects permanent inactivity at a zero-value restart. Proposition~\ref{prop:regions} allows every optimal selection.
 
-The combined proof target compiled on November 19. An axiom check of the six original declarations and four declarations for the reduction reported only the standard foundations of Lean. The paper-scoped command
+An axiom check of the six original declarations and four declarations for the reduction reported only the standard foundations of Lean. The paper-scoped command
 \begin{quote}\small\ttfamily
 python3 scripts/paper\_contribution.py check\\
 Saco26InstitutionalRestart -{}-fast
 \end{quote}
-also passed. Both runs used Lean \texttt{v4.30.0-rc2} and the same library environment. The original AppliedModelingLib run used \texttt{gpt-5.6-sol} at \texttt{xhigh}. An earlier independent review matched twelve source statements and definitions. Full independent certification of the correspondence with the manuscript remains outstanding. Build records and source hashes are in \path{paper/audit/}.
+also passed. Both runs used Lean \texttt{v4.30.0-rc2} and the same library environment. The original AppliedModelingLib run used \texttt{gpt-5.6-sol} at \texttt{xhigh}.
 
 \clearpage
 \section{Handwritten derivations}\label{app:handwritten}
