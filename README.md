@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="slides/final.pdf"><img src="figures/final-button.svg" width="230" alt="Read the final presentation PDF"></a>
-  <a href="https://gsaco.github.io/ai-project/slides/final.html"><img src="figures/presentation-button.svg" width="286" alt="Open the interactive presentation"></a>
+  <a href="slides/final.html"><img src="figures/presentation-button.svg" width="286" alt="Open the interactive presentation"></a>
   <a href="proposal/proposal.pdf"><img src="figures/proposal-button.svg" width="160" alt="Read the proposal PDF"></a>
   <a href="slides/topic.pdf"><img src="figures/slides-button.svg" width="160" alt="Read the slides PDF"></a>
 </p>
@@ -59,11 +59,11 @@ only the adverse firm closes, and it never restarts. Relative to no change, impa
 | Material | Files | Status |
 |:--|:--|:--|
 | Final paper | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) | 14 pages through the conclusion. Appendix C reproduces the two original photographs. |
-| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](https://gsaco.github.io/ai-project/slides/final.html) · [Quarto](slides/final.qmd) | 26 talk slides + 3 backups; handwritten revision and acceptance included |
+| Final presentation | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex) · [Interactive HTML](slides/final.html) · [Quarto](slides/final.qmd) | 26 talk slides + 3 backups; handwritten revision and acceptance included |
 | Numerical checks | [Instructions](code/README.md) · [Results](code/output/verification.json) | Four manuscript figures and two model tables reproduced. Includes the original Stata estimates and four exact decision cutoffs. |
 | Lean | [Final proof record](paper/audit/lean-run.md) · [Proof files](lean/ProofInterface.lean) | Six numbered results and the joint-to-reduced proof compile. The generated November 8 records describe the earlier version. |
 | Independent review | [Worksheet](hand/final/independent-check.md) · [Adjudication record](paper/audit/final-ai-log.md) | Author's slide correction, handwritten max–min check, and verdicts recorded. Two handwritten pages cover input choice, restart values and the main decision thresholds. [Handwritten coverage](hand/README.md). |
 | October submission | [Proposal](proposal/proposal.pdf) · [Topic PDF](slides/topic.pdf) · [Interactive topic](https://gsaco.github.io/ai-project/slides/topic.html) | Preserved earlier submission |
 | AI collaboration | [Raw conversation log](prompts.md) | AI explanations distinguished from my own assessment |
 
-The [interactive final presentation](https://gsaco.github.io/ai-project/slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [November presentation review](paper/audit/branch-review.md) records work at that stage. Entry, heterogeneous-firm equilibrium, empirical calibration, and the remaining handwritten derivations are open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).
+The [interactive final presentation](slides/final.html) is self-contained: download it and open it in a browser. The [course checklist](paper/audit/final-presentation-checklist.md) maps the eight required presentation points to slides; the [November presentation review](paper/audit/branch-review.md) records work at that stage. Entry, heterogeneous-firm equilibrium, empirical calibration, and the remaining handwritten derivations are open. [Course requirements](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7).
